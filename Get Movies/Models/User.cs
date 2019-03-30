@@ -34,6 +34,19 @@ namespace ASP.NET.Models
         [Column("verified")]
         public int Verified { get; set; }
 
+        public User() { }
+        public User(String email, String username, String password, String first_name, String last_name, String profile_picture, int verified)
+        {
+            this.Email = email;
+            this.Username = username;
+            this.Password = password;
+            this.First_Name = first_name;
+            this.Last_Name = last_name;
+            this.Profile_Picture = profile_picture;
+            this.Verified = verified;
+        }
+
+
         public Boolean authenticate(String email,String password)
         {
             using (var context = new Data.GetMoviesContext())
@@ -42,20 +55,10 @@ namespace ASP.NET.Models
                 return (query.FirstOrDefault<User>()!=null);
             }
         }
-        public void AddUser(String email,String username, String password, String first_name, String last_name, String profile_picture, int verified)
+        public void Add()
         {
             var context = new Data.GetMoviesContext();
-            User toAdd = new User()
-            {
-                Email = email,
-                Username = username,
-                Password = password,
-                First_Name = first_name,
-                Last_Name = last_name,
-                Profile_Picture = profile_picture,
-                Verified = verified
-            };
-            context.Users.Add(toAdd);
+            context.Users.Add(this);
             context.SaveChanges();
         }
     }
