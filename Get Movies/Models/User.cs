@@ -9,6 +9,7 @@ namespace ASP.NET.Models
 {
     public class User
     {
+        private Data.GetMoviesContext context = new Data.GetMoviesContext();
 
         [Key,Column("id"),DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id{ get; set; }
@@ -47,17 +48,13 @@ namespace ASP.NET.Models
         }
 
 
-        public Boolean authenticate(String email,String password)
+        public User authenticate(String email,String password)
         {
-            using (var context = new Data.GetMoviesContext())
-            {
-                var query = context.Users.Where(u => u.Email == email).Where(u => u.Password == password);
-                return (query.FirstOrDefault<User>()!=null);
-            }
+            var query = context.Users.Where(u => u.Email.Equals(email) && u.Password.Equals(password));
+            return query.FirstOrDefault<User>();
         }
         public void Add()
         {
-            var context = new Data.GetMoviesContext();
             context.Users.Add(this);
             context.SaveChanges();
         }
