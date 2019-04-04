@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ASP.NET.Data;
 using System.Linq;
 using System.Web;
 
@@ -9,7 +10,7 @@ namespace ASP.NET.Models
 {
     public class User
     {
-        private Data.GetMoviesContext context = new Data.GetMoviesContext();
+        private GetMoviesContext context = new GetMoviesContext();
 
         [Key,Column("id"),DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id{ get; set; }
@@ -56,6 +57,11 @@ namespace ASP.NET.Models
         public void Add()
         {
             context.Users.Add(this);
+            context.SaveChanges();
+        }
+        public void Remove()
+        {
+            context.Users.Remove(this);
             context.SaveChanges();
         }
     }

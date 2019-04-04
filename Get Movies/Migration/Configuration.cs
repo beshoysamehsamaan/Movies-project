@@ -22,3 +22,4 @@ namespace Get_Movies.Migration
         }
     }
 }
+// Get_Movies.Migration.Configuration

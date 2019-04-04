@@ -148,3 +148,4 @@ D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Proj
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.dll
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.pdb
+D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get_Movies.Migration.AllModelsv1.resources

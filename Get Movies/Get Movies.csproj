@@ -94,6 +94,47 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GetMovies.mdf" />
+    <Content Include="App_Data\GetMovies_log.ldf">
+      <DependentUpon>GetMovies.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\assets\css\main.css" />
+    <Content Include="Content\assets\css\util.css" />
+    <Content Include="Content\assets\images\icons\favicon.ico" />
+    <Content Include="Content\assets\images\icons\map-marker.png" />
+    <Content Include="Content\assets\images\Movies.jpg" />
+    <Content Include="Content\assets\js\main.js" />
+    <Content Include="Content\assets\js\map-custom.js" />
+    <Content Include="Content\assets\vendor\animate\animate.css" />
+    <Content Include="Content\assets\vendor\animsition\css\animsition.css" />
+    <Content Include="Content\assets\vendor\animsition\css\animsition.min.css" />
+    <Content Include="Content\assets\vendor\animsition\js\animsition.js" />
+    <Content Include="Content\assets\vendor\animsition\js\animsition.min.js" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\popper.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Content\assets\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Content\assets\vendor\countdowntime\countdowntime.js" />
+    <Content Include="Content\assets\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Content\assets\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Content\assets\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="Content\assets\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="Content\assets\vendor\daterangepicker\moment.js" />
+    <Content Include="Content\assets\vendor\daterangepicker\moment.min.js" />
+    <Content Include="Content\assets\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Content\assets\vendor\prefect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="Content\assets\vendor\prefect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="Content\assets\vendor\select2\select2.css" />
+    <Content Include="Content\assets\vendor\select2\select2.js" />
+    <Content Include="Content\assets\vendor\select2\select2.min.css" />
+    <Content Include="Content\assets\vendor\select2\select2.min.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -103,6 +144,12 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -113,6 +160,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\GetMoviesContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -121,7 +169,21 @@
     <Compile Include="Migration\201903302020310_Intial.Designer.cs">
       <DependentUpon>201903302020310_Intial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migration\201904041426373_All Models v1.cs" />
+    <Compile Include="Migration\201904041426373_All Models v1.Designer.cs">
+      <DependentUpon>201904041426373_All Models v1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migration\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\AdRequest.cs" />
+    <Compile Include="Models\Blacklist.cs" />
+    <Compile Include="Models\Casual.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MoviePlaylist.cs" />
+    <Compile Include="Models\MovieRequest.cs" />
+    <Compile Include="Models\Playlist.cs" />
+    <Compile Include="Models\Premium.cs" />
+    <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -140,6 +202,11 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Users\adduser.cshtml" />
+    <Content Include="Views\Users\auth.cshtml" />
+    <Content Include="Views\Users\login.cshtml" />
+    <Content Include="Views\Users\signup.cshtml" />
+    <Content Include="Views\Users\unauthorized.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,13 +214,13 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Migration\201903302020310_Intial.resx">
       <DependentUpon>201903302020310_Intial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migration\201904041426373_All Models v1.resx">
+      <DependentUpon>201904041426373_All Models v1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
