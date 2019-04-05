@@ -165,15 +165,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migration\201903302020310_Intial.cs" />
-    <Compile Include="Migration\201903302020310_Intial.Designer.cs">
-      <DependentUpon>201903302020310_Intial.cs</DependentUpon>
+    <Compile Include="Migrations\201904051322000_Stablev1.cs" />
+    <Compile Include="Migrations\201904051322000_Stablev1.Designer.cs">
+      <DependentUpon>201904051322000_Stablev1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migration\201904041426373_All Models v1.cs" />
-    <Compile Include="Migration\201904041426373_All Models v1.Designer.cs">
-      <DependentUpon>201904041426373_All Models v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migration\Configuration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdRequest.cs" />
     <Compile Include="Models\Blacklist.cs" />
@@ -216,11 +212,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="Migration\201903302020310_Intial.resx">
-      <DependentUpon>201903302020310_Intial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migration\201904041426373_All Models v1.resx">
-      <DependentUpon>201904041426373_All Models v1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904051322000_Stablev1.resx">
+      <DependentUpon>201904051322000_Stablev1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

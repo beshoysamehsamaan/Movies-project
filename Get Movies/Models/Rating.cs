@@ -2,25 +2,29 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using ASP.NET.Data;
+//using Get_Movies.Data;
 using System.Linq;
 using System.Web;
-using ASP.NET.Models;
 
 namespace Get_Movies.Models
 {
     public class Rating
     {
-        //id movie_id rating
-        private GetMoviesContext context = new GetMoviesContext();
+        //id user_id movie_id rating
+        //private GetMoviesContext context = GetMoviesContext.GetInstance();
 
-        [Key, Column("id"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("id")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Column("user_id")]
+        [ForeignKey("User")]
         public int User_Id { get; set; }
+        public User User { get; set; }
 
         [Column("movie_id")]
+        [ForeignKey("Movie")]
         public int Movie_Id { get; set; }
         public Movie Movie { get; set; }
 

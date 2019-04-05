@@ -142,10 +142,9 @@ D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Proj
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Mvc.xml
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get_Movies.Migration.Intial.resources
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.dll
 D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.pdb
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get_Movies.Migration.AllModelsv1.resources
+D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get_Movies.Migrations.Stablev1.resources
+D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache

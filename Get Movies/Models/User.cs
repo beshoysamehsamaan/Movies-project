@@ -2,23 +2,29 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using ASP.NET.Data;
+using Get_Movies.Data;
 using System.Linq;
 using System.Web;
 
-namespace ASP.NET.Models
+namespace Get_Movies.Models
 {
     public class User
     {
-        private GetMoviesContext context = new GetMoviesContext();
+        private GetMoviesContext context = GetMoviesContext.GetInstance();
 
-        [Key,Column("id"),DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("id")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id{ get; set; }
 
-        [Index(IsUnique=true),Column("email")]
+        [Column("email")]
+        [Index(IsUnique = true)]
+        [StringLength(50)]
         public string Email { get; set; }
 
-        [Index(IsUnique = true),Column("username")]
+        [Column("username")]
+        [Index(IsUnique = true)]
+        [StringLength(50)]
         public string Username { get; set; }
 
         [Column("password")]
@@ -48,7 +54,7 @@ namespace ASP.NET.Models
             this.Verified = verified;
         }
 
-
+     
         public User authenticate(String email,String password)
         {
             var query = context.Users.Where(u => u.Email.Equals(email) && u.Password.Equals(password));
@@ -64,5 +70,6 @@ namespace ASP.NET.Models
             context.Users.Remove(this);
             context.SaveChanges();
         }
+       
     }
 }

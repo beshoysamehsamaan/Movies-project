@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using ASP.NET.Data;
+//using Get_Movies.Data;
 using System.Linq;
 using System.Web;
-using ASP.NET.Models;
 
 namespace Get_Movies.Models
 {
     public class AdRequest
     {
         //id email note image approved start_date
-        private GetMoviesContext context = new GetMoviesContext();
+        //private GetMoviesContext context = GetMoviesContext.GetInstance();
 
-        [Key, Column("id"), DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Column("id")]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        [Index(IsUnique = true), Column("email")]
+        [Column("email")]
+        [Index(IsUnique = true)]
+        [StringLength(50)]
         public string Email { get; set; }
 
         [Column("note")]
