@@ -43,23 +43,7 @@ namespace Get_Movies.Models
         public int Verified { get; set; }
 
         public User() { }
-        public User(String email, String username, String password, String first_name, String last_name, String profile_picture, int verified)
-        {
-            this.Email = email;
-            this.Username = username;
-            this.Password = password;
-            this.First_Name = first_name;
-            this.Last_Name = last_name;
-            this.Profile_Picture = profile_picture;
-            this.Verified = verified;
-        }
-
-     
-        public User authenticate(String email,String password)
-        {
-            var query = context.Users.Where(u => u.Email.Equals(email) && u.Password.Equals(password));
-            return query.FirstOrDefault<User>();
-        }
+        //#########################//
         public void Add()
         {
             context.Users.Add(this);
@@ -70,6 +54,10 @@ namespace Get_Movies.Models
             context.Users.Remove(this);
             context.SaveChanges();
         }
-       
+        public User authenticate(String email, String password)
+        {
+            var query = context.Users.Where(u => u.Email.Equals(email) && u.Password.Equals(password));
+            return query.FirstOrDefault<User>();
+        }
     }
 }

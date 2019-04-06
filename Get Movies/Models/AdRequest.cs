@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-//using Get_Movies.Data;
+using Get_Movies.Data;
 using System.Linq;
 using System.Web;
 
@@ -11,7 +11,7 @@ namespace Get_Movies.Models
     public class AdRequest
     {
         //id email note image approved start_date
-        //private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesContext context = GetMoviesContext.GetInstance();
 
         [Column("id")]
         [Key]
@@ -34,5 +34,11 @@ namespace Get_Movies.Models
 
         [Column("start_date")]
         public string Start_Date { get; set; }
+        //#########################//
+        public void Add()
+        {
+            context.AdRequests.Add(this);
+            context.SaveChanges();
+        }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-//using Get_Movies.Data;
+using Get_Movies.Data;
 using System.Linq;
 using System.Web;
 
@@ -11,7 +11,7 @@ namespace Get_Movies.Models
     public class Playlist
     {
         //id premium_id title movies
-        //private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesContext context = GetMoviesContext.GetInstance();
 
         [Column("id")]
         [Key]
@@ -27,5 +27,11 @@ namespace Get_Movies.Models
         public string Title { get; set; }
 
         public List<Movie> Movies { get; set; }
+        //#########################//
+        public void Add()
+        {
+            context.Playlists.Add(this);
+            context.SaveChanges();
+        }
     }
 }

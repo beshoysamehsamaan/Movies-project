@@ -9,7 +9,7 @@ namespace Get_Movies.Data
     public class GetMoviesContext : DbContext
     {
         private static GetMoviesContext Instance = new GetMoviesContext();
-        public GetMoviesContext() : base("GetMovies") { }
+        private GetMoviesContext() : base("GetMoviesDB") { }
         public static GetMoviesContext GetInstance() {return Instance;}
 
         public System.Data.Entity.DbSet<Get_Movies.Models.Admin> Admins { get; set; }

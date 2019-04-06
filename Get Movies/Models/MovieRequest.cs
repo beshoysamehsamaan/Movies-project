@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-//using Get_Movies.Data;
+using Get_Movies.Data;
 using System.Linq;
 using System.Web;
 
@@ -11,7 +11,7 @@ namespace Get_Movies.Models
     public class MovieRequest
     {
         //id premium_id title note
-        //private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesContext context = GetMoviesContext.GetInstance();
 
         [Column("id")]
         [Key]
@@ -28,5 +28,11 @@ namespace Get_Movies.Models
 
         [Column("note")]
         public string Note { get; set; }
+        //#########################//
+        public void Add()
+        {
+            context.MovieRequests.Add(this);
+            context.SaveChanges();
+        }
     }
 }

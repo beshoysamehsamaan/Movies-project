@@ -15,48 +15,10 @@ namespace ASP.NET.Controllers
     {
         public ActionResult test()
         {
-            //User u = new User()
-            //{
-            //    Email = "mina14gerges14@gmail.com",
-            //    Username = "mina1234",
-            //    Password = "1234",
-            //    First_Name = "Mina",
-            //    Last_Name = "Mina",
-            //    Profile_Picture = "1.com",
-            //    Verified = 0
-            //};
-            //u.Add();
-
-            //Admin a = new Admin() { User_Id = 1 };
-            //GetMoviesContext.GetInstance().Admins.Add(a);
-            //Casual c = new Casual() { User_Id = 1 };
-            //GetMoviesContext.GetInstance().Casuals.Add(c);
-
-            //Premium p = new Premium() { User_Id = 2 };
-            //GetMoviesContext.GetInstance().Premiums.Add(p);
-
-            //Blacklist bl = new Blacklist() { User_Id = 2 };
-            //GetMoviesContext.GetInstance().Blacklist.Add(bl);
-
-            //MovieRequest mreq = new MovieRequest() { Use_Id = 2 };
-            //GetMoviesContext.GetInstance().MovieRequests.Add(mreq);
-
-            //AdRequest areq = new AdRequest() { Email="a"};
-            //GetMoviesContext.GetInstance().AdRequests.Add(areq);
-
-            //Movie m = new Movie() {};
-            //GetMoviesContext.GetInstance().Movies.Add(m);
-
-            //Playlist pl = new Playlist() { Premium_Id=3};
-            //GetMoviesContext.GetInstance().Playlists.Add(pl);
-
-            //Rating r = new Rating() { User_Id = 4, Movie_Id=5,Rating_=5};
-            //GetMoviesContext.GetInstance().Ratings.Add(r);
-
-            //MoviePlaylist mpl = new MoviePlaylist() { Movie_Id = 5, Playlist_Id = 5};
-            //GetMoviesContext.GetInstance().MoviePlaylists.Add(mpl);
-
+            User u = GetMoviesContext.GetInstance().Users.FirstOrDefault(a => a.Id == 1);
+            u.Password = "4321";
             GetMoviesContext.GetInstance().SaveChanges();
+
             return Content("Done Correctly");
         }
         //----login----//

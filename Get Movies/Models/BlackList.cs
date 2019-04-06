@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-//using Get_Movies.Data;
+using Get_Movies.Data;
 using System.Linq;
 using System.Web;
 
@@ -11,7 +11,7 @@ namespace Get_Movies.Models
     public class Blacklist
     {
         //user_id reason end_date
-        //private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesContext context = GetMoviesContext.GetInstance();
 
         [Column("id")]
         [Key]
@@ -27,6 +27,12 @@ namespace Get_Movies.Models
 
         [Column("end_date")]
         public string End_Date { get; set; }
+        //#########################//
+        public void Add()
+        {
+            context.Blacklist.Add(this);
+            context.SaveChanges();
+        }
 
     }
 }

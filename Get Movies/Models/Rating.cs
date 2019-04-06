@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-//using Get_Movies.Data;
+using Get_Movies.Data;
 using System.Linq;
 using System.Web;
 
@@ -11,7 +11,7 @@ namespace Get_Movies.Models
     public class Rating
     {
         //id user_id movie_id rating
-        //private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesContext context = GetMoviesContext.GetInstance();
 
         [Column("id")]
         [Key]
@@ -30,5 +30,11 @@ namespace Get_Movies.Models
 
         [Column("rating")]
         public int Rating_ { get; set; }
+        //#########################//
+        public void Add()
+        {
+            context.Ratings.Add(this);
+            context.SaveChanges();
+        }
     }
 }
