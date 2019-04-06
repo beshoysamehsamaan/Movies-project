@@ -45,5 +45,13 @@ namespace Get_Movies.Models
             context.Movies.Add(this);
             context.SaveChanges();
         }
+
+        public void Delete(int id)
+        {
+            Movie a1 = context.Movies.Find(id);
+            context.Movies.Remove(a1);
+            context.SaveChanges();
+        }
+
     }
 }

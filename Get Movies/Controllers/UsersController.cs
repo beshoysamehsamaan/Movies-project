@@ -13,6 +13,7 @@ namespace ASP.NET.Controllers
 {
     public class UsersController : Controller
     {
+<<<<<<< Updated upstream
 
         public ActionResult test()
         {
@@ -20,6 +21,17 @@ namespace ASP.NET.Controllers
             pl.AddMovie(1);
             return Content("done ok");
         }
+=======
+        public ActionResult test(){
+
+
+            Movie a1 = new Movie();
+            a1.Delete(1);
+            return Content("ok man");
+        }
+
+
+>>>>>>> Stashed changes
         //----login----//
         public ActionResult login()
         {
