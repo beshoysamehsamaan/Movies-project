@@ -29,5 +29,6 @@ namespace Get_Movies.Models
             context.Premiums.Add(this);
             context.SaveChanges();
         }
+        
     }
 }

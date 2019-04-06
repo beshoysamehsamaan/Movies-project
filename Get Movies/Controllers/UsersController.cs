@@ -13,6 +13,13 @@ namespace ASP.NET.Controllers
 {
     public class UsersController : Controller
     {
+
+        public ActionResult test()
+        {
+            Playlist pl = new Playlist() { Id = 1 };
+            pl.AddMovie(1);
+            return Content("done ok");
+        }
         //----login----//
         public ActionResult login()
         {

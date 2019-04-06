@@ -125,6 +125,7 @@
     <Content Include="Assets\images\icons\favicon.ico" />
     <Content Include="Assets\images\icons\map-marker.png" />
     <Content Include="Assets\images\Movies.jpg" />
+    <Content Include="Assets\images\site-icon.png" />
     <Content Include="Assets\js\animsition.js" />
     <Content Include="Assets\js\bootstrap.js" />
     <Content Include="Assets\js\countdowntime.js" />

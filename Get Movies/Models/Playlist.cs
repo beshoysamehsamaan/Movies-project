@@ -33,5 +33,25 @@ namespace Get_Movies.Models
             context.Playlists.Add(this);
             context.SaveChanges();
         }
+        public void Delete()
+        {
+            Playlist pl = context.Playlists.Find(this.Id);
+           
+            context.Playlists.Remove(pl);
+            context.SaveChanges();
+        }
+
+      //  public void Update(int id)
+       // {
+          //  Playlist pl = context.Playlists.Find(id);
+           // pl.
+          //  context.SaveChanges();
+       // }
+
+        public void AddMovie (int movieid)
+        {
+            context.MoviePlaylists.Add(new MoviePlaylist() {Playlist_Id= this.Id,Movie_Id=movieid });
+            context.SaveChanges();
+        }
     }
 }
