@@ -1,0 +1,60 @@
+﻿@model Get_Movies.Models.User
+@using (Html.BeginForm("signup", "Users", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+    <span class="login100-form-title p-b-59">
+        Sign Up
+    </span>
+
+    if (ViewBag.SignupAttempt == true)
+    {<div style="color:green">Successfully Registered ! Please Check your Email for verification</div>}
+
+    <div class="wrap-input100 validate-input" data-validate="First Name is required">
+        <span class="label-input100">First Name</span>
+        @Html.TextBoxFor(u => u.First_Name, new { @class = "input100", Name = "first_name" })
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Last Name is required">
+        <span class="label-input100">Last Name</span>
+        @Html.TextBoxFor(u => u.Last_Name, new { @class = "input100", Name = "last_name" })
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+        <span class="label-input100">Email</span>
+        @Html.TextBoxFor(u => u.Email, new { @class = "input100", Name = "email" })
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Username is required">
+        <span class="label-input100">Username</span>
+        @Html.TextBoxFor(u => u.Username, new { @class = "input100", Name = "username" })
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Password is required">
+        <span class="label-input100">Password</span>
+        @Html.PasswordFor(u => u.Password, new { @class = "input100", Name = "password" })
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="wrap-input100 validate-input" data-validate="Valid Link Photo is required: ex abc.xyz">
+        <span class="label-input100">Link Your Photo</span>
+        @Html.TextBoxFor(u => u.Profile_Picture, new { @class = "input100", Name = "profile_picture" })
+        <span class="focus-input100"></span>
+    </div>
+
+    <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button class="login100-form-btn" type="submit">
+                Sign Up
+            </button>
+        </div>
+
+        <a href="@Url.Action("login")" class="dis-block txt3 hov1 p-r-30 p-t-10 p-b-10 p-l-30">
+            Sign in
+            <i class="fa fa-long-arrow-right m-l-5"></i>
+        </a>
+    </div>
+}

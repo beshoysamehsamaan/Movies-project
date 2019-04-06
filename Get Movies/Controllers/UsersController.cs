@@ -13,41 +13,31 @@ namespace ASP.NET.Controllers
 {
     public class UsersController : Controller
     {
-        public ActionResult test()
-        {
-            User u = GetMoviesContext.GetInstance().Users.FirstOrDefault(a => a.Id == 1);
-            u.Password = "4321";
-            GetMoviesContext.GetInstance().SaveChanges();
-
-            return Content("Done Correctly");
-        }
         //----login----//
         public ActionResult login()
         {
             return View();
         }
-
         [HttpPost]
-        public ActionResult auth(User u)
+        public ActionResult login(User u)
         {
             User user = u.authenticate(u.Email,u.Password);
             if (user != null)
             {
+                ViewBag.LoginAttempt = true; ;
                 Session["email"] = user.Email;
                 Session["username"] = user.Username;
                 Session["first_name"] = user.First_Name;
                 Session["last_name"] = user.Last_Name; 
                 Session["profile_picture"] = user.Profile_Picture;
-                return View();
+                return Content("Logged In Successfully");
             }
             else
             {
-                return RedirectToAction("unauthorized", "Users");
+                ViewBag.LoginAttempt = false;
+                return View();
+
             }
-        }
-        public ActionResult unauthorized()
-        {
-            return View();
         }
         //----signup----//
         public ActionResult signup()
@@ -55,15 +45,26 @@ namespace ASP.NET.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult adduser(User u)
+        public ActionResult signup(User u)
         {
-            u.Verified = 0;
-            u.Add();
+            Boolean Validation;
+            //Start Code to validate
+            Validation = true;
+            //Validation = "Error Type";
+            //End   Code to validate
+            if (Validation)
+            {
+                u.Verified = 0;
+                u.Add();
+                ViewBag.SignupAttempt = true;
+                ModelState.Clear();
+            }
             return View();
         }
         //---logout----//
         public ActionResult Logout()
         {
+            ViewBag.LoginAttempt = null;
             Session.Clear();
             return RedirectToAction("login", "Users");
         }

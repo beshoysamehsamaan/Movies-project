@@ -1,3 +1,8 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@using System.Web.Optimization
+@{
+    Layout = "Shared/Layouts/_Layout.cshtml";
 }
+
+@Styles.Render("~/bundles/css")
+@Scripts.Render("~/bundles/js")
+
