@@ -1,43 +1,34 @@
-﻿using System.Web;
+﻿using System.IO;
+using System.Linq;
+using System.Web;
 using System.Web.Optimization;
+
 
 public class BundleConfig
 {
+    private enum BundleType
+    {
+      SCRIPT = 0,
+      STYLE  = 1
+    }
+    private static void AddBundle(BundleCollection bundles,BundleType type,string directoryPath,string bundlePath)
+    {
+        string[] files = Directory.GetFiles(System.AppDomain.CurrentDomain.BaseDirectory + directoryPath, "*."+(type==BundleType.STYLE?"css":"js"));
+        //foreach(string f in files)System.Diagnostics.Debug.WriteLine("["+f+"] is being in included from [" + directoryPath + "] in [" + bundlePath + "] bundle" );
+        files = files.Select(File => Path.GetFileName(File).Insert(0, "~/" + directoryPath + "/")).ToArray();
+        Bundle bundle = type == BundleType.STYLE ? (Bundle)(new StyleBundle(bundlePath)) : (Bundle)(new ScriptBundle(bundlePath));
+        bundle.Include(files);
+        bundles.Add(bundle);
+    }
     public static void RegisterBundles(BundleCollection bundles)
     {
-        StyleBundle cssFiles = new StyleBundle("~/bundles/css");
-        cssFiles.Include(
-            "~/Assets/css/animate.css",
-            "~/Assets/css/animsition.css",
-            "~/Assets/css/bootstrap.css",
-            "~/Assets/css/bootstrap-grid.css",
-            "~/Assets/css/bootstrap-reboot.css",
-            "~/Assets/css/daterangepicker.css",
-            "~/Assets/css/hamburgers.css",
-            "~/Assets/css/main.css",
-            "~/Assets/css/perfect-scrollbar.css",
-            "~/Assets/css/select2.css",
-            "~/Assets/css/util.css"
-        );
-        bundles.Add(cssFiles);
+        string cssDirectoryPath = "Assets/css";
+        string cssBundlePath    = "~/bundles/css";
+        AddBundle(bundles, BundleType.STYLE, cssDirectoryPath, cssBundlePath);
 
-
-        ScriptBundle jsFiles = new ScriptBundle("~/bundles/js");
-        jsFiles.Include(
-            "~/Assets/js/animsition.js",
-            "~/Assets/js/bootstrap.js",
-            "~/Assets/js/countdowntime.js",
-            "~/Assets/js/daterangepicker.js",
-            "~/Assets/js/jquery-3.2.1.min.js",
-            "~/Assets/js/main.js",
-            "~/Assets/js/map-custom.js",
-            "~/Assets/js/moment.js",
-            "~/Assets/js/perfect-scrollbar.min.js",
-            "~/Assets/js/popper.js",
-            "~/Assets/js/select2.js",
-            "~/Assets/js/tooltip.js"
-        );
-        bundles.Add(jsFiles);
+        string jsDirectoryPath  = "Assets/js";
+        string jsBundlePath     = "~/bundles/js";
+        AddBundle(bundles, BundleType.SCRIPT, jsDirectoryPath, jsBundlePath);
 
         BundleTable.EnableOptimizations = true;
     }

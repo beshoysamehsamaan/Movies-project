@@ -1,324 +1,82 @@
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\Get Movies.dll.config
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\Get Movies.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\Get Movies.pdb
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\csc.exe
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\csc.exe.config
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\csc.rsp
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\csi.exe
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\csi.exe.config
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\csi.rsp
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.Managed.Core.targets
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.AppContext.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Collections.Immutable.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Console.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.IO.Compression.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.IO.FileSystem.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.IO.Pipes.AccessControl.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.IO.Pipes.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Reflection.Metadata.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Security.AccessControl.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Security.Claims.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Security.Principal.Windows.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.ValueTuple.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Xml.XmlDocument.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Xml.XPath.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\vbc.exe
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\vbc.exe.config
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\vbc.rsp
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\VBCSCompiler.exe
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\roslyn\VBCSCompiler.exe.config
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\EntityFramework.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\EntityFramework.SqlServer.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\Microsoft.Web.Infrastructure.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Helpers.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Mvc.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Razor.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Webpages.Deployment.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Webpages.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Webpages.Razor.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\EntityFramework.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\EntityFramework.SqlServer.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Razor.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Webpages.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Webpages.Deployment.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Webpages.Razor.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Helpers.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\System.Web.Mvc.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\FCIH\Training\Web\Get Movies\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
-D:\FCIH\Training\Web\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
-D:\FCIH\Training\Web\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
-D:\FCIH\Training\Web\Get Movies\Get Movies\obj\Debug\Get Movies.dll
-D:\FCIH\Training\Web\Get Movies\Get Movies\obj\Debug\Get Movies.pdb
-D:\FCIH\Training\Web\Get Movies\Get Movies\obj\Debug\Get_Movies.Migration.Intial.resources
-D:\FCIH\Training\Web\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Get Movies.dll.config
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Get Movies.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Get Movies.pdb
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\csc.exe
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\csc.exe.config
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\csc.rsp
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\csi.exe
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\csi.exe.config
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\csi.rsp
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.Managed.Core.targets
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.AppContext.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Collections.Immutable.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Console.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.IO.Compression.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.IO.FileSystem.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.IO.Pipes.AccessControl.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.IO.Pipes.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Reflection.Metadata.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Security.AccessControl.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Security.Claims.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Security.Principal.Windows.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.ValueTuple.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Xml.XmlDocument.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Xml.XPath.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\vbc.exe
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\vbc.exe.config
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\vbc.rsp
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\VBCSCompiler.exe
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\roslyn\VBCSCompiler.exe.config
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Antlr3.Runtime.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\EntityFramework.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\EntityFramework.SqlServer.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Microsoft.Web.Infrastructure.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Newtonsoft.Json.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Helpers.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Mvc.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Optimization.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Razor.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Webpages.Deployment.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Webpages.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Webpages.Razor.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\WebGrease.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Antlr3.Runtime.pdb
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\EntityFramework.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\EntityFramework.SqlServer.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Newtonsoft.Json.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Optimization.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Razor.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Webpages.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Webpages.Deployment.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Webpages.Razor.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Helpers.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\System.Web.Mvc.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get_Movies.Migrations.Stablev1.resources
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.dll
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.pdb
-D:\FCIH\Faculity Modules\Level Three\Second Term\Software Engineering – 2\Project\VS Project\Get Movies\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
-<<<<<<< Updated upstream
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Get Movies.dll.config
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Get Movies.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Get Movies.pdb
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\csc.exe
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\csc.exe.config
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\csc.rsp
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\csi.exe
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\csi.exe.config
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\csi.rsp
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.Managed.Core.targets
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.AppContext.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Collections.Immutable.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Console.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.IO.Compression.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.AccessControl.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Reflection.Metadata.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Security.AccessControl.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Security.Claims.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Security.Principal.Windows.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.ValueTuple.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Xml.XmlDocument.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\vbc.exe
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\vbc.exe.config
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\vbc.rsp
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe.config
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Antlr3.Runtime.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\EntityFramework.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\EntityFramework.SqlServer.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Microsoft.Web.Infrastructure.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Newtonsoft.Json.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Helpers.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Mvc.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Optimization.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Razor.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Webpages.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\WebGrease.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Antlr3.Runtime.pdb
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\EntityFramework.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\EntityFramework.SqlServer.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Newtonsoft.Json.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Optimization.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Razor.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Webpages.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Helpers.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\System.Web.Mvc.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\proj sw\edit 2\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
-D:\proj sw\edit 2\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Stablev1.resources
-D:\proj sw\edit 2\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
-D:\proj sw\edit 2\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
-D:\proj sw\edit 2\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
-D:\proj sw\edit 2\Movies-project\Get Movies\obj\Debug\Get Movies.dll
-D:\proj sw\edit 2\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
-=======
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Get Movies.dll.config
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Get Movies.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Get Movies.pdb
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csc.exe
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csc.exe.config
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csc.rsp
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csi.exe
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csi.exe.config
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csi.rsp
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.Managed.Core.targets
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.AppContext.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Collections.Immutable.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Console.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.Compression.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.AccessControl.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Reflection.Metadata.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.AccessControl.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Claims.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Encoding.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Primitives.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Principal.Windows.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Text.Encoding.CodePages.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.ValueTuple.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.ReaderWriter.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XmlDocument.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.XDocument.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\vbc.exe
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\vbc.exe.config
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\vbc.rsp
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe.config
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Antlr3.Runtime.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.SqlServer.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Microsoft.Web.Infrastructure.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Newtonsoft.Json.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Helpers.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Mvc.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Optimization.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Razor.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\WebGrease.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Antlr3.Runtime.pdb
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.SqlServer.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Newtonsoft.Json.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Optimization.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Razor.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Helpers.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Mvc.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Stablev1.resources
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
-D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
->>>>>>> Stashed changes
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Get Movies.dll.config
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Get Movies.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Get Movies.pdb
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\csc.exe
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\csc.exe.config
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\csc.rsp
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\csi.exe
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\csi.exe.config
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\csi.rsp
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.Managed.Core.targets
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.AppContext.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Collections.Immutable.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Console.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.IO.Compression.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Reflection.Metadata.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Security.AccessControl.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Security.Claims.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Security.Principal.Windows.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.ValueTuple.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XmlDocument.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\vbc.exe
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\vbc.exe.config
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\vbc.rsp
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe.config
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Antlr3.Runtime.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\EntityFramework.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\EntityFramework.SqlServer.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Microsoft.Web.Infrastructure.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Newtonsoft.Json.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Helpers.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Mvc.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Optimization.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Razor.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Webpages.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\WebGrease.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Antlr3.Runtime.pdb
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\EntityFramework.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\EntityFramework.SqlServer.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Newtonsoft.Json.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Optimization.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Razor.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Webpages.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Helpers.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Mvc.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migration.resources
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache

@@ -107,9 +107,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\GetMoviesDB.mdf" />
-    <Content Include="App_Data\GetMoviesDB_log.ldf">
-      <DependentUpon>GetMoviesDB.mdf</DependentUpon>
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
     <Content Include="Assets\css\animate.css" />
     <Content Include="Assets\css\animsition.css" />
@@ -138,58 +138,10 @@
     <Content Include="Assets\js\popper.js" />
     <Content Include="Assets\js\select2.js" />
     <Content Include="Assets\js\tooltip.js" />
-    <Content Include="Content\assets\css\main.css" />
-    <Content Include="Content\assets\css\util.css" />
-    <Content Include="Content\assets\images\icons\favicon.ico" />
-    <Content Include="Content\assets\images\icons\map-marker.png" />
-    <Content Include="Content\assets\images\Movies.jpg" />
-    <Content Include="Content\assets\js\main.js" />
-    <Content Include="Content\assets\js\map-custom.js" />
-    <Content Include="Content\assets\vendor\animate\animate.css" />
-    <Content Include="Content\assets\vendor\animsition\css\animsition.css" />
-    <Content Include="Content\assets\vendor\animsition\css\animsition.min.css" />
-    <Content Include="Content\assets\vendor\animsition\js\animsition.js" />
-    <Content Include="Content\assets\vendor\animsition\js\animsition.min.js" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="Content\assets\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Content\assets\vendor\bootstrap\js\popper.js" />
-    <Content Include="Content\assets\vendor\bootstrap\js\popper.min.js" />
-    <Content Include="Content\assets\vendor\bootstrap\js\tooltip.js" />
-    <Content Include="Content\assets\vendor\countdowntime\countdowntime.js" />
-    <Content Include="Content\assets\vendor\css-hamburgers\hamburgers.css" />
-    <Content Include="Content\assets\vendor\css-hamburgers\hamburgers.min.css" />
-    <Content Include="Content\assets\vendor\daterangepicker\daterangepicker.css" />
-    <Content Include="Content\assets\vendor\daterangepicker\daterangepicker.js" />
-    <Content Include="Content\assets\vendor\daterangepicker\moment.js" />
-    <Content Include="Content\assets\vendor\daterangepicker\moment.min.js" />
-    <Content Include="Content\assets\vendor\jquery\jquery-3.2.1.min.js" />
-    <Content Include="Content\assets\vendor\prefect-scrollbar\perfect-scrollbar.css" />
-    <Content Include="Content\assets\vendor\prefect-scrollbar\perfect-scrollbar.min.js" />
-    <Content Include="Content\assets\vendor\select2\select2.css" />
-    <Content Include="Content\assets\vendor\select2\select2.js" />
-    <Content Include="Content\assets\vendor\select2\select2.min.css" />
-    <Content Include="Content\assets\vendor\select2\select2.min.js" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.css.map" />
-    <Content Include="Content\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="Assets\css\bootstrap-grid.css.map" />
     <Content Include="Assets\css\bootstrap-reboot.css.map" />
     <Content Include="Assets\css\bootstrap.css.map" />
@@ -209,15 +161,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904051322000_Stablev1.cs" />
-    <Compile Include="Migrations\201904051322000_Stablev1.Designer.cs">
-      <DependentUpon>201904051322000_Stablev1.cs</DependentUpon>
+    <Compile Include="Migrations\201904092009205_Migration.cs" />
+    <Compile Include="Migrations\201904092009205_Migration.Designer.cs">
+      <DependentUpon>201904092009205_Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdRequest.cs" />
     <Compile Include="Models\Blacklist.cs" />
     <Compile Include="Models\Casual.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MoviePlaylist.cs" />
     <Compile Include="Models\MovieRequest.cs" />
@@ -225,6 +178,7 @@
     <Compile Include="Models\Premium.cs" />
     <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\ViewLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -233,10 +187,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
@@ -257,8 +207,8 @@
     <Folder Include="Assets\fonts\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904051322000_Stablev1.resx">
-      <DependentUpon>201904051322000_Stablev1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904092009205_Migration.resx">
+      <DependentUpon>201904092009205_Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

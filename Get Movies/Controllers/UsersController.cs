@@ -13,25 +13,6 @@ namespace ASP.NET.Controllers
 {
     public class UsersController : Controller
     {
-<<<<<<< Updated upstream
-
-        public ActionResult test()
-        {
-            Playlist pl = new Playlist() { Id = 1 };
-            pl.AddMovie(1);
-            return Content("done ok");
-        }
-=======
-        public ActionResult test(){
-
-
-            Movie a1 = new Movie();
-            a1.Delete(1);
-            return Content("ok man");
-        }
-
-
->>>>>>> Stashed changes
         //----login----//
         public ActionResult login()
         {
@@ -40,15 +21,29 @@ namespace ASP.NET.Controllers
         [HttpPost]
         public ActionResult login(User u)
         {
-            User user = u.authenticate(u.Email,u.Password);
+            User user = u.authenticate();
             if (user != null)
             {
-                ViewBag.LoginAttempt = true; ;
-                Session["email"] = user.Email;
-                Session["username"] = user.Username;
-                Session["first_name"] = user.First_Name;
-                Session["last_name"] = user.Last_Name; 
-                Session["profile_picture"] = user.Profile_Picture;
+                ViewBag.LoginAttempt = true;
+                var LoggingTypeObject = new User() { Id = user.Id }.GetUserType();
+                string LoggingType = LoggingTypeObject.GetType().Name;
+                switch(LoggingType)
+                {
+                    case "Blacklist":
+                        Session["LoggingTypeDetails"] = new Blacklist() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id};
+                        break;
+                    case "Admin":
+                        Session["LoggingTypeDetails"] = new Admin() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id };
+                        break;
+                    case "Premium":
+                        Session["LoggingTypeDetails"] = new Premium() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id };
+                        break;
+                    case "Casual":
+                        Session["LoggingTypeDetails"] = new Casual() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id };
+                        break;
+                }
+                Session["LoggingUserDetails"] = user;
+                Session["LoggingType"] = LoggingType;
                 return Content("Logged In Successfully");
             }
             else

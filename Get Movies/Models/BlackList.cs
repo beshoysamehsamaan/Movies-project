@@ -4,35 +4,73 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Get_Movies.Data;
 using System.Linq;
-using System.Web;
+using System.Data.Entity;
+using System.Data.SqlClient;
 
 namespace Get_Movies.Models
 {
     public class Blacklist
     {
-        //user_id reason end_date
         private GetMoviesContext context = GetMoviesContext.GetInstance();
 
-        [Column("id")]
         [Key]
-        public int Id { get; set; }
+        public int? Id { get; set; }
 
-        [Column("user_id")]
         [ForeignKey("User")]
-        public int User_Id { get; set; }
+        [Index(IsUnique = true)]
+        public int? User_Id { get; set; }
         public User User { get; set; }
 
-        [Column("reason")]
+        [MaxLength(50)]
         public string Reason { get; set; }
 
-        [Column("end_date")]
+        [Required]
+        [StringLength(50)]
+        [MaxLength(10)]
+        [MinLength(10)]
         public string End_Date { get; set; }
         //#########################//
-        public void Add()
+        public void Add() { context.Blacklist.Add(this); context.SaveChanges(); }
+        public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Blacklist.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
+        public IQueryable<Blacklist> Search(Boolean allRequired, Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching); }
+        private IQueryable<Blacklist> SearchAnd(Boolean exactStringMatching)
         {
-            context.Blacklist.Add(this);
-            context.SaveChanges();
+            DbSet<Blacklist> entity = context.Blacklist;
+            IQueryable<Blacklist> resultSet = null;
+            if (this.Id.HasValue) { resultSet = entity.Where(bl => bl.Id == this.Id); }
+            if (this.User_Id.HasValue) { resultSet = entity.Where(bl => bl.User_Id == this.User_Id); }
+            if (!String.IsNullOrWhiteSpace(this.Reason)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(bl => bl.Reason.Equals(this.Reason))) : ((resultSet ?? entity).Where(bl => bl.Reason.Contains(this.Reason))); }
+            return resultSet;
         }
-
+        private IQueryable<Blacklist> SearchOr(Boolean exactStringMatching)
+        {
+            string query = "SELECT * FROM Blacklist WHERE ";
+            List<SqlParameter> sqlParameters = new List<SqlParameter>();
+            if (this.Id.HasValue) { query += "Id = @Id OR "; sqlParameters.Add(new SqlParameter("@Id", this.Id)); }
+            if (this.User_Id.HasValue) { query += "User_Id = @User_Id OR "; sqlParameters.Add(new SqlParameter("@User_Id", this.User_Id)); }
+            if (!String.IsNullOrWhiteSpace(this.Reason)) { query += "Reason"; query += exactStringMatching ? " = " : " LIKE "; query += "@Reason OR "; sqlParameters.Add(new SqlParameter("@Reason", exactStringMatching ? this.Reason : "%" + this.Reason + "%")); }
+            query = query.Remove(query.Length - 3);
+            return sqlParameters.Count() == 0 ? null : context.Blacklist.SqlQuery(query, sqlParameters.ToArray()).AsQueryable<Blacklist>();
+        }
+        public void Update(Blacklist newData, Boolean allRequired, Boolean exactStringMatching)
+        {
+            IQueryable<Blacklist> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
+            Boolean Updatable = this.Id.HasValue || this.User_Id.HasValue || !String.IsNullOrWhiteSpace(this.Reason);
+            Boolean Id = newData.Id.HasValue && this.Id != newData.Id;
+            Boolean User_Id = newData.User_Id.HasValue && this.User_Id != newData.User_Id;
+            Boolean Reason = !String.IsNullOrWhiteSpace(newData.Reason) && !this.Reason.Equals(newData.Reason);
+            if(Updatable)
+            {
+                foreach (var toUpdateRecord in toUpdateListQueryable)
+                {
+                    if (Id) { toUpdateRecord.Id = newData.Id; }
+                    if (User_Id) { toUpdateRecord.User_Id = newData.User_Id; }
+                    if (Reason) { toUpdateRecord.Reason = newData.Reason; }
+                }
+                context.SaveChanges();
+            }
+        }
+        public List<Blacklist> ListAll() { return context.Blacklist.ToList<Blacklist>(); }
+        //#########################//
     }
 }

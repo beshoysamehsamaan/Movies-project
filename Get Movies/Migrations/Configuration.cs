@@ -7,7 +7,7 @@ namespace Get_Movies.Migrations
     using System.Linq;
     using Get_Movies.Data;
     using Get_Movies.Models;
-
+    //Get_Movies.Migrations.Configuration
     internal sealed class Configuration : DbMigrationsConfiguration<Get_Movies.Data.GetMoviesContext>
     {
         public Configuration()
@@ -22,9 +22,9 @@ namespace Get_Movies.Migrations
             {
                 Email = "user1@gmail.com",
                 Username = "user1",
-                Password = "1234",
+                Password = "12345678",
                 First_Name = "user 1",
-                Last_Name = "x",
+                Last_Name = "xxxx",
                 Profile_Picture = "www.text2image.com/user_images/text2image_A31887_20190405_000906.jpg",
                 Verified = 0
             };
@@ -35,9 +35,9 @@ namespace Get_Movies.Migrations
             {
                 Email = "user2@gmail.com",
                 Username = "user2",
-                Password = "1234",
+                Password = "12345678",
                 First_Name = "user 2",
-                Last_Name = "x",
+                Last_Name = "xxxx",
                 Profile_Picture = "www.text2image.com/user_images/text2image_A31887_20190405_002441.jpg",
                 Verified = 0
             };
@@ -48,9 +48,9 @@ namespace Get_Movies.Migrations
             {
                 Email = "user3@gmail.com",
                 Username = "user3",
-                Password = "1234",
+                Password = "12345678",
                 First_Name = "user 3",
-                Last_Name = "x",
+                Last_Name = "xxxx",
                 Profile_Picture = "www.text2image.com/user_images/text2image_A31887_20190405_005341.jpg",
                 Verified = 0
             };
@@ -61,21 +61,44 @@ namespace Get_Movies.Migrations
             {
                 Email = "user4@gmail.com",
                 Username = "user4",
-                Password = "1234",
+                Password = "12345678",
                 First_Name = "user 4",
-                Last_Name = "x",
+                Last_Name = "xxxx",
                 Profile_Picture = "www.text2image.com/user_images/text2image_A31887_20190405_005609.jpg",
                 Verified = 0
             };
             u4.Add();
             new Blacklist() { User_Id = u4.Id, Reason = "Ban Testing", End_Date = "04/06/2019" }.Add();
 
+            Genre gen1 = new Genre() { Genre_ = "Action" }; gen1.Add();
+            Genre gen2 = new Genre() { Genre_ = "Adventure" }; gen2.Add();
+            Genre gen3 = new Genre() { Genre_ = "Animation" }; gen3.Add();
+            Genre gen4 = new Genre() { Genre_ = "Biography" }; gen4.Add();
+            Genre gen5 = new Genre() { Genre_ = "Comedy" }; gen5.Add();
+            Genre gen6 = new Genre() { Genre_ = "Crime" }; gen6.Add();
+            Genre gen7 = new Genre() { Genre_ = "Documentary" }; gen7.Add();
+            Genre gen8 = new Genre() { Genre_ = "Drama" }; gen8.Add();
+            Genre gen9 = new Genre() { Genre_ = "Family" }; gen9.Add();
+            Genre gen10 = new Genre() { Genre_ = "Fantasy" }; gen10.Add();
+            Genre gen11 = new Genre() { Genre_ = "Film-Noir" }; gen11.Add();
+            Genre gen12 = new Genre() { Genre_ = "History" }; gen12.Add();
+            Genre gen13 = new Genre() { Genre_ = "Horror" }; gen13.Add();
+            Genre gen14 = new Genre() { Genre_ = "Music" }; gen14.Add();
+            Genre gen15 = new Genre() { Genre_ = "Musical" }; gen15.Add();
+            Genre gen16 = new Genre() { Genre_ = "Mystery" }; gen16.Add();
+            Genre gen17 = new Genre() { Genre_ = "Romance" }; gen17.Add();
+            Genre gen18 = new Genre() { Genre_ = "Sci-Fi" }; gen18.Add();
+            Genre gen19 = new Genre() { Genre_ = "Sport" }; gen19.Add();
+            Genre gen20 = new Genre() { Genre_ = "Thriller" }; gen20.Add();
+            Genre gen21 = new Genre() { Genre_ = "War" }; gen21.Add();
+            Genre gen22 = new Genre() { Genre_ = "Western" }; gen22.Add();
+
             Movie m1 = new Movie()
             {
                 Title = "RED",
-                Genre = "Action",
+                Genre_Id = 1,
                 Director = "Robert Schwentke",
-                Release_date = "12/05/2010",
+                Release_Date = "12/05/2010",
                 Poster = "en.wikipedia.org/wiki/Red_(2010_film)#/media/File:Red_ver7.jpg",
                 Rating_Count = 0,
                 View_Count = 0
@@ -84,9 +107,9 @@ namespace Get_Movies.Migrations
             Movie m2 = new Movie()
             {
                 Title = "RED 2",
-                Genre = "Action",
+                Genre_Id = 1,
                 Director = "Dean Parisot",
-                Release_date = "12/05/2016",
+                Release_Date = "12/05/2016",
                 Poster = "en.wikipedia.org/wiki/Red_2_(film)#/media/File:RED_2_poster.jpg",
                 Rating_Count = 0,
                 View_Count = 0
@@ -107,8 +130,11 @@ namespace Get_Movies.Migrations
 
             MovieRequest mr = new MovieRequest() { Premium_Id = prem.Id, Title = "Requested Movie", Note = "Note" };
 
-            AdRequest ar = new AdRequest() { Email = "proposer@gmail.com", Note = "Negotiation Terms", Image = "www.text2image.com/user_images/text2image_A31887_20190406_022910.jpg", Start_Date = "", Approved = 0 };
+            AdRequest ar = new AdRequest() { Email = "proposer@gmail.com", Note = "Negotiation Terms", Image = "www.text2image.com/user_images/text2image_A31887_20190406_022910.jpg", Start_Date = "10/10/2019", Approved = 0 };
             ar.Add();
+
+            ViewLog vl = new ViewLog() { User_Id = 3, Movie_Id = 1, Time_Stamp = DateTime.Now.ToString("dddd, dd MMMM yyyy")};
+            vl.Add();
         }
     }
 }
