@@ -11,7 +11,7 @@ namespace Get_Movies.Data
     public class GetMoviesContext : DbContext
     {
         private static GetMoviesContext Instance = new GetMoviesContext();
-        public GetMoviesContext() : base("Database") {}
+        public GetMoviesContext() : base("GetMoviesDatabase_V1") {}
         public static GetMoviesContext GetInstance() {return Instance;}
 
         public DbSet<Admin> Admins { get; set; }

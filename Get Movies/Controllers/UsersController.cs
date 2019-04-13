@@ -14,6 +14,15 @@ namespace ASP.NET.Controllers
     public class UsersController : Controller
     {
         //----login----//
+        public ActionResult test()
+        {
+            MoviePlaylist m1pl1 = new MoviePlaylist() { Movie_Id = 1, Playlist_Id = 1 };
+            m1pl1.Add();
+
+            MoviePlaylist m2pl1 = new MoviePlaylist() { Movie_Id = 2, Playlist_Id = 1 };
+            m2pl1.Add();
+            return Content("done");
+        }
         public ActionResult login()
         {
             return View();
@@ -83,6 +92,7 @@ namespace ASP.NET.Controllers
             return RedirectToAction("login", "Users");
         }
         //---home----//
+        [Route("")]
         public ActionResult home()
         {
             return View();

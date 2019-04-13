@@ -96,7 +96,7 @@ namespace Get_Movies.Migrations
             Movie m1 = new Movie()
             {
                 Title = "RED",
-                Genre_Id = 1,
+                Genre_Id = gen1.Id,
                 Director = "Robert Schwentke",
                 Release_Date = "12/05/2010",
                 Poster = "upload.wikimedia.org/wikipedia/en/4/41/Red_ver7.jpg",
@@ -109,7 +109,7 @@ namespace Get_Movies.Migrations
             Movie m2 = new Movie()
             {
                 Title = "RED 2",
-                Genre_Id = 1,
+                Genre_Id = gen1.Id,
                 Director = "Dean Parisot",
                 Release_Date = "12/05/2016",
                 Poster = "en.wikipedia.org/wiki/Red_2_(film)#/media/File:RED_2_poster.jpg",
@@ -133,6 +133,7 @@ namespace Get_Movies.Migrations
             Rating r2 = new Rating() { User_Id = u2.Id, Movie_Id = m2.Id, Rating_ = 5 }; r2.Add();
 
             MovieRequest mr = new MovieRequest() { Premium_Id = prem.Id, Title = "Requested Movie", Note = "Note" };
+            mr.Add();
 
             AdRequest ar = new AdRequest() { Email = "proposer@gmail.com", Note = "Negotiation Terms", Image = "www.text2image.com/user_images/text2image_A31887_20190406_022910.jpg", Start_Date = "10/10/2019", Approved = 0 };
             ar.Add();

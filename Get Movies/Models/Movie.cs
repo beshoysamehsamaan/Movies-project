@@ -33,13 +33,11 @@ namespace Get_Movies.Models
         public string Poster { get; set; }
 
         [Required]
-        [StringLength(50)]
         [MinLength(10)]
         [MaxLength(10)]
         public string Release_Date { get; set; }
 
         [Required]
-        [MaxLength(10)]
         public string Description { get; set; }
 
         [Required]

@@ -78,3 +78,5 @@ D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCo
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migration.resources
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache

@@ -1,7 +1,7 @@
 ﻿@using System.Web.Optimization
 
-@Styles.Render("~/bundles/css/wheelnav")
-@Scripts.Render("~/bundles/js/wheelnav")
+@Styles.Render("~/Bundles/css/wheelnav")
+
 
 <nav style="background-image: url(../../../Assets/images/navbar/nav-background.png);width:100%;position: fixed;z-index: 1000">
 
@@ -17,7 +17,7 @@
          data-wheelnav-rotateoff
          data-wheelnav-cssmode
          data-wheelnav-init>
-        <div data-wheelnav-navitemimg='images/shared/default-pp.png' onmouseup=''></div>
+        <div data-wheelnav-navitemimg='../../../Assets/images/shared/default-pp.png' onmouseup=''></div>
         <div data-wheelnav-navitemicon='search' onmouseup='document.getElementById("SearchMovieFormToggle").click();'></div>
         <div data-wheelnav-navitemicon='list' onmouseup='alert("Place your logic here.");'></div>
         <div data-wheelnav-navitemicon='barchart' onmouseup='alert("Place your logic here.");'></div>
@@ -29,3 +29,5 @@
         <div style="float:right;"><img src="~/Assets/images/navbar/slogan.png"></div>
     </div>
 </nav>
+
+@Scripts.Render("~/Bundles/js/wheelnav")

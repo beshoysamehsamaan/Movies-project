@@ -15,10 +15,10 @@ public class BundleConfig
     private static void AddBundle(BundleCollection bundles, BundleType type, string directoryPath, string bundlePath)
     {
         string[] files = Directory.GetFiles(AppDomain.CurrentDomain.BaseDirectory + directoryPath, "*." + (type == BundleType.STYLE ? "css" : "js"));
-        System.Diagnostics.Debug.WriteLine("[" + directoryPath + "] in [" + bundlePath + "] bundle");
-        //foreach(string f in files)System.Diagnostics.Debug.WriteLine("["+f+"] is being in included from [" + directoryPath + "] in [" + bundlePath + "] bundle" );
         files = files.Select(File => Path.GetFileName(File).Insert(0, "~/" + directoryPath + "/")).ToArray();
-        Bundle bundle = type == BundleType.STYLE ? (Bundle)(new StyleBundle(bundlePath)) : (Bundle)(new ScriptBundle(bundlePath));
+        //System.Diagnostics.Debug.WriteLine("[" + directoryPath + "] in [" + bundlePath + "] bundle");
+        foreach (string f in files) System.Diagnostics.Debug.WriteLine("[" + f + "] is being in included from [" + directoryPath + "] in [" + bundlePath + "] bundle");
+        Bundle bundle = type == BundleType.STYLE ? (Bundle)(new StyleBundle(bundlePath.Replace("//", "/").Replace('\\', '/'))) : (Bundle)(new ScriptBundle(bundlePath.Replace("//","/").Replace('\\','/')));
         bundle.Include(files);
         bundles.Add(bundle);
     }
@@ -412,6 +412,5 @@ public class BundleConfig
         AddBundle(bundles, BundleType.SCRIPT, wheelNavJsDirectoryPath, wheelNavJsBundleName);
         //**End   Wheelnav**//
         /*End   Js Bundles*/
-        BundleTable.EnableOptimizations = true;
     }
 }

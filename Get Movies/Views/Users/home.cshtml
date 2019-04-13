@@ -3,13 +3,13 @@
     ViewBag.Title = "home";
 }
 
-@Styles.Render("~/Bundles/css/components/textfield")
-@Styles.Render("~/Bundles/css/components/radio")
-@Styles.Render("~/Bundles/css/components/select2")
-@Styles.Render("~/Bundles/css/components/select2")
-@Styles.Render("~/Bundles/css/components/button")
-@Styles.Render("~/Bundles/css/components/card")
-@Styles.Render("~/Bundles/css/components/custom-scrollbar")
+@Styles.Render("~/Bundles/css/propeller/components/textfield")
+@Styles.Render("~/Bundles/css/propeller/components/radio")
+@Styles.Render("~/Bundles/css/propeller/components/select2")
+@Styles.Render("~/Bundles/css/propeller/components/select2")
+@Styles.Render("~/Bundles/css/propeller/components/button")
+@Styles.Render("~/Bundles/css/propeller/components/card")
+@Styles.Render("~/Bundles/css/propeller/components/custom-scrollbar")
 
 <div id="MoviesContainer" style="display: table;margin:0px auto;">
     <div class="pmd-card pmd-card-default pmd-z-depth" style="width:19%;margin:30px .5%;display:inline-block;">
@@ -28,9 +28,9 @@
         </div>
         <!-- Card media -->
         <div class="pmd-card-media" style="overflow: hidden">
-            <img width="100%"
-                 onMouseOver="this.style.cssText = 'transition: all 1s ease-in-out;transform:scale(1.1);';"
-                 onMouseOut="this.style.cssText = 'transition: all 1s ease-in-out;transform:scale(1);';"
+            <img style="width:100%"
+                 onMouseOver="this.style.cssText = 'transition: all 1s ease-in-out;transform:scale(1.1);width:100%';"
+                 onMouseOut="this.style.cssText = 'transition: all 1s ease-in-out;transform:scale(1);width:100%';"
                  class="img-responsive"
                  src="https://upload.wikimedia.org/wikipedia/en/4/41/Red_ver7.jpg">
         </div>
@@ -63,9 +63,33 @@
     <li class="page-item"><a class="page-link" href="#">»</a></li>
 </ul><br>
 
-@Scripts.Render("~/Bundles/js/components/textfield")
-@Scripts.Render("~/Bundles/js/components/radio")
-@Scripts.Render("~/Bundles/js/components/select2")
-@Scripts.Render("~/Bundles/js/components/button")
-@Scripts.Render("~/Bundles/js/components/card")
-@Scripts.Render("~/Bundles/js/components/custom-scrollbar")
+@Scripts.Render("~/Bundles/js/propeller/components/textfield")
+@Scripts.Render("~/Bundles/js/propeller/components/radio")
+@Scripts.Render("~/Bundles/js/propeller/components/select2")
+@Scripts.Render("~/Bundles/js/propeller/components/button")
+@Scripts.Render("~/Bundles/js/propeller/components/card")
+@Scripts.Render("~/Bundles/js/propeller/components/custom-scrollbar")
+<!--End Specific Scripts-->
+<script type="text/javascript">
+    $(document).ready(function () {
+            $(".select-tags").select2({
+                tags: false,
+                theme: "bootstrap",
+            })
+    });
+</script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+<script>
+    (function ($) {
+        $(window).load(function () {
+            $(".content").mCustomScrollbar({
+                theme: "minimal"
+            });
+        });
+    })(jQuery);
+</script>
+<!--End Including Scripts -->

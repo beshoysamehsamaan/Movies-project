@@ -107,6 +107,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GetMoviesDatabase_V1.mdf" />
+    <Content Include="App_Data\GetMoviesDatabase_V1_log.ldf">
+      <DependentUpon>GetMoviesDatabase_V1.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\css\animate.css" />
     <Content Include="Assets\css\animsition.css" />
     <Content Include="Assets\css\bootstrap-grid.css" />
@@ -157,6 +161,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904131139046_Migration.cs" />
+    <Compile Include="Migrations\201904131139046_Migration.Designer.cs">
+      <DependentUpon>201904131139046_Migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdRequest.cs" />
@@ -199,8 +207,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\fonts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904131139046_Migration.resx">
+      <DependentUpon>201904131139046_Migration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
