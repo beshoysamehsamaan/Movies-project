@@ -125,7 +125,7 @@ namespace Get_Movies.Migrations
             Movie m3 = new Movie()
             {
                 Title = "Shazam",
-                Genre_Id = 2,
+                Genre_Id = gen2.Id,
                 Director = "David F. Sandberg",
                 Release_Date = "23/03/2019",
                 Poster = "/en/6/60/Shazam%21_theatrical_poster.jpg",
@@ -139,7 +139,7 @@ namespace Get_Movies.Migrations
             Movie m4 = new Movie()
             {
                 Title = "Captain Marvel",
-                Genre_Id = 1,
+                Genre_Id = gen1.Id,
                 Director = "Ryan Fleck",
                 Release_Date = "03/06/2019",
                 Poster = "/en/8/85/Captain_Marvel_poster.jpg",
@@ -153,7 +153,7 @@ namespace Get_Movies.Migrations
             Movie m5 = new Movie()
             {
                 Title = "Dumbo",
-                Genre_Id = 2,
+                Genre_Id = gen2.Id,
                 Director = "Tim Burton",
                 Release_Date = "27/03/201",
                 Poster = "/en/9/91/Dumbo_%282019_film%29.png",
@@ -167,7 +167,7 @@ namespace Get_Movies.Migrations
             Movie m6 = new Movie()
             {
                 Title = "Cars",
-                Genre_Id = 3,
+                Genre_Id = gen3.Id,
                 Director = "John Lasseter",
                 Release_Date = "08/06/2006",
                 Poster = "en/3/34/Cars_2006.jpg ",
@@ -181,7 +181,7 @@ namespace Get_Movies.Migrations
             Movie m7 = new Movie()
             {
                 Title = "Ralph Breaks the Internet",
-                Genre_Id = 3,
+                Genre_Id = gen3.Id,
                 Director = " Phil Johnston",
                 Release_Date = "20/11/2018",
                 Poster = "en/0/0b/Ralph_Breaks_the_Internet_%282018_film_poster%29.png",
@@ -195,7 +195,7 @@ namespace Get_Movies.Migrations
             Movie m8 = new Movie()
             {
                 Title = "Annabelle",
-                Genre_Id = 13,
+                Genre_Id = gen13.Id,
                 Director = "John R. Leonetti",
                 Release_Date = "02/10/2014",
                 Poster = "en/9/90/Annabelle_film_poster.jpg",
@@ -209,12 +209,12 @@ namespace Get_Movies.Migrations
             Movie m9 = new Movie()
             {
                 Title = "Annabelle Comes Home",
-                Genre_Id = 13,
+                Genre_Id = gen13.Id,
                 Director = "Gary Dauberman",
                 Release_Date = "03/08/2017",
                 Poster = "en/2/2f/AnnabelleComesHome.jpeg",
-                Description = "Determined to keep Annabelle from wreaking more havoc, demonologists Ed and Lorraine Warren bring the possessed doll to the locked artifacts room in their home, placing her "safely" behind sacred glass and enlisting a priest's holy blessing. But an unholy night of horror awaits as Annabelle awakens the evil spirits in the room, who all set their sights on a new target-the Warrens' ten-year-old daughter, Judy, and her friends.",
-                Duration = 000,
+                Description = "Determined to keep Annabelle from wreaking more havoc, demonologists Ed and Lorraine Warren bring the possessed doll to the locked artifacts room in their home, placing her safely behind sacred glass and enlisting a priest's holy blessing. But an unholy night of horror awaits as Annabelle awakens the evil spirits in the room, who all set their sights on a new target-the Warrens' ten-year-old daughter, Judy, and her friends.",
+                Duration = 60,
                 Rating_Count = 0,
                 View_Count = 0
             };
@@ -223,7 +223,7 @@ namespace Get_Movies.Migrations
             Movie m10 = new Movie()
             {
                 Title = "Annabelle: Creation ",
-                Genre_Id = 13,
+                Genre_Id = gen13.Id,
                 Director = "David F. Sandberg",
                 Release_Date = "03/08/2017",
                 Poster = "en/0/08/Annabelle_Creation.jpg",
@@ -238,7 +238,7 @@ namespace Get_Movies.Migrations
             Movie m11 = new Movie()
             {
                 Title = "Harry Potter and the Sorcerer's Stone",
-                Genre_Id = 18,
+                Genre_Id = gen18.Id,
                 Director = "Chris Columbus",
                 Release_Date = "16/11/2001",
                 Poster = "en/7/7a/Harry_Potter_and_the_Philosopher%27s_Stone_banner.jpg",
@@ -252,7 +252,7 @@ namespace Get_Movies.Migrations
             Movie m12 = new Movie()
             {
                 Title = "Doctor Strange",
-                Genre_Id = 18,
+                Genre_Id = gen18.Id,
                 Director = "Chris Columbus",
                 Release_Date = "25/10/2016",
                 Poster = "en/c/c7/Doctor_Strange_poster.jpg",
@@ -266,7 +266,7 @@ namespace Get_Movies.Migrations
             Movie m13 = new Movie()
             {
                 Title = "War Of The Worlds",
-                Genre_Id = 21,
+                Genre_Id = gen21.Id,
                 Director = "Steven Spielberg",
                 Release_Date = "28/06/2005",
                 Poster = "en/8/83/War_of_the_Worlds_2005_poster.jpg",
