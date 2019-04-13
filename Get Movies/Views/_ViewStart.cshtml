@@ -7,8 +7,47 @@
 @Styles.Render("~/Bundles/css/propeller/style/typography")
 @Styles.Render("~/Bundles/css/propeller/style/shadow")
 @Styles.Render("~/Bundles/css/propeller/style/icons")
+@Styles.Render("~/Bundles/css/propeller/components/radio")
+@Styles.Render("~/Bundles/css/propeller/components/card")
+@Styles.Render("~/Bundles/css/propeller/components/custom-scrollbar")
+@Styles.Render("~/Bundles/css/propeller/components/textfield")
+@Styles.Render("~/Bundles/css/propeller/components/select2")
+@Styles.Render("~/Bundles/css/propeller/components/button")
+@Styles.Render("~/Bundles/css/wheelnav")
+
 
 @Scripts.Render("~/Bundles/js/jquery/min")
 @Scripts.Render("~/Bundles/js/bootstrap/min")
 @Scripts.Render("~/Bundles/js/propeller/shared/global")
 @Scripts.Render("~/Bundles/js/propeller/shared/ripple-effect")
+@Scripts.Render("~/Bundles/js/propeller/components/radio")
+@Scripts.Render("~/Bundles/js/propeller/components/card")
+@Scripts.Render("~/Bundles/js/propeller/components/custom-scrollbar")
+@Scripts.Render("~/Bundles/js/propeller/components/textfield")
+@Scripts.Render("~/Bundles/js/propeller/components/select2")
+@Scripts.Render("~/Bundles/js/propeller/components/button")
+@Scripts.Render("~/Bundles/js/wheelnav")
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".select-tags").select2({
+            tags: false,
+            theme: "bootstrap",
+        })
+    });
+</script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+<script>
+    (function ($) {
+        $(window).load(function () {
+            $(".content").mCustomScrollbar({
+                theme: "minimal"
+            });
+        });
+    })(jQuery);
+</script>

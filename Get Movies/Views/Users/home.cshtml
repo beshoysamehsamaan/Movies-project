@@ -3,13 +3,8 @@
     ViewBag.Title = "Home";
 }
 
-@Styles.Render("~/Bundles/css/propeller/components/textfield")
-@Styles.Render("~/Bundles/css/propeller/components/radio")
-@Styles.Render("~/Bundles/css/propeller/components/select2")
-@Styles.Render("~/Bundles/css/propeller/components/select2")
-@Styles.Render("~/Bundles/css/propeller/components/button")
-@Styles.Render("~/Bundles/css/propeller/components/card")
-@Styles.Render("~/Bundles/css/propeller/components/custom-scrollbar")
+
+
 
 <div id="MoviesContainer" style="display: table;margin:0px auto;">
     <div class="pmd-card pmd-card-default pmd-z-depth" style="width:19%;margin:30px .5%;display:inline-block;">
@@ -63,33 +58,9 @@
     <li class="page-item"><a class="page-link" href="#">»</a></li>
 </ul><br>
 
-@Scripts.Render("~/Bundles/js/propeller/components/textfield")
-@Scripts.Render("~/Bundles/js/propeller/components/radio")
-@Scripts.Render("~/Bundles/js/propeller/components/select2")
-@Scripts.Render("~/Bundles/js/propeller/components/button")
-@Scripts.Render("~/Bundles/js/propeller/components/card")
-@Scripts.Render("~/Bundles/js/propeller/components/custom-scrollbar")
+
+
+
 <!--End Specific Scripts-->
-<script type="text/javascript">
-    $(document).ready(function () {
-            $(".select-tags").select2({
-                tags: false,
-                theme: "bootstrap",
-            })
-    });
-</script>
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
-<script>
-    (function ($) {
-        $(window).load(function () {
-            $(".content").mCustomScrollbar({
-                theme: "minimal"
-            });
-        });
-    })(jQuery);
-</script>
+
 <!--End Including Scripts -->
