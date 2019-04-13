@@ -107,10 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database.mdf" />
-    <Content Include="App_Data\Database_log.ldf">
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\css\animate.css" />
     <Content Include="Assets\css\animsition.css" />
     <Content Include="Assets\css\bootstrap-grid.css" />
@@ -161,10 +157,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904092009205_Migration.cs" />
-    <Compile Include="Migrations\201904092009205_Migration.Designer.cs">
-      <DependentUpon>201904092009205_Migration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AdRequest.cs" />
@@ -196,6 +188,9 @@
     <Content Include="Views\Shared\Layouts\_Layout.cshtml" />
     <Content Include="Views\Shared\Partials\Forms\_Login.cshtml" />
     <Content Include="Views\Shared\Partials\Forms\_Signup.cshtml" />
+    <Content Include="Views\Users\home.cshtml" />
+    <Content Include="Views\Shared\Partials\Components\_Navbar.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\_SearchMovie.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,12 +199,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Assets\fonts\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904092009205_Migration.resx">
-      <DependentUpon>201904092009205_Migration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

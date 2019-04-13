@@ -2,13 +2,12 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Get Movies</title>
-    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/thin-food-cooking/24/thin-0911_popcorn_cinema-512.png">
-    <link>
-
+    <link rel="icon" href="images/shared/fav-icon.png">
 </head>
-<body>
+<body style="background-image: url('../../../Assets/images/shared/body-backgroud.jpg');background-repeat: no-repeat;background-size: cover" ;>
+    @Html.Partial("Partials/Components/_Navbar")
+    @Html.Partial("Partials/Forms/_SearchMovie")
     @RenderBody()
 </body>
 </html>

@@ -3,6 +3,12 @@
     Layout = "Shared/Layouts/_Layout.cshtml";
 }
 
-@Styles.Render("~/bundles/css")
-@Scripts.Render("~/bundles/js")
+@Styles.Render("~/bundles/css/bootstrap/min")
+@Styles.Render("~/bundles/css/propeller/style/typography")
+@Styles.Render("~/bundles/css/propeller/style/shadow")
+@Styles.Render("~/bundles/css/propeller/style/icons")
 
+@Scripts.Render("~/bundles/js/jquery/min")
+@Scripts.Render("~/bundles/js/bootstrap/min")
+@Scripts.Render("~/bundles/js/propeller/shared/global")
+@Scripts.Render("~/bundles/js/propeller/shared/ripple-effect")

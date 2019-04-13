@@ -1,0 +1,31 @@
+﻿@using System.Web.Optimization
+
+@Styles.Render("~/bundles/css/wheelnav")
+@Scripts.Render("~/bundles/js/wheelnav")
+
+<nav style="background-image: url(../../../Assets/images/navbar/nav-background.png);width:100%;position: fixed;z-index: 1000">
+
+    <div style="width:52%;display:inline-block;margin: 0px auto;padding: 10px;">
+        <div style="float:right;"><img src="~/Assets/images/navbar/slogan.png"></div>
+    </div>
+</nav>
+<div style="width: 10%;float:right;position: fixed;top:-22px;right:0px;z-index: 1001">
+    <div id='piemenu' data-wheelnav
+         data-wheelnav-slicepath='DonutSlice'
+         data-wheelnav-spreader data-wheelnav-spreaderpath='PieSpreader'
+         data-wheelnav-navangle='180'
+         data-wheelnav-rotateoff
+         data-wheelnav-cssmode
+         data-wheelnav-init>
+        <div data-wheelnav-navitemimg='images/shared/default-pp.png' onmouseup=''></div>
+        <div data-wheelnav-navitemicon='search' onmouseup='document.getElementById("SearchMovieFormToggle").click();'></div>
+        <div data-wheelnav-navitemicon='list' onmouseup='alert("Place your logic here.");'></div>
+        <div data-wheelnav-navitemicon='barchart' onmouseup='alert("Place your logic here.");'></div>
+
+    </div>
+</div>
+<nav id="decoy" style="background-image: url(../../../Assets/images/navbar/nav-background.png);">
+    <div style="width:52%;display:inline-block;margin: 0px auto;padding: 10px;">
+        <div style="float:right;"><img src="~/Assets/images/navbar/slogan.png"></div>
+    </div>
+</nav>

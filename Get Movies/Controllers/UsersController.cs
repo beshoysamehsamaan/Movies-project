@@ -82,5 +82,10 @@ namespace ASP.NET.Controllers
             Session.Clear();
             return RedirectToAction("login", "Users");
         }
+        //---home----//
+        public ActionResult home()
+        {
+            return View();
+        }
     }
 }
