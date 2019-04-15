@@ -1,0 +1,16 @@
+﻿@model Get_Movies.Models.Movie
+@using (Html.BeginForm("deletemovie", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+    <!-- Regular Input -->
+    <div class="form-group">
+        <label for="regular1" class="control-label">Title of the movie</label>
+        @Html.TextBoxFor(u => u.Title, new { @class = "form-control", Name = "title" })
+    </div>
+
+
+    <div>
+        <button type="submit" class="btn btn-primary">Delete Movie</button>
+    </div>
+}
+
+

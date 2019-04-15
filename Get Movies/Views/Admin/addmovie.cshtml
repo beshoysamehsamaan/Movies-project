@@ -10,31 +10,33 @@
 <div>
     <!-- Nav tabs -->
     <ul id="myTabs" class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Add Movie</a></li>
-        <li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">Update Movie</a></li>
-        <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Delete Movie</a></li>
-        <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">List Movie</a></li>
-        <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Review Movie Requests</a></li>
+        <li role="presentation" class="active"><a href="#add" aria-controls="add" role="tab" data-toggle="tab">Add Movie</a></li>
+        <li role="presentation"><a href="#delete" aria-controls="delete" role="tab" data-toggle="tab">Delete Movie</a></li>
+        <li role="presentation"><a href="#update" aria-controls="update" role="tab" data-toggle="tab">Update Movie</a></li>
+        <li role="presentation"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">List Movie</a></li>
+        <li role="presentation"><a href="#review" aria-controls="review" role="tab" data-toggle="tab">Review Movie Requests</a></li>
 
-        <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Ban User</a></li>
-        <li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Add Advertisement</a></li>
+        <li role="presentation"><a href="#ban" aria-controls="ban" role="tab" data-toggle="tab">Ban User</a></li>
+        <li role="presentation"><a href="#ads" aria-controls="ads" role="tab" data-toggle="tab">Add Advertisement</a></li>
     </ul>
     <div class="pmd-card">
         <div class="pmd-card-body">
             <!-- Tab panes -->
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="home">
+                <div role="tabpanel" class="tab-pane active" id="add">
 
                     <div>
                         @Html.Partial("../Shared/Partials/Forms/Movie/addmovie")
                     </div>
                 </div>
 
+                <div role="tabpanel" class="tab-pane" id="delete">
 
+                    <div>
+                        @Html.Partial("../Shared/Partials/Forms/Movie/deletemovie")
+                    </div>
 
-
-                <div role="tabpanel" class="tab-pane" id="about">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
-                <div role="tabpanel" class="tab-pane" id="work">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+                </div>
 
             </div>
         </div>
