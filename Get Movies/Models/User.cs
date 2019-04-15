@@ -85,14 +85,14 @@ namespace Get_Movies.Models
         {
             IQueryable<User> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || !String.IsNullOrWhiteSpace(this.Email) || !String.IsNullOrWhiteSpace(this.Username) || !String.IsNullOrWhiteSpace(this.Password) || !String.IsNullOrWhiteSpace(this.First_Name) || !String.IsNullOrWhiteSpace(this.Last_Name) || !String.IsNullOrWhiteSpace(this.Profile_Picture) || this.Verified.HasValue;
-            Boolean Id = newData.Id .HasValue && this.Id != newData.Id;
-            Boolean Email =  !String.IsNullOrWhiteSpace(newData.Email) && !this.Email.Equals(newData.Email);
-            Boolean Username = !String.IsNullOrWhiteSpace(newData.Username) && !this.Username.Equals(newData.Username);
-            Boolean Password = !String.IsNullOrWhiteSpace(newData.Password) && !this.Password.Equals(newData.Password);
-            Boolean First_Name = !String.IsNullOrWhiteSpace(newData.First_Name) && !this.First_Name.Equals(newData.First_Name);
-            Boolean Last_Name = !String.IsNullOrWhiteSpace(newData.Last_Name) && !this.Last_Name.Equals(newData.Last_Name);
-            Boolean Profile_Picture = !String.IsNullOrWhiteSpace(newData.Profile_Picture) && !this.Profile_Picture.Equals(newData.Profile_Picture);
-            Boolean Verified = newData.Verified.HasValue && this.Verified != newData.Verified;
+            Boolean Id = newData.Id .HasValue ;
+            Boolean Email =  !String.IsNullOrWhiteSpace(newData.Email) ;
+            Boolean Username = !String.IsNullOrWhiteSpace(newData.Username);
+            Boolean Password = !String.IsNullOrWhiteSpace(newData.Password) ;
+            Boolean First_Name = !String.IsNullOrWhiteSpace(newData.First_Name);
+            Boolean Last_Name = !String.IsNullOrWhiteSpace(newData.Last_Name) ;
+            Boolean Profile_Picture = !String.IsNullOrWhiteSpace(newData.Profile_Picture) ;
+            Boolean Verified = newData.Verified.HasValue ;
             if (Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)

@@ -199,6 +199,8 @@
     <Content Include="Views\Users\home.cshtml" />
     <Content Include="Views\Shared\Partials\Components\_Navbar.cshtml" />
     <Content Include="Views\Shared\Partials\Forms\_SearchMovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\_Editprofile.cshtml" />
+    <Content Include="Views\Users\Editprofile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

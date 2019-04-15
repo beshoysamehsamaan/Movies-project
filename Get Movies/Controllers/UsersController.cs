@@ -97,5 +97,27 @@ namespace ASP.NET.Controllers
         {
             return View();
         }
+        public ActionResult Editprofile()
+        {
+            User u = new User() { Id = 2 }.Search(true, true).FirstOrDefault();
+            ViewBag.usernameOrEmailExists = 2;
+            return View(u);
+        }
+        [HttpPost]
+        public ActionResult Editprofile(User u)
+        {
+            
+            try
+            {
+                new User() { Id = 2 }.Update(u, true, true);
+                ViewBag.usernameOrEmailExists = 0;
+            }
+            catch(Exception ex)
+            {
+                ViewBag.usernameOrEmailExists = 1;
+            }
+
+            return View();
+        }
     }
 }
