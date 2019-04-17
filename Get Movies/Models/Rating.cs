@@ -19,17 +19,17 @@ namespace Get_Movies.Models
 
         [ForeignKey("User")]
         public int? User_Id { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
         [ForeignKey("Movie")]
         public int? Movie_Id { get; set; }
-        public Movie Movie { get; set; }
+        public virtual Movie Movie { get; set; }
 
         public int? Rating_ { get; set; }
         //#########################//
         public void Add() { context.Ratings.Add(this); context.SaveChanges(); }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Ratings.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
-        public IQueryable<Rating> Search(Boolean allRequired, Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching); }
+        public IQueryable<Rating> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<Rating>().AsQueryable(); }
         private IQueryable<Rating> SearchAnd(Boolean exactStringMatching)
         {
             DbSet<Rating> entity = context.Ratings;
@@ -55,10 +55,10 @@ namespace Get_Movies.Models
         {
             IQueryable<Rating> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || this.User_Id.HasValue || this.Movie_Id.HasValue || this.Rating_.HasValue;
-            Boolean Id = newData.Id.HasValue && this.Id != newData.Id;
-            Boolean User_Id = newData.User_Id.HasValue && this.User_Id != newData.User_Id;
-            Boolean Movie_Id = newData.Movie_Id.HasValue && this.Movie_Id != newData.Movie_Id;
-            Boolean Rating_ = newData.Rating_.HasValue && this.Rating_ != newData.Rating_;
+            Boolean Id = newData.Id.HasValue;
+            Boolean User_Id = newData.User_Id.HasValue;
+            Boolean Movie_Id = newData.Movie_Id.HasValue;
+            Boolean Rating_ = newData.Rating_.HasValue;
             if(Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)

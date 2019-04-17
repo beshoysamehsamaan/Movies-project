@@ -7,7 +7,7 @@
 </head>
 <body style="background-image: url('../../../Assets/images/shared/body-backgroud.jpg');background-repeat: no-repeat;background-size: cover" ;>
     @Html.Partial("Partials/Components/_Navbar")
-    @Html.Partial("Partials/Forms/_SearchMovie")
+    @Html.Partial("Partials/Forms/Movies/_SearchMovie",new Get_Movies.Models.Movie())
     @RenderBody()
 </body>
 </html>

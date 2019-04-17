@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 using Get_Movies.Data;
 using Get_Movies.Models;
 
@@ -14,15 +15,6 @@ namespace ASP.NET.Controllers
     public class UsersController : Controller
     {
         //----login----//
-        public ActionResult test()
-        {
-            MoviePlaylist m1pl1 = new MoviePlaylist() { Movie_Id = 1, Playlist_Id = 1 };
-            m1pl1.Add();
-
-            MoviePlaylist m2pl1 = new MoviePlaylist() { Movie_Id = 2, Playlist_Id = 1 };
-            m2pl1.Add();
-            return Content("done");
-        }
         public ActionResult login()
         {
             return View();
@@ -39,27 +31,29 @@ namespace ASP.NET.Controllers
                 switch(LoggingType)
                 {
                     case "Blacklist":
-                        Session["LoggingTypeDetails"] = new Blacklist() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id};
+                        Session["UserData"] = new Blacklist() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
                         break;
                     case "Admin":
-                        Session["LoggingTypeDetails"] = new Admin() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id };
+                        Session["UserData"] = new Admin() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
                         break;
                     case "Premium":
-                        Session["LoggingTypeDetails"] = new Premium() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id };
+                        Session["UserData"] = new Premium() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
                         break;
                     case "Casual":
-                        Session["LoggingTypeDetails"] = new Casual() { Id = LoggingTypeObject.Id, User_Id = LoggingTypeObject.User_Id };
+                        Session["UserData"] = new Casual() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
                         break;
                 }
-                Session["LoggingUserDetails"] = user;
-                Session["LoggingType"] = LoggingType;
-                return Content("Logged In Successfully");
+                Session["UserType"] = LoggingType;
+                if (LoggingType.Equals("Blacklist"))
+                {
+                    return View();
+                }
+                return RedirectToAction("Home","Users");
             }
             else
             {
                 ViewBag.LoginAttempt = false;
                 return View();
-
             }
         }
         //----signup----//
@@ -89,13 +83,13 @@ namespace ASP.NET.Controllers
         {
             ViewBag.LoginAttempt = null;
             Session.Clear();
-            return RedirectToAction("login", "Users");
+            return RedirectToAction("Home", "Users");
         }
         //---home----//
         [Route("")]
-        public ActionResult home()
+        public ActionResult Home()
         {
-            return View();
+            return RedirectToAction("Page", "Movies", new RouteValueDictionary { { "PageNum", 1 } });
         }
     }
 }

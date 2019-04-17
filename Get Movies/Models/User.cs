@@ -43,7 +43,6 @@ namespace Get_Movies.Models
         [MaxLength(20)]
         public string Last_Name { get; set; }
 
-        [MaxLength(100)]
         public string Profile_Picture { get; set; }
 
         [Required]
@@ -51,7 +50,7 @@ namespace Get_Movies.Models
         //#########################//
         public void Add(){ context.Users.Add(this); context.SaveChanges();}
         public void Remove(Boolean allRequired,Boolean exactStringMatching) {context.Users.RemoveRange(this.Search(allRequired, exactStringMatching));context.SaveChanges();}
-        public IQueryable<User> Search(Boolean allRequired,Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching);}
+        public IQueryable<User> Search(Boolean allRequired,Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<User>().AsQueryable();}
         private IQueryable<User> SearchAnd(Boolean exactStringMatching)
         {
             DbSet<User> entity = context.Users;
@@ -85,14 +84,14 @@ namespace Get_Movies.Models
         {
             IQueryable<User> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || !String.IsNullOrWhiteSpace(this.Email) || !String.IsNullOrWhiteSpace(this.Username) || !String.IsNullOrWhiteSpace(this.Password) || !String.IsNullOrWhiteSpace(this.First_Name) || !String.IsNullOrWhiteSpace(this.Last_Name) || !String.IsNullOrWhiteSpace(this.Profile_Picture) || this.Verified.HasValue;
-            Boolean Id = newData.Id .HasValue && this.Id != newData.Id;
-            Boolean Email =  !String.IsNullOrWhiteSpace(newData.Email) && !this.Email.Equals(newData.Email);
-            Boolean Username = !String.IsNullOrWhiteSpace(newData.Username) && !this.Username.Equals(newData.Username);
-            Boolean Password = !String.IsNullOrWhiteSpace(newData.Password) && !this.Password.Equals(newData.Password);
-            Boolean First_Name = !String.IsNullOrWhiteSpace(newData.First_Name) && !this.First_Name.Equals(newData.First_Name);
-            Boolean Last_Name = !String.IsNullOrWhiteSpace(newData.Last_Name) && !this.Last_Name.Equals(newData.Last_Name);
-            Boolean Profile_Picture = !String.IsNullOrWhiteSpace(newData.Profile_Picture) && !this.Profile_Picture.Equals(newData.Profile_Picture);
-            Boolean Verified = newData.Verified.HasValue && this.Verified != newData.Verified;
+            Boolean Id = newData.Id.HasValue;
+            Boolean Email = !String.IsNullOrWhiteSpace(newData.Email);
+            Boolean Username = !String.IsNullOrWhiteSpace(newData.Username);
+            Boolean Password = !String.IsNullOrWhiteSpace(newData.Password);
+            Boolean First_Name = !String.IsNullOrWhiteSpace(newData.First_Name);
+            Boolean Last_Name = !String.IsNullOrWhiteSpace(newData.Last_Name);
+            Boolean Profile_Picture = !String.IsNullOrWhiteSpace(newData.Profile_Picture);
+            Boolean Verified = newData.Verified.HasValue;
             if (Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)

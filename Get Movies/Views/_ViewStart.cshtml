@@ -7,6 +7,7 @@
 @Styles.Render("~/Bundles/css/propeller/style/typography")
 @Styles.Render("~/Bundles/css/propeller/style/shadow")
 @Styles.Render("~/Bundles/css/propeller/style/icons")
+@Styles.Render("~/Bundles/css/propeller/components/alert")
 @Styles.Render("~/Bundles/css/propeller/components/radio")
 @Styles.Render("~/Bundles/css/propeller/components/card")
 @Styles.Render("~/Bundles/css/propeller/components/custom-scrollbar")
@@ -20,6 +21,7 @@
 @Scripts.Render("~/Bundles/js/bootstrap/min")
 @Scripts.Render("~/Bundles/js/propeller/shared/global")
 @Scripts.Render("~/Bundles/js/propeller/shared/ripple-effect")
+@Styles.Render("~/Bundles/css/propeller/components/alert")
 @Scripts.Render("~/Bundles/js/propeller/components/radio")
 @Scripts.Render("~/Bundles/js/propeller/components/card")
 @Scripts.Render("~/Bundles/js/propeller/components/custom-scrollbar")
@@ -30,10 +32,10 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".select-tags").select2({
-            tags: false,
-            theme: "bootstrap",
-        })
+        $(".select-with-search").select2({
+            theme: "bootstrap"
+        });
+
     });
 </script>
 <script>

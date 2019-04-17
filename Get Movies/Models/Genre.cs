@@ -20,10 +20,11 @@ namespace Get_Movies.Models
 
         [Required]
         public string Genre_ { get; set; }
+        public virtual List<Movie> Movies { get; set; }
         //#########################//
         public void Add() { context.Genres.Add(this); context.SaveChanges(); }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Genres.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
-        public IQueryable<Genre> Search(Boolean allRequired, Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching); }
+        public IQueryable<Genre> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<Genre>().AsQueryable(); }
         private IQueryable<Genre> SearchAnd(Boolean exactStringMatching)
         {
             DbSet<Genre> entity = context.Genres;
@@ -45,8 +46,8 @@ namespace Get_Movies.Models
         {
             IQueryable<Genre> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || !String.IsNullOrWhiteSpace(this.Genre_);
-            Boolean Id = newData.Id.HasValue && this.Id != newData.Id;
-            Boolean Reason = !String.IsNullOrWhiteSpace(newData.Genre_) && !this.Genre_.Equals(newData.Genre_);
+            Boolean Id = newData.Id.HasValue;
+            Boolean Reason = !String.IsNullOrWhiteSpace(newData.Genre_);
             if (Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)

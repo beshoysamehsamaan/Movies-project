@@ -412,5 +412,6 @@ public class BundleConfig
         AddBundle(bundles, BundleType.SCRIPT, wheelNavJsDirectoryPath, wheelNavJsBundleName);
         //**End   Wheelnav**//
         /*End   Js Bundles*/
+        BundleTable.EnableOptimizations = true;
     }
 }

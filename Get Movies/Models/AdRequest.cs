@@ -38,7 +38,7 @@ namespace Get_Movies.Models
         //#########################//
         public void Add() { context.AdRequests.Add(this); context.SaveChanges(); }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.AdRequests.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
-        public IQueryable<AdRequest> Search(Boolean allRequired, Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching); }
+        public IQueryable<AdRequest> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<AdRequest>().AsQueryable(); }
         private IQueryable<AdRequest> SearchAnd(Boolean exactStringMatching)
         {
             DbSet<AdRequest> entity = context.AdRequests;
@@ -47,6 +47,7 @@ namespace Get_Movies.Models
             if (!String.IsNullOrWhiteSpace(this.Email)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(ar => ar.Email.Equals(this.Email))) : ((resultSet ?? entity).Where(ar => ar.Email.Contains(this.Email))); }
             if (!String.IsNullOrWhiteSpace(this.Note)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(ar => ar.Note.Equals(this.Note))) : ((resultSet ?? entity).Where(ar => ar.Note.Contains(this.Note))); }
             if (!String.IsNullOrWhiteSpace(this.Image)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(ar => ar.Image.Equals(this.Image))) : ((resultSet ?? entity).Where(ar => ar.Image.Contains(this.Image))); }
+            if (!String.IsNullOrWhiteSpace(this.Start_Date)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(ar => ar.Start_Date.Equals(this.Start_Date))) : ((resultSet ?? entity).Where(ar => ar.Start_Date.Contains(this.Start_Date))); }
             if (this.Approved.HasValue) { resultSet = ((resultSet ?? entity).Where(ar => ar.Approved == (this.Approved))); }
             return resultSet;
         }
@@ -58,6 +59,7 @@ namespace Get_Movies.Models
             if (!String.IsNullOrWhiteSpace(this.Email)) { query += "Email"; query += exactStringMatching ? " = " : " LIKE "; query += "@Email OR "; sqlParameters.Add(new SqlParameter("@Email", exactStringMatching ? this.Email : "%" + this.Email + "%")); }
             if (!String.IsNullOrWhiteSpace(this.Note)) { query += "Note"; query += exactStringMatching ? " = " : " LIKE "; query += "@Note OR "; sqlParameters.Add(new SqlParameter("@Note", exactStringMatching ? this.Note : "%" + this.Note + "%")); }
             if (!String.IsNullOrWhiteSpace(this.Image)) { query += "Image"; query += exactStringMatching ? " = " : " LIKE "; query += "@Image OR "; sqlParameters.Add(new SqlParameter("@Image", exactStringMatching ? this.Image : "%" + this.Image + "%")); }
+            if (!String.IsNullOrWhiteSpace(this.Start_Date)) { query += "Start_Date"; query += exactStringMatching ? " = " : " LIKE "; query += "@Start_Date OR "; sqlParameters.Add(new SqlParameter("@Start_Date", exactStringMatching ? this.Start_Date : "%" + this.Start_Date + "%")); }
             if (this.Approved.HasValue) { query += "Approved = @Approved OR "; sqlParameters.Add(new SqlParameter("@Approved", this.Approved)); }
             query = query.Remove(query.Length - 3);
             return sqlParameters.Count() == 0 ? null : context.AdRequests.SqlQuery(query, sqlParameters.ToArray()).AsQueryable<AdRequest>();
@@ -66,11 +68,12 @@ namespace Get_Movies.Models
         {
             IQueryable<AdRequest> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || !String.IsNullOrWhiteSpace(this.Email) || !String.IsNullOrWhiteSpace(this.Note) || !String.IsNullOrWhiteSpace(this.Image) || this.Approved.HasValue;
-            Boolean Id = newData.Id.HasValue && this.Id != newData.Id;
-            Boolean Email = !String.IsNullOrWhiteSpace(newData.Email) && !this.Email.Equals(newData.Email);
-            Boolean Note = !String.IsNullOrWhiteSpace(newData.Note) && !this.Note.Equals(newData.Note);
-            Boolean Image = !String.IsNullOrWhiteSpace(newData.Image) && !this.Image.Equals(newData.Image);
-            Boolean Approved = newData.Approved.HasValue && this.Approved != newData.Approved;
+            Boolean Id = newData.Id.HasValue;
+            Boolean Email = !String.IsNullOrWhiteSpace(newData.Email);
+            Boolean Note = !String.IsNullOrWhiteSpace(newData.Note);
+            Boolean Image = !String.IsNullOrWhiteSpace(newData.Image);
+            Boolean Start_Date = !String.IsNullOrWhiteSpace(newData.Start_Date);
+            Boolean Approved = newData.Approved.HasValue;
             if(Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)
@@ -79,6 +82,7 @@ namespace Get_Movies.Models
                     if (Email) { toUpdateRecord.Email = newData.Email; }
                     if (Note) { toUpdateRecord.Note = newData.Note; }
                     if (Image) { toUpdateRecord.Image = newData.Image; }
+                    if (Start_Date) { toUpdateRecord.Start_Date = newData.Start_Date; }
                     if (Approved) { toUpdateRecord.Approved = newData.Approved; }
                 }
                 context.SaveChanges();

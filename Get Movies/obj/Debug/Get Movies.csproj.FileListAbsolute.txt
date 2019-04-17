@@ -73,10 +73,10 @@ D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.xml
 D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Helpers.xml
 D:\LPBUs\VS Project\Movies-project\Get Movies\bin\System.Web.Mvc.xml
 D:\LPBUs\VS Project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migration.resources
 D:\LPBUs\VS Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
