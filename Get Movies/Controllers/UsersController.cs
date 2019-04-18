@@ -21,6 +21,7 @@ namespace ASP.NET.Controllers
             return Content("");
         }
         //----login----//
+        [Route("login")]
         public ActionResult login()
         {
             return View();
@@ -63,6 +64,7 @@ namespace ASP.NET.Controllers
             }
         }
         //----signup----//
+        [Route("signup")]
         public ActionResult signup()
         {
             return View();
