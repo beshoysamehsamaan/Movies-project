@@ -14,9 +14,6 @@ namespace Get_Movies.Controllers
         [Route("Page/{PageNum}")]
         public ActionResult Page(int PageNum)
         {
-            Get_Movies.Data.GetMoviesContext context = Get_Movies.Data.GetMoviesContext.GetInstance();
-            context.Users.RemoveRange(null);
-
             int moviesPerPage = 25;
             MoviesPagination pagination = new Movie().ListLatest((PageNum - 1) * moviesPerPage, moviesPerPage);
             pagination.PageNum = PageNum;
@@ -36,7 +33,15 @@ namespace Get_Movies.Controllers
             return View(pagination);
         }
         /*End Front Page*/
-
+        /*Start View Page*/
+        [Route("{imdbId}/View")]
+        public ActionResult ViewMovie(string imdbId)
+        {
+            Movie toWatch = new Movie() { Imdb_Id = imdbId }.Search(true, true).FirstOrDefault();
+            if (Session["UserData"] != null) { User watcher = Session["UserData"] as User; toWatch.View(watcher.Id.Value); }
+            return View(toWatch);
+        }
+        /*End   View Page*/
     }
 }
             

@@ -107,10 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\GetMoviesDatabase_V18.mdf" />
-    <Content Include="App_Data\GetMoviesDatabase_V18_log.ldf">
-      <DependentUpon>GetMoviesDatabase_V18.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\css\bootstrap\full\bootstrap.css" />
     <Content Include="Assets\css\bootstrap\min\bootstrap.min.css" />
     <Content Include="Assets\css\colorlib\main.css" />
@@ -225,9 +221,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904171359062_Migration.cs" />
-    <Compile Include="Migrations\201904171359062_Migration.Designer.cs">
-      <DependentUpon>201904171359062_Migration.cs</DependentUpon>
+    <Compile Include="Migrations\201904181235252_Migration.cs" />
+    <Compile Include="Migrations\201904181235252_Migration.Designer.cs">
+      <DependentUpon>201904181235252_Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -258,6 +254,7 @@
     <Content Include="Views\Shared\Partials\Forms\Users\_Login.cshtml" />
     <Content Include="Views\Shared\Partials\Forms\Users\_Signup.cshtml" />
     <Content Include="Views\Movies\Page.cshtml" />
+    <Content Include="Views\Movies\ViewMovie.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -266,13 +263,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="fonts\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904171359062_Migration.resx">
-      <DependentUpon>201904171359062_Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904181235252_Migration.resx">
+      <DependentUpon>201904181235252_Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

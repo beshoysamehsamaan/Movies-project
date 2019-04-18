@@ -37,6 +37,8 @@ namespace Get_Movies.Models
         [Required]
         public string Poster { get; set; }
 
+        public string Youtube_Trailer { get; set; }
+
         [Required]
         public int? Release_Year { get; set; }
 

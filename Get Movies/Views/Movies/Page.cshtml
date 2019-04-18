@@ -46,7 +46,7 @@
             <!-- Card actions -->
             <div class="pmd-card-actions" style="padding: 10px">
                 <div style="float: left">
-                    <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch"><i class="material-icons md-dark pmd-lg">play_circle_outline</i></button>
+                    <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch" onmouseup="window.location.href ='@Url.Action("ViewMovie", "Movies", new { imdbId = movie.Imdb_Id }, null)';"><i class="material-icons md-dark pmd-lg">play_circle_outline</i></button>
                 </div>
                 <div style="float: right;">
                     <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="bottom" title="Add To Playlist"><i class="material-icons md-dark pmd-lg">playlist_add</i></button>
