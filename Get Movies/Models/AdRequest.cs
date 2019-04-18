@@ -67,7 +67,7 @@ namespace Get_Movies.Models
         public void Update(AdRequest newData, Boolean allRequired, Boolean exactStringMatching)
         {
             IQueryable<AdRequest> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
-            Boolean Updatable = this.Id.HasValue || !String.IsNullOrWhiteSpace(this.Email) || !String.IsNullOrWhiteSpace(this.Note) || !String.IsNullOrWhiteSpace(this.Image) || this.Approved.HasValue;
+            Boolean Updatable = this.Id.HasValue || !String.IsNullOrWhiteSpace(this.Email) || !String.IsNullOrWhiteSpace(this.Note) || !String.IsNullOrWhiteSpace(this.Image) || !String.IsNullOrWhiteSpace(this.Start_Date) || this.Approved.HasValue;
             Boolean Id = newData.Id.HasValue;
             Boolean Email = !String.IsNullOrWhiteSpace(newData.Email);
             Boolean Note = !String.IsNullOrWhiteSpace(newData.Note);

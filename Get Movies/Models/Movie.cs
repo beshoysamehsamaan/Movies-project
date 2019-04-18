@@ -82,6 +82,7 @@ namespace Get_Movies.Models
             if (!String.IsNullOrWhiteSpace(this.Title)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(m => m.Title.Equals(this.Title))) : ((resultSet ?? entity).Where(m => m.Title.Contains(this.Title))); }
             if (!String.IsNullOrWhiteSpace(this.Director)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(m => m.Director.Equals(this.Director))) : ((resultSet ?? entity).Where(m => m.Director.Contains(this.Director))); }
             if (!String.IsNullOrWhiteSpace(this.Poster)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(m => m.Poster.Equals(this.Poster))) : ((resultSet ?? entity).Where(m => m.Poster.Contains(this.Poster))); }
+            if (!String.IsNullOrWhiteSpace(this.Youtube_Trailer)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(m => m.Youtube_Trailer.Equals(this.Youtube_Trailer))) : ((resultSet ?? entity).Where(m => m.Youtube_Trailer.Contains(this.Youtube_Trailer))); }
             if (this.Release_Year.HasValue) { resultSet = entity.Where(m => m.Release_Year == this.Release_Year); }
             if (!String.IsNullOrWhiteSpace(this.Description)) { resultSet = exactStringMatching ? ((resultSet ?? entity).Where(m => m.Description.Equals(this.Description))) : ((resultSet ?? entity).Where(m => m.Description.Contains(this.Description))); }
             if (this.Duration.HasValue) { resultSet = entity.Where(m => m.Duration == this.Duration); }
@@ -98,6 +99,7 @@ namespace Get_Movies.Models
             if (!String.IsNullOrWhiteSpace(this.Director)) { query += "Director"; query += exactStringMatching ? " = " : " LIKE "; query += "@Director OR "; sqlParameters.Add(new SqlParameter("@Director", exactStringMatching ? this.Director : "%" + this.Director + "%")); }
             if (!String.IsNullOrWhiteSpace(this.Title)) { query += "Title"; query += exactStringMatching ? " = " : " LIKE "; query += "@Title OR "; sqlParameters.Add(new SqlParameter("@Title", exactStringMatching ? this.Title : "%" + this.Title + "%")); }
             if (!String.IsNullOrWhiteSpace(this.Poster)) { query += "Poster"; query += exactStringMatching ? " = " : " LIKE "; query += "@Poster OR "; sqlParameters.Add(new SqlParameter("@Poster", exactStringMatching ? this.Poster : "%" + this.Poster + "%")); }
+            if (!String.IsNullOrWhiteSpace(this.Youtube_Trailer)) { query += "Youtube_Trailer"; query += exactStringMatching ? " = " : " LIKE "; query += "@Youtube_Trailer OR "; sqlParameters.Add(new SqlParameter("@Youtube_Trailer", exactStringMatching ? this.Youtube_Trailer : "%" + this.Youtube_Trailer + "%")); }
             if (this.Release_Year.HasValue) { query += "Release_Year = @Release_Year OR "; sqlParameters.Add(new SqlParameter("@Release_Year", this.Release_Year)); }
             if (!String.IsNullOrWhiteSpace(this.Description)) { query += "Description"; query += exactStringMatching ? " = " : " LIKE "; query += "@Description OR "; sqlParameters.Add(new SqlParameter("@Description", exactStringMatching ? this.Description : "%" + this.Description + "%")); }
             if (this.Duration.HasValue) { query += "Duration = @Duration OR "; sqlParameters.Add(new SqlParameter("@Duration", this.Duration)); }
@@ -108,13 +110,14 @@ namespace Get_Movies.Models
         public void Update(Movie newData, Boolean allRequired, Boolean exactStringMatching)
         {
             IQueryable<Movie> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
-            Boolean Updatable = this.Id.HasValue || this.Genre_Id.HasValue || !String.IsNullOrWhiteSpace(this.Director) || !String.IsNullOrWhiteSpace(this.Poster) || this.Release_Year.HasValue || !String.IsNullOrWhiteSpace(this.Description) || this.Duration.HasValue || this.Views_Count.HasValue;
+            Boolean Updatable = this.Id.HasValue || !String.IsNullOrWhiteSpace(this.Imdb_Id) || this.Genre_Id.HasValue || !String.IsNullOrWhiteSpace(this.Title) || !String.IsNullOrWhiteSpace(this.Director) || !String.IsNullOrWhiteSpace(this.Poster) || !String.IsNullOrWhiteSpace(this.Youtube_Trailer) || this.Release_Year.HasValue || !String.IsNullOrWhiteSpace(this.Description) || this.Duration.HasValue || this.Views_Count.HasValue;
             Boolean Id = newData.Id.HasValue;
             Boolean Imdb_Id = !String.IsNullOrWhiteSpace(newData.Imdb_Id);
             Boolean Genre_Id = newData.Genre_Id.HasValue;
             Boolean Title = !String.IsNullOrWhiteSpace(newData.Title);
             Boolean Director = !String.IsNullOrWhiteSpace(newData.Director);
             Boolean Poster = !String.IsNullOrWhiteSpace(newData.Poster);
+            Boolean Youtube_Trailer = !String.IsNullOrWhiteSpace(newData.Youtube_Trailer);
             Boolean Release_Year = newData.Release_Year.HasValue;
             Boolean Description = !String.IsNullOrWhiteSpace(newData.Description);
             Boolean Duration = newData.Duration.HasValue;
@@ -129,6 +132,7 @@ namespace Get_Movies.Models
                     if (Title) { toUpdateRecord.Director = newData.Director; }
                     if (Director) { toUpdateRecord.Director = newData.Director; }
                     if (Poster) { toUpdateRecord.Poster = newData.Poster; }
+                    if (Youtube_Trailer) { toUpdateRecord.Poster = newData.Poster; }
                     if (Release_Year) { toUpdateRecord.Release_Year= newData.Release_Year; }
                     if (Description) { toUpdateRecord.Description = newData.Description; }
                     if (Duration) { toUpdateRecord.Duration = newData.Duration; }
