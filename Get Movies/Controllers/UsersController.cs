@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -14,6 +15,11 @@ namespace ASP.NET.Controllers
 {
     public class UsersController : Controller
     {
+        [Route("test")]
+        public ActionResult test()
+        {
+            return Content("");
+        }
         //----login----//
         public ActionResult login()
         {

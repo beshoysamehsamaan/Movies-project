@@ -21,11 +21,11 @@
                     }
                     else
                     {
-                        <iframe id="yt_vid" height="800" src="https://www.youtube.com/embed/@Model.Youtube_Trailer" style="display:block;margin:0px auto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe id="yt_vid" src="https://www.youtube.com/embed/@Model.Youtube_Trailer" style="display:block;margin:0px auto;height:800px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     }
                 </div>
                 <div role="tabpanel" class="tab-pane" id="movieTab">
-                    <video src="sources/movies/@Model.Imdb_Id/source.mp4">
+                    <video id="full_vid" src="../Sources/Movies/@Model.Imdb_Id/source.mp4" style="display:block;margin:0px auto;height:800px" controls>
                         HTML5 Video is not supported in your browser
                     </video>
                 </div>
@@ -33,4 +33,4 @@
         </div>
     </div>
 </div>
-<script>document.getElementById('yt_vid').width = window.screen.width;</script>
+<script>document.getElementById('yt_vid').width = window.screen.width;document.getElementById('full_vid').width = window.screen.width;</script>

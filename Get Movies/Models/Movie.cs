@@ -8,6 +8,7 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using Get_Movies.ViewModels;
 using System.Diagnostics;
+using System.IO;
 
 namespace Get_Movies.Models
 {
@@ -58,7 +59,17 @@ namespace Get_Movies.Models
 
         public virtual List<Playlist> Playlists { get; set; }
         //#########################//
-        public void Add() { context.Movies.Add(this); context.SaveChanges(); }
+        public void Add()
+        {
+            string toCopy = AppDomain.CurrentDomain.BaseDirectory + "../Sources/source.mp4";
+            string target = AppDomain.CurrentDomain.BaseDirectory + "../Sources/Movies/" + this.Imdb_Id;
+            Debug.WriteLine(target);
+            if (!Directory.Exists(target)) {
+                Directory.CreateDirectory(target);
+                File.Copy(toCopy, target + "./source.mp4");
+            }
+            context.Movies.Add(this); context.SaveChanges();
+        }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Movies.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
         public IQueryable<Movie> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<Movie>().AsQueryable(); }
         private IQueryable<Movie> SearchAnd(Boolean exactStringMatching)
