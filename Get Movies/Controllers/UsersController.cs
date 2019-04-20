@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -27,6 +28,7 @@ namespace ASP.NET.Controllers
             return View();
         }
         [HttpPost]
+        [Route("login")]
         public ActionResult login(User u)
         {
             User user = u.authenticate();
@@ -34,24 +36,26 @@ namespace ASP.NET.Controllers
             {
                 ViewBag.LoginAttempt = true;
                 var LoggingTypeObject = new User() { Id = user.Id }.GetUserType();
+                Session["UserData"] = new User() { Id = user.Id }.Search(true, true).FirstOrDefault<User>();
                 string LoggingType = LoggingTypeObject.GetType().Name;
-                switch(LoggingType)
+                Session["UserType"] = ((String)LoggingType).Split('_')[0];
+                Debug.WriteLine("Xxxxxxxxxxxxxxxxx" + ((String)Session["UserType"]));
+                switch ((String)Session["UserType"])
                 {
                     case "Blacklist":
-                        Session["UserData"] = new Blacklist() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Blacklist() {User_Id = user.Id}.Search(true,true).FirstOrDefault();
                         break;
                     case "Admin":
-                        Session["UserData"] = new Admin() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Admin() {User_Id = user.Id }.Search(true,true).FirstOrDefault();
                         break;
                     case "Premium":
-                        Session["UserData"] = new Premium() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Premium() {User_Id = user.Id }.Search(true,true).FirstOrDefault();
                         break;
                     case "Casual":
-                        Session["UserData"] = new Casual() {User_Id = LoggingTypeObject.User_Id}.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Casual() {User_Id = user.Id }.Search(true,true).FirstOrDefault();
                         break;
                 }
-                Session["UserType"] = LoggingType;
-                if (LoggingType.Equals("Blacklist"))
+                if (((String)Session["UserType"]).Equals("Blacklist"))
                 {
                     return View();
                 }
@@ -70,6 +74,7 @@ namespace ASP.NET.Controllers
             return View();
         }
         [HttpPost]
+        [Route("signup")]
         public ActionResult signup(User u)
         {
             Boolean Validation;
@@ -87,6 +92,7 @@ namespace ASP.NET.Controllers
             return View();
         }
         //---logout----//
+        [Route("logout")]
         public ActionResult Logout()
         {
             ViewBag.LoginAttempt = null;

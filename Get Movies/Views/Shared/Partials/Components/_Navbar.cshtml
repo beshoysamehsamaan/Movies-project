@@ -1,5 +1,6 @@
 ﻿@using System.Web.Optimization
 @using Get_Movies.Models;
+@using System.Diagnostics;
 
 <nav style="background-image: url(../../../Assets/images/navbar/nav-background.png);width:100%;position: fixed;z-index: 1000">
 
@@ -26,6 +27,7 @@
         <div data-wheelnav-navitemicon='search' onmouseup='document.getElementById("SearchMovieFormToggle").click();'></div>
         @if (!String.IsNullOrEmpty((String)Session["UserType"]) && !((String)Session["UserType"]).Equals("Blacklist"))
         {
+            
             var loggingUser = Session["UserData"] as User;
             <div data-wheelnav-navitemimg='@loggingUser.Profile_Picture' onmouseup='document.getElementById("wheelnavProfileLink").click();'></div>
             if (Session["UserType"].Equals("Premium") || Session["UserType"].Equals("Admin"))
