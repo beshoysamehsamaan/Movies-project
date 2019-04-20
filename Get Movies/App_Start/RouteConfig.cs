@@ -12,12 +12,7 @@ namespace Get_Movies
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Users", action = "login", id = UrlParameter.Optional }
-            );
+            routes.MapMvcAttributeRoutes();  
         }
     }
 }

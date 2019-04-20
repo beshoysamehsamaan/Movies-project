@@ -1,0 +1,36 @@
+﻿@model Get_Movies.Models.Movie
+@{
+    ViewBag.Title = "ViewMovie";
+}
+<div style="width:100%;display:table;">
+    <!-- Nav tabs -->
+    <ul id="ViewMovieTabPane" class="nav nav-tabs" role="tablist" style="background-color:#000">
+        <li role="presentation" class="active"><a href="#ytTab" aria-controls="ytTab" role="tab" data-toggle="tab">Youtube Video</a></li>
+        <li role="presentation"><a href="#movieTab" aria-controls="movieTab" role="tab" data-toggle="tab">Actual Movie</a></li>
+    </ul>
+    <div class="pmd-card" style="margin-bottom:0px;height:100%">
+        <div class="pmd-card-body">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="ytTab">
+                    @if (String.IsNullOrEmpty(@Model.Youtube_Trailer))
+                    {
+                    <div class="alert alert-danger" role="alert" style="text-align:center">
+                        Oh No !! .. We are sorry to inform you that we dont have an official youtube reference for this movie. Sorry for the inconvenience
+                    </div>
+                    }
+                    else
+                    {
+                        <iframe id="yt_vid" src="https://www.youtube.com/embed/@Model.Youtube_Trailer" style="display:block;margin:0px auto;height:800px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    }
+                </div>
+                <div role="tabpanel" class="tab-pane" id="movieTab">
+                    <video id="full_vid" src="../Sources/Movies/@Model.Imdb_Id/source.mp4" style="display:block;margin:0px auto;height:800px" controls>
+                        HTML5 Video is not supported in your browser
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>document.getElementById('yt_vid').width = window.screen.width;document.getElementById('full_vid').width = window.screen.width;</script>

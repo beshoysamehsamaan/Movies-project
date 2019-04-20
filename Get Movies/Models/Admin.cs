@@ -17,14 +17,15 @@ namespace Get_Movies.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("User")]
         [Index(IsUnique = true)]
         public int? User_Id { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
         //#########################//
         public void Add() { context.Admins.Add(this); context.SaveChanges(); }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Admins.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
-        public IQueryable<Admin> Search(Boolean allRequired, Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching); }
+        public IQueryable<Admin> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<Admin>().AsQueryable(); }
         private IQueryable<Admin> SearchAnd(Boolean exactStringMatching)
         {
             DbSet<Admin> entity = context.Admins;
@@ -46,8 +47,8 @@ namespace Get_Movies.Models
         {
             IQueryable<Admin> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || this.User_Id.HasValue;
-            Boolean Id = newData.Id.HasValue && this.Id != newData.Id;
-            Boolean User_Id = newData.User_Id.HasValue && this.User_Id != newData.User_Id;
+            Boolean Id = newData.Id.HasValue;
+            Boolean User_Id = newData.User_Id.HasValue;
             if (Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)

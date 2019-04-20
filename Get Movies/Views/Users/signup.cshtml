@@ -1,18 +1,19 @@
-﻿@model Get_Movies.Models.User
+﻿@using System.Web.Optimization
+@model Get_Movies.Models.User
 @{
     ViewBag.Title = "signup";
 }
-
+@Styles.Render("~/Bundles/css/colorlib");
 <div class="limiter">
-    <div class="container-login100">
+    <div style="margin:0px;padding:0px;float:right">
         <div class="login100-more" style="background-image: url('../../Content/assets/images/Movies.jpg');"></div>
 
         <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-            @Html.Partial("../Shared/Partials/Forms/_Signup")
+            @Html.Partial("../Shared/Partials/Forms/Users/_Signup")
         </div>
     </div>
 </div>
-
+@Styles.Render("~/Bundles/js/colorlib");
 
 
 

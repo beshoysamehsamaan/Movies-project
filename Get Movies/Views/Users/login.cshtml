@@ -1,14 +1,28 @@
-﻿@model Get_Movies.Models.User
+﻿@using System.Web.Optimization
+@using Get_Movies.Models;
+@model Get_Movies.Models.User
 @{
     ViewBag.Title = "Login";
 }
-
+@Styles.Render("~/Bundles/css/colorlib");
 <div class="limiter">
-    <div class="container-login100">
+    <div style="margin:0px;padding:0px;float:right">
         <div class="login100-more" style="background-image: url('../../Content/assets/images/Movies.jpg');"></div>
-        
+
         <div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
-            @Html.Partial("../Shared/Partials/Forms/_Login")
+            @{
+                if (!String.IsNullOrEmpty((String)Session["UserType"]) && ((String)Session["UserType"]).Equals("Blacklist"))
+                {
+                    Blacklist bannedUser = Session["UserTypeData"] as Blacklist;
+                    <div role="alert" class="alert alert-danger alert-dismissible">
+                        <button aria-label="Close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true">×</span></button>
+
+                        You have been banned . The Reason is " @bannedUser.Reason " and it ends on @bannedUser.End_Date
+                    </div>
+                    Session.Clear();
+                }
+            }
+            @Html.Partial("../Shared/Partials/Forms/Users/_Login")
             <div class="flex-m w-full p-b-33">
                 <div class="contact100-form-checkbox">
                     <div tabindex="-1" class="modal fade" id="simple-dialog" style="display: none;" aria-hidden="true">
@@ -28,3 +42,4 @@
         </div>
     </div>
 </div>
+@Styles.Render("~/Bundles/js/colorlib");

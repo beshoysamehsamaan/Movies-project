@@ -17,20 +17,21 @@ namespace Get_Movies.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("Premium")]
         public int? Premium_Id { get; set; }
-        public Premium Premium { get; set; }
+        public virtual Premium Premium { get; set; }
 
         [Required]
         [MinLength(3)]
         [MaxLength(20)]
         public string Title { get; set; }
 
-        public List<Movie> Movies { get; set; }
+        public virtual List<Movie> Movies { get; set; }
         //#########################//
         public void Add() { context.Playlists.Add(this); context.SaveChanges(); }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Playlists.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
-        public IQueryable<Playlist> Search(Boolean allRequired, Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching); }
+        public IQueryable<Playlist> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<Playlist>().AsQueryable(); }
         private IQueryable<Playlist> SearchAnd(Boolean exactStringMatching)
         {
             DbSet<Playlist> entity = context.Playlists;
@@ -54,9 +55,9 @@ namespace Get_Movies.Models
         {
             IQueryable<Playlist> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || this.Premium_Id.HasValue || !String.IsNullOrWhiteSpace(this.Title);
-            Boolean Id = newData.Id.HasValue && this.Id != newData.Id;
-            Boolean Premium_Id = newData.Premium_Id.HasValue && this.Premium_Id != newData.Premium_Id;
-            Boolean Title = !String.IsNullOrWhiteSpace(newData.Title) && !this.Title.Equals(newData.Title);
+            Boolean Id = newData.Id.HasValue;
+            Boolean Premium_Id = newData.Premium_Id.HasValue;
+            Boolean Title = !String.IsNullOrWhiteSpace(newData.Title);
             if (Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)

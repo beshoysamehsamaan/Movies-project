@@ -16,10 +16,11 @@ namespace Get_Movies.Models
         [Key]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("User")]
         [Index(IsUnique = true)]
         public int? User_Id { get; set; }
-        public User User { get; set; }
+        public virtual User User { get; set; }
 
         [MaxLength(50)]
         public string Reason { get; set; }
@@ -32,7 +33,7 @@ namespace Get_Movies.Models
         //#########################//
         public void Add() { context.Blacklist.Add(this); context.SaveChanges(); }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Blacklist.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
-        public IQueryable<Blacklist> Search(Boolean allRequired, Boolean exactStringMatching) { return allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching); }
+        public IQueryable<Blacklist> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<Blacklist>().AsQueryable(); }
         private IQueryable<Blacklist> SearchAnd(Boolean exactStringMatching)
         {
             DbSet<Blacklist> entity = context.Blacklist;
@@ -56,9 +57,9 @@ namespace Get_Movies.Models
         {
             IQueryable<Blacklist> toUpdateListQueryable = this.Search(allRequired, exactStringMatching);
             Boolean Updatable = this.Id.HasValue || this.User_Id.HasValue || !String.IsNullOrWhiteSpace(this.Reason);
-            Boolean Id = newData.Id.HasValue && this.Id != newData.Id;
-            Boolean User_Id = newData.User_Id.HasValue && this.User_Id != newData.User_Id;
-            Boolean Reason = !String.IsNullOrWhiteSpace(newData.Reason) && !this.Reason.Equals(newData.Reason);
+            Boolean Id = newData.Id.HasValue;
+            Boolean User_Id = newData.User_Id.HasValue;
+            Boolean Reason = !String.IsNullOrWhiteSpace(newData.Reason);
             if(Updatable)
             {
                 foreach (var toUpdateRecord in toUpdateListQueryable)

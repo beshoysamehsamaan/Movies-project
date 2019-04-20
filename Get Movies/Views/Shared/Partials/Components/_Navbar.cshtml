@@ -1,0 +1,53 @@
+﻿@using System.Web.Optimization
+@using Get_Movies.Models;
+@using System.Diagnostics;
+
+<nav style="background-image: url(../../../Assets/images/navbar/nav-background.png);width:100%;position: fixed;z-index: 1000">
+
+    <div style="width:52%;display:inline-block;margin: 0px auto;padding: 10px;">
+        <div style="float:right;"><a id="HomeLink" href="@Url.Action("Home","Users")"><img src="~/Assets/images/navbar/slogan.png"></a></div>
+    </div>
+</nav>
+
+<a id="wheelnavProfileLink" style='display:none' href='#Profile'></a>
+<a id="wheelnavPlaylistsLink" style='display:none' href='#Playlist'></a>
+<a id="wheelnavAdminDashboardLink" style='display:none' href='#AdminDashboard'></a>
+<a id="wheelnavLoginLink" style='display:none' href='@Url.Action("login","Users")'></a>
+<a id="wheelnavLogoutLink" style='display:none' href='@Url.Action("logout","Users")'></a>
+
+<div style="width: 10%;float:right;position: fixed;top:-22px;right:0px;z-index: 1001">
+    <div id='piemenu' data-wheelnav
+         data-wheelnav-slicepath='DonutSlice'
+         data-wheelnav-spreader data-wheelnav-spreaderpath='PieSpreader'
+         data-wheelnav-navangle='180'
+         data-wheelnav-rotateoff
+         data-wheelnav-cssmode
+         data-wheelnav-init>
+
+        <div data-wheelnav-navitemicon='search' onmouseup='document.getElementById("SearchMovieFormToggle").click();'></div>
+        @if (!String.IsNullOrEmpty((String)Session["UserType"]) && !((String)Session["UserType"]).Equals("Blacklist"))
+        {
+            
+            var loggingUser = Session["UserData"] as User;
+            <div data-wheelnav-navitemimg='@loggingUser.Profile_Picture' onmouseup='document.getElementById("wheelnavProfileLink").click();'></div>
+            if (Session["UserType"].Equals("Premium") || Session["UserType"].Equals("Admin"))
+            {
+                <div data-wheelnav-navitemicon='list' onmouseup='document.getElementById("wheelnavPlaylistsLink").click();'></div>
+                if (Session["UserType"].Equals("Admin"))
+                {
+                    <div data-wheelnav-navitemicon='barchart' onmouseup='document.getElementById("wheelnavAdminDashboardLink").click();'></div>
+                }
+            }
+            <div data-wheelnav-navitemicon='export' onmouseup='document.getElementById("wheelnavLogoutLink").click();'></div>
+        }
+        else
+        {
+            <div data-wheelnav-navitemicon='warning' onmouseup='document.getElementById("wheelnavLoginLink").click();'></div>
+        }
+    </div>
+</div>
+<nav id="decoy" style="background-image: url(../../../Assets/images/navbar/nav-background.png);">
+    <div style="width:52%;display:inline-block;margin: 0px auto;padding: 10px;">
+        <div style="float:right;"><img src="~/Assets/images/navbar/slogan.png"></div>
+    </div>
+</nav>
