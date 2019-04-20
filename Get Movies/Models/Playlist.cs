@@ -17,6 +17,7 @@ namespace Get_Movies.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("Premium")]
         public int? Premium_Id { get; set; }
         public virtual Premium Premium { get; set; }

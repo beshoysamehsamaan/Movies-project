@@ -16,6 +16,7 @@ namespace Get_Movies.Models
         [Key]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("User")]
         [Index(IsUnique = true)]
         public int? User_Id { get; set; }

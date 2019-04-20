@@ -17,6 +17,7 @@ namespace Get_Movies.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("User")]
         [Index(IsUnique = true)]
         public int? User_Id { get; set; }

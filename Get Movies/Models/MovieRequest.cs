@@ -11,13 +11,13 @@ namespace Get_Movies.Models
 {
     public class MovieRequest
     {
-        //id premium_id title note
         private GetMoviesContext context = GetMoviesContext.GetInstance();
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("Premium")]
         public int? Premium_Id { get; set; }
         public virtual Premium Premium { get; set; }

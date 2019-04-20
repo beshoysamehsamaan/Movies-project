@@ -17,10 +17,12 @@ namespace Get_Movies.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("User")]
         public int? User_Id { get; set; }
         public virtual User User { get; set; }
 
+        [Required]
         [ForeignKey("Movie")]
         public int? Movie_Id { get; set; }
         public virtual Movie Movie { get; set; }

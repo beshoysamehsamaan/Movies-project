@@ -16,11 +16,13 @@ namespace Get_Movies.Models
         [Key]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("User")]
         [Index(IsUnique = true)]
         public int? User_Id { get; set; }
         public virtual User User { get; set; }
 
+        [Required]
         [ForeignKey("Movie")]
         public int? Movie_Id { get; set; }
         public virtual Movie Movie { get; set; }

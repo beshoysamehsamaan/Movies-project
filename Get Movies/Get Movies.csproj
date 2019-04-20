@@ -107,10 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\GetMoviesDatabase_V26.mdf" />
-    <Content Include="App_Data\GetMoviesDatabase_V26_log.ldf">
-      <DependentUpon>GetMoviesDatabase_V26.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\css\bootstrap\full\bootstrap.css" />
     <Content Include="Assets\css\bootstrap\min\bootstrap.min.css" />
     <Content Include="Assets\css\colorlib\main.css" />
@@ -225,9 +221,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904181718243_Migration.cs" />
-    <Compile Include="Migrations\201904181718243_Migration.Designer.cs">
-      <DependentUpon>201904181718243_Migration.cs</DependentUpon>
+    <Compile Include="Migrations\201904201406239_Migrations.cs" />
+    <Compile Include="Migrations\201904201406239_Migrations.Designer.cs">
+      <DependentUpon>201904201406239_Migrations.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -267,13 +263,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="fonts\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904181718243_Migration.resx">
-      <DependentUpon>201904181718243_Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904201406239_Migrations.resx">
+      <DependentUpon>201904201406239_Migrations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

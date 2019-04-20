@@ -11,7 +11,6 @@ namespace Get_Movies.Models
 {
     public class AdRequest
     {
-        //id email note image approved start_date
         private GetMoviesContext context = GetMoviesContext.GetInstance();
 
         [Key]

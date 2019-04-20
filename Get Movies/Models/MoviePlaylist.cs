@@ -16,10 +16,12 @@ namespace Get_Movies.Models
         [Key]
         public int? Id { get; set; }
 
+        [Required]
         [ForeignKey("Playlist")]
         public int? Playlist_Id { get; set; }
         public virtual Playlist Playlist { get; set; }
 
+        [Required]
         [ForeignKey("Movie")]
         public int? Movie_Id { get; set; }
         public virtual Movie Movie { get; set; }
