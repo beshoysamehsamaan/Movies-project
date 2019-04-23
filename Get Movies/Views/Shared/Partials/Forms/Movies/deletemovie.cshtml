@@ -1,0 +1,61 @@
+﻿@model Get_Movies.Models.Movie
+@using (Html.BeginForm("deletemovie", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+
+    // @Html.TextBoxFor(i => i.Id, new { @class = "input100" })
+
+    <div class="form-group">
+        @Html.TextBoxFor(i => i.Id, new { @class = "form-control", Name = "Id" })
+    </div>
+
+    <div class="container-login100-form-btn">
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <input class="btn btn-primary" type="submit" name="submit" value="search" />
+        </div>
+    </div>
+    <br>
+
+   
+    if (ViewBag.x == 0)
+    {
+        @Html.HiddenFor(u => u.Id)
+
+        //   <div class="wrap-input100 validate-input" data-validate="First Name is required">
+        //   <span class="label-input100">Title</span>
+        //   @Html.TextBoxFor(u => u.Title, new { @class = "input100", Name = "Title" })
+        //   <span class="focus-input100"></span>
+        //  </div>
+
+        <div class="form-group">
+            @Html.TextBoxFor(u => u.Title, new { @class = "form-control", Name = "Title" })
+        </div>///
+
+        <div class="form-group">
+            @Html.TextBoxFor(u => u.Description, new { @class = "form-control", Name = "Description" })
+        </div>
+
+       // <div class="wrap-input1000 validate-input" data-validate="Last Name is required">
+          //  <span class="label-input1000">Description</span>
+          //  @Html.TextBoxFor(u => u.Description, new { @class = "input1000", Name = "Description" })
+           // <span class="focus-input1000"></span>
+       // </div>
+
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <input class="btn btn-primary" type="submit" name="submit" value="Ubdate" />
+
+            </div>
+        </div>
+        <br> 
+        <div class="container-login100-form-btn">
+            <div class="wrap-login100-form-btn">
+                <div class="login100-form-bgbtn"></div>
+                <input class="btn btn-primary" type="submit" name="submit" value="Delete" />
+
+            </div>
+
+        </div>
+    }
+}
