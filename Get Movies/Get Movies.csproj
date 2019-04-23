@@ -215,6 +215,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Data\GetMoviesContext.cs" />
@@ -255,6 +256,16 @@
     <Content Include="Views\Shared\Partials\Forms\Users\_Signup.cshtml" />
     <Content Include="Views\Movies\Page.cshtml" />
     <Content Include="Views\Movies\ViewMovie.cshtml" />
+    <Content Include="Views\Admin\addmovie.cshtml" />
+    <Content Include="Views\Admin\deletemovie.cshtml" />
+    <Content Include="Views\Admin\listmovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\addmovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\deletemovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\listmovie.cshtml" />
+    <Content Include="Views\Admin\banuser.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Users\banuser.cshtml" />
+    <Content Include="Views\Admin\movierequest.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\movierequest.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

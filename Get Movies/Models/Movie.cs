@@ -129,10 +129,10 @@ namespace Get_Movies.Models
                     if (Id) { toUpdateRecord.Id = newData.Id; }
                     if (Imdb_Id) { toUpdateRecord.Imdb_Id = newData.Imdb_Id; }
                     if (Genre_Id) { toUpdateRecord.Genre_Id = newData.Genre_Id; }
-                    if (Title) { toUpdateRecord.Director = newData.Director; }
+                    if (Title) { toUpdateRecord.Title = newData.Title; }
                     if (Director) { toUpdateRecord.Director = newData.Director; }
                     if (Poster) { toUpdateRecord.Poster = newData.Poster; }
-                    if (Youtube_Trailer) { toUpdateRecord.Poster = newData.Poster; }
+                    if (Youtube_Trailer) { toUpdateRecord.Youtube_Trailer = newData.Youtube_Trailer; }
                     if (Release_Year) { toUpdateRecord.Release_Year= newData.Release_Year; }
                     if (Description) { toUpdateRecord.Description = newData.Description; }
                     if (Duration) { toUpdateRecord.Duration = newData.Duration; }
