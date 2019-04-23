@@ -244,6 +244,7 @@ D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreComp
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+<<<<<<< Updated upstream
 D:\projects\Movies-project\Get Movies\bin\Get Movies.dll.config
 D:\projects\Movies-project\Get Movies\bin\Get Movies.dll
 D:\projects\Movies-project\Get Movies\bin\Get Movies.pdb
@@ -326,3 +327,87 @@ D:\projects\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInp
 D:\projects\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
 D:\projects\Movies-project\Get Movies\obj\Debug\Get Movies.dll
 D:\projects\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+=======
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Get Movies.dll.config
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Get Movies.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Get Movies.pdb
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csc.exe
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csc.exe.config
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csc.rsp
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csi.exe
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csi.exe.config
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\csi.rsp
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.AppContext.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Collections.Immutable.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Console.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.Compression.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Reflection.Metadata.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.AccessControl.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Claims.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.ValueTuple.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\vbc.exe
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\vbc.exe.config
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\vbc.rsp
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe.config
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Antlr3.Runtime.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.SqlServer.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Microsoft.Web.Infrastructure.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Newtonsoft.Json.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Helpers.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Mvc.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Optimization.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Razor.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\WebGrease.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Antlr3.Runtime.pdb
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\EntityFramework.SqlServer.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Newtonsoft.Json.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Optimization.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Razor.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Helpers.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\System.Web.Mvc.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migrations.resources
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
+D:\Level 3\Second Semester\SWE2\Project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+>>>>>>> Stashed changes

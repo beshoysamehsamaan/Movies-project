@@ -60,7 +60,7 @@ namespace Get_Movies.Controllers
         [HttpPost]
         public ActionResult deletemovie(Movie i, Movie u, string submit)
         {
-            if (submit == "search")
+            if (submit == "submit")
             {
                 try
                 {
@@ -166,6 +166,7 @@ namespace Get_Movies.Controllers
 
             return View();
         }
+
 
     }
 

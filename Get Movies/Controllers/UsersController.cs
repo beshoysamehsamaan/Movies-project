@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using Get_Movies.Models;
+using System;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Get_Movies.Data;
-using Get_Movies.Models;
 
 namespace ASP.NET.Controllers
 {
@@ -114,20 +107,33 @@ namespace ASP.NET.Controllers
         }
         [Route("Users/Editprofile")]
         [HttpPost]
-        public ActionResult Editprofile(User u)
+        public ActionResult Editprofile(User u, string submit)
         {
 
-            try
+            if (submit == "update")
             {
-                new User() { Id = 2 }.Update(u, true, true);
-                ViewBag.usernameOrEmailExists = 0;
-            }
-            catch (Exception ex)
-            {
-                ViewBag.usernameOrEmailExists = 1;
-            }
 
-            return View();
+                try
+                {
+                    new User() { Id = 2 }.Update(u, true, true);
+                    ViewBag.usernameOrEmailExists = 0;
+                }
+                catch (Exception)
+                {
+                    ViewBag.usernameOrEmailExists = 1;
+                }
+
+                return View();
+            }
+            else if (submit == "deleteProfile")
+            {
+                Debug.WriteLine("ntered deleted if");
+                User loggedUser = Session["UserData"] as User;
+                new User() { Id = loggedUser.Id }.Remove(true, true);
+                ViewBag.usernameOrEmailExists = 2;
+                return RedirectToAction("Logout", "Users");
+            }
+            else { return View(); }
         }
     }
 }
