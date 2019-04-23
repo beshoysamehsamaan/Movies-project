@@ -266,6 +266,8 @@
     <Content Include="Views\Shared\Partials\Forms\Users\banuser.cshtml" />
     <Content Include="Views\Admin\movierequest.cshtml" />
     <Content Include="Views\Shared\Partials\Forms\Movies\movierequest.cshtml" />
+    <Content Include="Views\Users\Editprofile.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Users\_Editprofile.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

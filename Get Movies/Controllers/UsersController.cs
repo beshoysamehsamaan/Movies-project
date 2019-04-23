@@ -105,5 +105,29 @@ namespace ASP.NET.Controllers
         {
             return RedirectToAction("Page", "Movies", new RouteValueDictionary { { "PageNum", 1 } });
         }
+        [Route("Users/Editprofile")]
+        public ActionResult Editprofile()
+        {
+            User u = new User() { Id = 2 }.Search(true, true).FirstOrDefault();
+            ViewBag.usernameOrEmailExists = 2;
+            return View(u);
+        }
+        [Route("Users/Editprofile")]
+        [HttpPost]
+        public ActionResult Editprofile(User u)
+        {
+
+            try
+            {
+                new User() { Id = 2 }.Update(u, true, true);
+                ViewBag.usernameOrEmailExists = 0;
+            }
+            catch (Exception ex)
+            {
+                ViewBag.usernameOrEmailExists = 1;
+            }
+
+            return View();
+        }
     }
 }
