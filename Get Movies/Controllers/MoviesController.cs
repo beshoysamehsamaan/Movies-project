@@ -38,8 +38,11 @@ namespace Get_Movies.Controllers
         [Route("{imdbId}/View")]
         public ActionResult ViewMovie(string imdbId)
         {
+
             Movie toWatch = new Movie() { Imdb_Id = imdbId }.Search(true, true).FirstOrDefault();
-            if (Session["UserData"] != null) { User watcher = Session["UserData"] as User; toWatch.View(watcher.Id.Value); }
+            if (Session["UserData"] != null) {
+                User watcher = Session["UserData"] as User; toWatch.View(watcher.Id.Value);
+            }
             return View(toWatch);
         }
         /*End   View Page*/

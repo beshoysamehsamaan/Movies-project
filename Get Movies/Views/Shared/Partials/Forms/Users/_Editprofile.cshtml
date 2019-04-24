@@ -5,17 +5,23 @@
         Edit Profile
     </span>
 
+    <div class="container-login100-form-btn" style="display:inline-block;width:48%;text-align:center">
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button class="login100-form-btn" type="submit" name="submit" value="watchHistory" style="text-align:center;">
+                <a href=@Url.Action("WatchHistory")>Watch your History</a>
+            </button>
+        </div>
+    </div>
+
+
+
     if (ViewBag.usernameOrEmailExists == 0)
     {<div style="color:green">Updated Successfully</div>}
     if (ViewBag.usernameOrEmailExists == 1)
     {
-        <div style="color:green">Email or Username is Exist</div>
+        <div style="color:green">Email or Username Exists</div>
     }
-    if (ViewBag.usernameOrEmailExists == 2)
-    {
-<div style="color:green">Deleted Successfully</div>
-    }
-
 
     <div class="wrap-input100 validate-input" data-validate="First Name is required">
         <span class="label-input100">First Name</span>

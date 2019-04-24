@@ -11,11 +11,10 @@ namespace Get_Movies.Data
     public class GetMoviesContext : DbContext
     {
         private static GetMoviesContext Instance = new GetMoviesContext();
-        public GetMoviesContext() : base("GetMoviesDatabase_V27") {}
+        public GetMoviesContext() : base("GetMoviesDatabase_V28") {}
         public static GetMoviesContext GetInstance() {return Instance;}
 
         public DbSet<Admin> Admins { get; set; }
-        public DbSet<AdRequest> AdRequests { get; set; }
         public DbSet<Blacklist> Blacklist { get; set; }
         public DbSet<Casual> Casuals { get; set; }
         public DbSet<Genre> Genres { get; set; }

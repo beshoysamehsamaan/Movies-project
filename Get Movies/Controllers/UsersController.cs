@@ -1,5 +1,6 @@
 ﻿using Get_Movies.Models;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Web.Mvc;
@@ -12,7 +13,8 @@ namespace ASP.NET.Controllers
         [Route("test")]
         public ActionResult test()
         {
-            return Content("");
+            List<ViewLog> items = new ViewLog() { User_Id = 2 }.Search(true, true).ToList();
+            return Content(""+items.Count);
         }
         //----login----//
         [Route("login")]
@@ -36,23 +38,23 @@ namespace ASP.NET.Controllers
                 switch ((String)Session["UserType"])
                 {
                     case "Blacklist":
-                        Session["UserTypeData"] = new Blacklist() {User_Id = user.Id}.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Blacklist() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
                         break;
                     case "Admin":
-                        Session["UserTypeData"] = new Admin() {User_Id = user.Id }.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Admin() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
                         break;
                     case "Premium":
-                        Session["UserTypeData"] = new Premium() {User_Id = user.Id }.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Premium() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
                         break;
                     case "Casual":
-                        Session["UserTypeData"] = new Casual() {User_Id = user.Id }.Search(true,true).FirstOrDefault();
+                        Session["UserTypeData"] = new Casual() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
                         break;
                 }
                 if (((String)Session["UserType"]).Equals("Blacklist"))
                 {
                     return View();
                 }
-                return RedirectToAction("Home","Users");
+                return RedirectToAction("Home", "Users");
             }
             else
             {
@@ -133,7 +135,24 @@ namespace ASP.NET.Controllers
                 ViewBag.usernameOrEmailExists = 2;
                 return RedirectToAction("Logout", "Users");
             }
+            //else if (submit == "watchHistory")
+            //{
+            //    Debug.WriteLine("Entered watch history successfully");
+            //}
+
             else { return View(); }
         }
+
+        [Route("Users/WatchHistory")]
+        public ActionResult WatchHistory()
+        {
+            Debug.WriteLine((Session["UserData"] as User).Id);
+            return View(new ViewLog() { User_Id = (Session["UserData"] as User).Id }.Search(true, true).ToList());
+
+        }
+
+
+
     }
+
 }

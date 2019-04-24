@@ -6546,8 +6546,7 @@ namespace Get_Movies.Migrations
             MovieRequest mr = new MovieRequest() { Premium_Id = prem.Id, Title = "Requested Movie", Note = "Note" };
             mr.Add();
 
-            AdRequest ar = new AdRequest() { Email = "proposer@gmail.com", Note = "Negotiation Terms", Image = "www.text2image.com/user_images/text2image_A31887_20190406_022910.jpg", Start_Date = "10/10/2019", Approved = 0 };
-            ar.Add();
+            
 
             //ViewLog vl = new ViewLog() { User_Id = u3.Id, Movie_Id = m1.Id, Time_Stamp = DateTime.ParseExact("ddd dd/MM/yyyy HH:mm:ss", DateTime.Now.ToString("ddd dd/MM/yyyy HH:mm:ss"), System.Globalization.CultureInfo.InvariantCulture) };
             //vl.Add();

@@ -171,7 +171,9 @@ namespace Get_Movies.Models
         }
         public void View(int user_id)
         {
-            new ViewLog() { Movie_Id = this.Id, User_Id = user_id, Time_Stamp = DateTime.Parse(DateTime.Now.ToString("ddd dd/MM/yyyy HH:mm:ss"))};
+            ViewLog viewLog = new ViewLog() { Movie_Id = this.Id, User_Id = user_id, Time_Stamp = DateTime.Now};
+            //new ViewLog() { Movie_Id = this.Id, User_Id = user_id, Time_Stamp = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+            viewLog.Add();
             Movie toIncrementViewsCount = context.Movies.Find(this.Id);
             toIncrementViewsCount.Views_Count += 1;
             context.SaveChanges();

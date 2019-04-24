@@ -107,6 +107,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GetMoviesDatabase_V28.mdf" />
+    <Content Include="App_Data\GetMoviesDatabase_V28_log.ldf">
+      <DependentUpon>GetMoviesDatabase_V28.mdf</DependentUpon>
+    </Content>
     <Content Include="Assets\css\bootstrap\full\bootstrap.css" />
     <Content Include="Assets\css\bootstrap\min\bootstrap.min.css" />
     <Content Include="Assets\css\colorlib\main.css" />
@@ -222,13 +226,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904201406239_Migrations.cs" />
-    <Compile Include="Migrations\201904201406239_Migrations.Designer.cs">
-      <DependentUpon>201904201406239_Migrations.cs</DependentUpon>
+    <Compile Include="Migrations\201904241834195_Migration.cs" />
+    <Compile Include="Migrations\201904241834195_Migration.Designer.cs">
+      <DependentUpon>201904241834195_Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
-    <Compile Include="Models\AdRequest.cs" />
     <Compile Include="Models\Blacklist.cs" />
     <Compile Include="Models\Casual.cs" />
     <Compile Include="Models\Genre.cs" />
@@ -268,6 +271,7 @@
     <Content Include="Views\Shared\Partials\Forms\Movies\movierequest.cshtml" />
     <Content Include="Views\Users\Editprofile.cshtml" />
     <Content Include="Views\Shared\Partials\Forms\Users\_Editprofile.cshtml" />
+    <Content Include="Views\Users\WatchHistory.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -276,14 +280,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="fonts\" />
     <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904201406239_Migrations.resx">
-      <DependentUpon>201904201406239_Migrations.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201904241834195_Migration.resx">
+      <DependentUpon>201904241834195_Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
