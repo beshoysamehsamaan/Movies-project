@@ -14,7 +14,7 @@ namespace ASP.NET.Controllers
         public ActionResult test()
         {
             List<ViewLog> items = new ViewLog() { User_Id = 2 }.Search(true, true).ToList();
-            return Content(""+items.Count);
+            return Content("" + items.Count);
         }
         //----login----//
         [Route("login")]
@@ -129,7 +129,7 @@ namespace ASP.NET.Controllers
             }
             else if (submit == "deleteProfile")
             {
-                Debug.WriteLine("ntered deleted if");
+                //Debug.WriteLine("entered deleted if");
                 User loggedUser = Session["UserData"] as User;
                 new User() { Id = loggedUser.Id }.Remove(true, true);
                 ViewBag.usernameOrEmailExists = 2;
@@ -144,14 +144,20 @@ namespace ASP.NET.Controllers
         }
 
         [Route("Users/WatchHistory")]
-        public ActionResult WatchHistory()
+        public ActionResult WatchHistory(string submit)
         {
-            Debug.WriteLine((Session["UserData"] as User).Id);
+            if (submit == "deleteWatchHistory")
+            {
+                Debug.WriteLine((Session["UserData"] as User).Id);
+                new ViewLog() { User_Id = (Session["UserData"] as User).Id }.Remove(true, true);
+                return RedirectToAction("Editprofile", "Users");
+            }
+
+            //Debug.WriteLine((Session["UserData"] as User).Id);
             return View(new ViewLog() { User_Id = (Session["UserData"] as User).Id }.Search(true, true).ToList());
 
+
         }
-
-
 
     }
 
