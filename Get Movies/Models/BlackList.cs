@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace Get_Movies.Models
 {
-    public class Blacklist
+    public class Blacklist : GeneralUser
     {
         private GetMoviesContext context = GetMoviesContext.GetInstance();
 

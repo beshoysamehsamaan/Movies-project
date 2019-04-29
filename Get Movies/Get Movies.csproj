@@ -231,6 +231,8 @@
       <DependentUpon>201904241834195_Migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\UserFactory.cs" />
+    <Compile Include="Models\GeneralUser.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Blacklist.cs" />
     <Compile Include="Models\Casual.cs" />

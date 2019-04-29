@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace Get_Movies.Models
 {
-    public class Casual
+    public class Casual : GeneralUser
     {
         private GetMoviesContext context = GetMoviesContext.GetInstance();
 
