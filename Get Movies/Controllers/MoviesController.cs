@@ -5,7 +5,7 @@ using System.Web;
 using Get_Movies.Models;
 using Get_Movies.ViewModels;
 using System.Web.Mvc;
-
+using System.Web.Routing;
 
 namespace Get_Movies.Controllers
 {
@@ -40,12 +40,26 @@ namespace Get_Movies.Controllers
         {
 
             Movie toWatch = new Movie() { Imdb_Id = imdbId }.Search(true, true).FirstOrDefault();
-            if (Session["UserData"] != null) {
+            if (Session["UserData"] != null)
+            {
+
+
                 User watcher = Session["UserData"] as User; toWatch.View(watcher.Id.Value);
+
             }
             return View(toWatch);
+        }
+        [HttpPost]
+        [Route("Movies/Rate")]
+        public ActionResult RateMovie(int Movie_Id,String imdb_Id,int submit)
+        {
+            if (submit == 1 || submit == 2 || submit == 3 || submit == 4 || submit == 5)
+            {
+                Rating toRate = new Rating { User_Id = (Session["UserData"] as User).Id, Rating_ = submit, Movie_Id = Movie_Id };
+                toRate.Add();
+            }
+            return RedirectToAction("ViewMovie", "Movies", new RouteValueDictionary() { {"imdbId",imdb_Id } });
         }
         /*End   View Page*/
     }
 }
-            

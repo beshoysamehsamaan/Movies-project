@@ -185,7 +185,8 @@ namespace Get_Movies.Models
             int ratingSum = 0;
             foreach (Rating Rating in Ratings) { ratingSum += Rating.Rating_.GetValueOrDefault();}
             float result = ratingSum / latestRatingCount;
-            return (float)Math.Round(result);
+            return (float)result;
+            //return (float)Math.Round(result,2);
         }
     }
 }

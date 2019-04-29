@@ -15,15 +15,32 @@
                 <div role="tabpanel" class="tab-pane active" id="ytTab">
                     @if (String.IsNullOrEmpty(@Model.Youtube_Trailer))
                     {
-                    <div class="alert alert-danger" role="alert" style="text-align:center">
-                        Oh No !! .. We are sorry to inform you that we dont have an official youtube reference for this movie. Sorry for the inconvenience
-                    </div>
+                        <div class="alert alert-danger" role="alert" style="text-align:center">
+                            Oh No !! .. We are sorry to inform you that we dont have an official youtube reference for this movie. Sorry for the inconvenience
+                        </div>
                     }
                     else
                     {
                         <iframe id="yt_vid" src="https://www.youtube.com/embed/@Model.Youtube_Trailer" style="display:block;margin:0px auto;height:800px" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     }
                 </div>
+
+                @using (Html.BeginForm("RateMovie", "Movies", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+
+                    <input type="submit" value="Rate Movie">
+
+                    <input hidden name="Movie_Id" value="@Model.Id">
+                    <input hidden name="imdb_id" value="@Model.Imdb_Id">
+                    <select name="submit">
+                        <option value=1 class="dropdown-item" style="text-align:center;">1/5</option>
+                        <option value=2 class="dropdown-item" style="text-align:center;">2/5</option>
+                        <option value=3 class="dropdown-item" style="text-align:center;">3/5</option>
+                        <option value=4 class="dropdown-item" style="text-align:center;">4/5</option>
+                        <option value=5 class="dropdown-item" style="text-align:center;">5/5</option>
+                    </select>
+                }
+
                 <div role="tabpanel" class="tab-pane" id="movieTab">
                     <video id="full_vid" src="../Sources/Movies/@Model.Imdb_Id/source.mp4" style="display:block;margin:0px auto;height:800px" controls>
                         HTML5 Video is not supported in your browser
@@ -33,4 +50,4 @@
         </div>
     </div>
 </div>
-<script>document.getElementById('yt_vid').width = window.screen.width;document.getElementById('full_vid').width = window.screen.width;</script>
+<script>document.getElementById('yt_vid').width = window.screen.width; document.getElementById('full_vid').width = window.screen.width;</script>
