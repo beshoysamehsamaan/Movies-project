@@ -1,0 +1,37 @@
+﻿@using System.Web.Optimization
+@model Get_Movies.Models.Playlist
+
+@{
+    ViewBag.Title = "Premium Dashboard";
+}
+@if(Session["UserData"]!=null && !(Session["UserType"] as String).Equals("Premium"))
+{
+    <script>window.location.href = '@Url.Action("Page","Home",new { PageNum = 1})';</script>
+}
+<!--Basic Bootstrap Tab start -->
+<div>
+    <!-- Nav tabs -->
+    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href=@Url.Action("createplaylist")>Create Playlist</a></li>
+        <li role="presentation"><a href=@Url.Action("playlists")>Playlists</a></li>
+        <!--
+        <li role="presentation"><a href=@Url.Action("deletemovie")>Delete & Update</a></li>
+        <li role="presentation"><a href=@Url.Action("movierequest")>Submit Movie Requests</a></li> -->
+    </ul>
+</div>
+<div class="pmd-card">
+    <div class="pmd-card-body">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+
+                <div>
+                    @Html.Partial("../Shared/Partials/Forms/Playlists/createplaylist")
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

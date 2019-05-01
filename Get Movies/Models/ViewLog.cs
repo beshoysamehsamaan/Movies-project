@@ -12,7 +12,7 @@ namespace Get_Movies.Models
 {
     public class ViewLog
     {
-        private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesDatabaseContext context = GetMoviesDatabaseContext.GetInstance();
 
         [Key]
         public int? Id { get; set; }

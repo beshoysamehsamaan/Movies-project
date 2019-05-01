@@ -11,7 +11,7 @@ namespace Get_Movies.Models
 {
     public class Rating
     {
-        private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesDatabaseContext context = GetMoviesDatabaseContext.GetInstance();
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

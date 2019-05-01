@@ -11,7 +11,7 @@ namespace Get_Movies.Models
 {
     public class Playlist
     {
-        private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesDatabaseContext context = GetMoviesDatabaseContext.GetInstance();
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -73,7 +73,7 @@ namespace Get_Movies.Models
         //#########################//
         public void AddMovie(Movie movieToAdd)
         {
-            new MoviePlaylist() { Playlist_Id = this.Id, Movie_Id = movieToAdd.Id }.Add();
+            new PlaylistMovie() { Playlist_Id = this.Id, Movie_Id = movieToAdd.Id }.Add();
         }
     }
 }

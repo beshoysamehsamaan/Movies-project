@@ -6,12 +6,13 @@ using Get_Movies.Data;
 using System.Linq;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using Get_Movies.ViewModels;
 
 namespace Get_Movies.Models
 {
     public class Admin : GeneralUser
     {
-        private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesDatabaseContext context = GetMoviesDatabaseContext.GetInstance();
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

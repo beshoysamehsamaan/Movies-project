@@ -12,7 +12,7 @@ namespace Get_Movies.Models
 {
     public class Genre
     {
-        private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesDatabaseContext context = GetMoviesDatabaseContext.GetInstance();
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

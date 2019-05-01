@@ -1,16 +1,12 @@
 namespace Get_Movies.Migrations
 {
     using System;
-    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Data.Entity.Validation;
-    using System.Diagnostics;
     using System.Linq;
-    using Get_Movies.Data;
     using Get_Movies.Models;
-    //Get_Movies.Migrations.Configuration
-    internal sealed class Configuration : DbMigrationsConfiguration<Get_Movies.Data.GetMoviesContext>
+
+    internal sealed class Configuration : DbMigrationsConfiguration<Get_Movies.Data.GetMoviesDatabaseContext>
     {
         public Configuration()
         {
@@ -18,7 +14,7 @@ namespace Get_Movies.Migrations
             MigrationsDirectory = @"Migrations";
         }
 
-        protected override void Seed(GetMoviesContext context)
+        protected override void Seed(Get_Movies.Data.GetMoviesDatabaseContext context)
         {
             User u1 = new User
             {
@@ -6534,11 +6530,11 @@ namespace Get_Movies.Migrations
             Playlist pl1 = new Playlist() { Premium_Id = prem.Id, Title = "Playlist1" };
             pl1.Add();
 
-            MoviePlaylist m1pl1 = new MoviePlaylist() { Movie_Id = m1.Id, Playlist_Id = pl1.Id };
-            m1pl1.Add();
+            PlaylistMovie p1ml1 = new PlaylistMovie() { Movie_Id = m1.Id, Playlist_Id = pl1.Id };
+            p1ml1.Add();
 
-            MoviePlaylist m2pl1 = new MoviePlaylist() { Movie_Id = m2.Id, Playlist_Id = pl1.Id };
-            m2pl1.Add();
+            PlaylistMovie p2ml1 = new PlaylistMovie() { Movie_Id = m2.Id, Playlist_Id = pl1.Id };
+            p2ml1.Add();
 
             Rating r1 = new Rating() { User_Id = u1.Id, Movie_Id = m1.Id, Rating_ = 4 }; r1.Add();
             Rating r2 = new Rating() { User_Id = u2.Id, Movie_Id = m2.Id, Rating_ = 5 }; r2.Add();
@@ -6546,12 +6542,9 @@ namespace Get_Movies.Migrations
             MovieRequest mr = new MovieRequest() { Premium_Id = prem.Id, Title = "Requested Movie", Note = "Note" };
             mr.Add();
 
-            
-
             //ViewLog vl = new ViewLog() { User_Id = u3.Id, Movie_Id = m1.Id, Time_Stamp = DateTime.ParseExact("ddd dd/MM/yyyy HH:mm:ss", DateTime.Now.ToString("ddd dd/MM/yyyy HH:mm:ss"), System.Globalization.CultureInfo.InvariantCulture) };
             //vl.Add();
-
-
+            
         }
     }
 }

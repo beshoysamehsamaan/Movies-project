@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Get_Movies.ViewModels;
 
 namespace ASP.NET.Controllers
 {
@@ -39,7 +40,23 @@ namespace ASP.NET.Controllers
             
 
                 var loggingType = UserFactory.Build((string)Session["UserType"], user.Id);
-                Session["UserTypeData"] = loggingType;
+                switch (Session["UserType"] as String)
+                {
+                    case "Blacklist":
+                        Session["UserTypeData"] = loggingType as Blacklist;
+                        break;
+                    case "Admin":
+                        Session["UserTypeData"] = loggingType as Admin;
+                        break;
+                    case "Casual":
+                        Session["UserTypeData"] = loggingType as Casual;
+                        break;
+                    case "Premium":
+                        Session["UserTypeData"] = loggingType as Premium;
+                        break;
+                }
+
+                
 
                 if (((String)Session["UserType"]).Equals("Blacklist"))
                 {
@@ -94,7 +111,7 @@ namespace ASP.NET.Controllers
         [Route("Users/Editprofile")]
         public ActionResult Editprofile()
         {
-            User u = new User() { Id = 2 }.Search(true, true).FirstOrDefault();
+            User u = new User() { Id = (Session["UserData"] as User).Id }.Search(true, true).FirstOrDefault();
             ViewBag.usernameOrEmailExists = 2;
             return View(u);
         }
@@ -108,7 +125,7 @@ namespace ASP.NET.Controllers
 
                 try
                 {
-                    new User() { Id = 2 }.Update(u, true, true);
+                    new User() { Id = (Session["UserData"] as User).Id }.Update(u, true, true);
                     ViewBag.usernameOrEmailExists = 0;
                 }
                 catch (Exception)

@@ -14,7 +14,7 @@ namespace Get_Movies.Models
 {
     public class Movie
     {
-        private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesDatabaseContext context = GetMoviesDatabaseContext.GetInstance();
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -167,7 +167,7 @@ namespace Get_Movies.Models
                 else if (String.IsNullOrWhiteSpace(Title) && !String.IsNullOrWhiteSpace(Director)) { all = (all ?? ListAll()).Where(m => m.Director.Contains(Director)).ToList(); Debug.WriteLine("6"); }
                 else if (!String.IsNullOrWhiteSpace(Title) && !String.IsNullOrWhiteSpace(Director)) { all = (all ?? ListAll()).Where(m => m.Title.Contains(Title) || m.Director.Contains(Director)).ToList(); Debug.WriteLine("7"); }
             }
-            return new MoviesPagination() { WholeListCount = all.Count(), MoviesList = (all == null ? null : all.Skip(offset).Take(limit).ToList()) };
+            return new MoviesPagination() { WholeListCount = all.Count(), MoviesList = (all == null ? new Movie().ListAll() : all.Skip(offset).Take(limit).ToList()) };
         }
         public void View(int user_id)
         {

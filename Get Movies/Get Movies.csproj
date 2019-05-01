@@ -107,10 +107,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\GetMoviesDatabase_V28.mdf" />
-    <Content Include="App_Data\GetMoviesDatabase_V28_log.ldf">
-      <DependentUpon>GetMoviesDatabase_V28.mdf</DependentUpon>
-    </Content>
     <Content Include="Assets\css\bootstrap\full\bootstrap.css" />
     <Content Include="Assets\css\bootstrap\min\bootstrap.min.css" />
     <Content Include="Assets\css\colorlib\main.css" />
@@ -221,24 +217,22 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\PremiumController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
-    <Compile Include="Data\GetMoviesContext.cs" />
+    <Compile Include="Data\GetMoviesDatabaseContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201904241834195_Migration.cs" />
-    <Compile Include="Migrations\201904241834195_Migration.Designer.cs">
-      <DependentUpon>201904241834195_Migration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\UserFactory.cs" />
-    <Compile Include="Models\GeneralUser.cs" />
+    <Compile Include="Models\PlaylistMovie.cs" />
+    <Compile Include="Models\PlaylistMovie1.cs" />
+    <Compile Include="ViewModels\UserFactory.cs" />
+    <Compile Include="ViewModels\GeneralUser.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Blacklist.cs" />
     <Compile Include="Models\Casual.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Movie.cs" />
-    <Compile Include="Models\MoviePlaylist.cs" />
     <Compile Include="Models\MovieRequest.cs" />
     <Compile Include="Models\Playlist.cs" />
     <Compile Include="Models\Premium.cs" />
@@ -246,6 +240,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\ViewLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AddMovieToPlaylist.cs" />
     <Compile Include="ViewModels\MoviesPagination.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -274,6 +269,11 @@
     <Content Include="Views\Users\Editprofile.cshtml" />
     <Content Include="Views\Shared\Partials\Forms\Users\_Editprofile.cshtml" />
     <Content Include="Views\Users\WatchHistory.cshtml" />
+    <Content Include="Views\Premium\createplaylist.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Playlists\createplaylist.cshtml" />
+    <Content Include="Views\Premium\playlists.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Playlists\playlists.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Playlists\_AddMovieToPlaylist.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -282,14 +282,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Assets\fonts\" />
     <Folder Include="fonts\" />
     <Folder Include="Scripts\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201904241834195_Migration.resx">
-      <DependentUpon>201904241834195_Migration.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

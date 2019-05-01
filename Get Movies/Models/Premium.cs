@@ -6,12 +6,13 @@ using Get_Movies.Data;
 using System.Linq;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using Get_Movies.ViewModels;
 
 namespace Get_Movies.Models
 {
-    public class Premium
+    public class Premium : GeneralUser
     {
-        private GetMoviesContext context = GetMoviesContext.GetInstance();
+        private GetMoviesDatabaseContext context = GetMoviesDatabaseContext.GetInstance();
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -22,6 +23,8 @@ namespace Get_Movies.Models
         [Index(IsUnique = true)]
         public int? User_Id { get; set; }
         public virtual User User { get; set; }
+
+        public virtual List<Playlist> Playlists { get; set; }
         //#########################//
         public void Add() { context.Premiums.Add(this); context.SaveChanges(); }
         public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.Premiums.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }

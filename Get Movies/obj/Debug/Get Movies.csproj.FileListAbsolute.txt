@@ -156,9 +156,9 @@ D:\movies project\Movies-project\Get Movies\bin\System.Web.Helpers.xml
 D:\movies project\Movies-project\Get Movies\bin\System.Web.Mvc.xml
 D:\movies project\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
-D:\movies project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migration.resources
-D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+D:\movies project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migrationv6.resources
+D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache

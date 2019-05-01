@@ -1,9 +1,10 @@
 ﻿@model Get_Movies.ViewModels.MoviesPagination
 @using Get_Movies.Models;
+@using Get_Movies.ViewModels;
 @{
     ViewBag.Title = "Page";
 }
-@if (ViewBag.MovieSearch404!=null && ViewBag.MovieSearch404)
+@if (ViewBag.MovieSearch404 != null && ViewBag.MovieSearch404)
 {
     <div class="alert alert-danger" role="alert" style="text-align:center">
         Oh snap! Apparetly we dont have any movies matching your given credentials. maybe you should consider changing them and try submitting again.
@@ -48,9 +49,25 @@
                 <div style="float: left">
                     <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch" onmouseup="window.location.href ='@Url.Action("ViewMovie", "Movies", new { imdbId = movie.Imdb_Id }, null)';"><i class="material-icons md-dark pmd-lg">play_circle_outline</i></button>
                 </div>
-                <div style="float: right;">
-                    <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="bottom" title="Add To Playlist"><i class="material-icons md-dark pmd-lg">playlist_add</i></button>
-                </div>
+                @if (!String.IsNullOrEmpty(Session["UserType"] as String) && (Session["UserType"] as String).Equals("Premium"))
+                {
+                    <div style="float: right;">
+                        <button data-target="@("#playlistModal"+movie.Id)" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="modal" data-placement="bottom" title="Add To Playlist"><i class="material-icons md-dark pmd-lg">playlist_add</i></button>
+                    </div>
+                    <div tabindex="-1" class="modal fade" id="@("playlistModal"+movie.Id)" style="display: none;" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header pmd-modal-bordered">
+                                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                    <h2 class="pmd-card-title-text">Add @movie.Title To A PLaylist</h2>
+                                </div>
+                                <div class="modal-body">
+                                    @Html.Partial("../Shared/Partials/Forms/Playlists/_AddMovieToPlaylist", new AddMovieToPlaylist() { movieId = movie.Id, Playlists = new Premium() { Id = (Session["UserTypeData"] as Premium).Id }.Search(true, true).FirstOrDefault().Playlists })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
             </div>
         </div>
     }
