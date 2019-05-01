@@ -143,10 +143,7 @@ namespace ASP.NET.Controllers
                 ViewBag.usernameOrEmailExists = 2;
                 return RedirectToAction("Logout", "Users");
             }
-            //else if (submit == "watchHistory")
-            //{
-            //    Debug.WriteLine("Entered watch history successfully");
-            //}
+           
 
             else { return View(); }
         }
@@ -161,7 +158,7 @@ namespace ASP.NET.Controllers
                 return RedirectToAction("Editprofile", "Users");
             }
 
-            //Debug.WriteLine((Session["UserData"] as User).Id);
+            
             return View(new ViewLog() { User_Id = (Session["UserData"] as User).Id }.Search(true, true).ToList());
 
 

@@ -98,7 +98,7 @@ namespace Get_Movies.Controllers
                 {
 
                     new Movie() { Id = u.Id }.Remove(true, true);
-                    //u = new Movie() { Id = u.Id }.Search(true, true).FirstOrDefault();
+                  
                     ViewBag.x = 0;
 
                     return View();
