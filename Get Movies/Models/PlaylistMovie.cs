@@ -7,6 +7,7 @@ using System.Linq;
 using System.Data.Entity;
 using System.Data.SqlClient;
 
+
 namespace Get_Movies.Models
 {
     public class PlaylistMovie
@@ -26,12 +27,12 @@ namespace Get_Movies.Models
         public int? Movie_Id { get; set; }
         public virtual Movie Movie { get; set; }
         //#########################//
-        public void Add() { context.PlaylistMovies.Add(this); context.SaveChanges(); }
-        public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.PlaylistMovies.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
+        public void Add() { context.MoviePlaylists.Add(this); context.SaveChanges(); }
+        public void Remove(Boolean allRequired, Boolean exactStringMatching) { context.MoviePlaylists.RemoveRange(this.Search(allRequired, exactStringMatching)); context.SaveChanges(); }
         public IQueryable<PlaylistMovie> Search(Boolean allRequired, Boolean exactStringMatching) { return (allRequired ? this.SearchAnd(exactStringMatching) : this.SearchOr(exactStringMatching)) ?? new List<PlaylistMovie>().AsQueryable(); }
         private IQueryable<PlaylistMovie> SearchAnd(Boolean exactStringMatching)
         {
-            DbSet<PlaylistMovie> entity = context.PlaylistMovies;
+            DbSet<PlaylistMovie> entity = context.MoviePlaylists;
             IQueryable<PlaylistMovie> resultSet = null;
             if (this.Id.HasValue) { resultSet = entity.Where(mp => mp.Id == this.Id); }
             if (this.Playlist_Id.HasValue) { resultSet = entity.Where(mp => mp.Playlist_Id == this.Playlist_Id); }
@@ -40,13 +41,13 @@ namespace Get_Movies.Models
         }
         private IQueryable<PlaylistMovie> SearchOr(Boolean exactStringMatching)
         {
-            string query = "SELECT * FROM PlaylistMovies WHERE ";
+            string query = "SELECT * FROM MoviePlaylists WHERE ";
             List<SqlParameter> sqlParameters = new List<SqlParameter>();
             if (this.Id.HasValue) { query += "Id = @Id OR "; sqlParameters.Add(new SqlParameter("@Id", this.Id)); }
             if (this.Playlist_Id.HasValue) { query += "Playlist_Id = @Playlist_Id OR "; sqlParameters.Add(new SqlParameter("@Playlist_Id", this.Playlist_Id)); }
             if (this.Movie_Id.HasValue) { query += "Movie_Id = @Movie_Id OR "; sqlParameters.Add(new SqlParameter("@Movie_Id", this.Movie_Id)); }
             query = query.Remove(query.Length - 3);
-            return sqlParameters.Count() == 0 ? null : context.PlaylistMovies.SqlQuery(query, sqlParameters.ToArray()).AsQueryable<PlaylistMovie>();
+            return sqlParameters.Count() == 0 ? null : context.MoviePlaylists.SqlQuery(query, sqlParameters.ToArray()).AsQueryable<PlaylistMovie>();
         }
         public void Update(PlaylistMovie newData, Boolean allRequired, Boolean exactStringMatching)
         {
@@ -66,7 +67,7 @@ namespace Get_Movies.Models
                 context.SaveChanges();
             }
         }
-        public List<PlaylistMovie> ListAll() { return context.PlaylistMovies.ToList<PlaylistMovie>(); }
+        public List<PlaylistMovie> ListAll() { return context.MoviePlaylists.ToList<PlaylistMovie>(); }
         //#########################/
     }
 }

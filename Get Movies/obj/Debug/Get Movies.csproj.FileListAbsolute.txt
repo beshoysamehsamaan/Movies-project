@@ -162,3 +162,85 @@ D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.dll
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migrationv6.resources
 D:\movies project\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Get Movies.dll.config
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Get Movies.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Get Movies.pdb
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\csc.exe
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\csc.exe.config
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\csc.rsp
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\csi.exe
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\csi.exe.config
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\csi.rsp
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.Managed.Core.targets
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.AppContext.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Collections.Immutable.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Console.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.IO.Compression.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.IO.Pipes.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Reflection.Metadata.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Security.AccessControl.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Security.Claims.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Security.Principal.Windows.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.ValueTuple.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Xml.XmlDocument.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\vbc.exe
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\vbc.exe.config
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\vbc.rsp
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\roslyn\VBCSCompiler.exe.config
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Antlr3.Runtime.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\EntityFramework.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\EntityFramework.SqlServer.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Microsoft.Web.Infrastructure.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Newtonsoft.Json.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Helpers.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Mvc.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Optimization.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Razor.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Webpages.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\WebGrease.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Antlr3.Runtime.pdb
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\EntityFramework.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\EntityFramework.SqlServer.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Newtonsoft.Json.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Optimization.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Razor.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Webpages.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Webpages.Deployment.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Webpages.Razor.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Helpers.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\System.Web.Mvc.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\obj\Debug\Get Movies.csprojAssemblyReference.cache
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CoreCompileInputs.cache
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.CopyComplete
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\obj\Debug\Get Movies.dll
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\obj\Debug\Get Movies.pdb
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\obj\Debug\Get_Movies.Migrations.Migration.resources
+D:\LPBUs\VS Project SW\Movies-project\Get Movies\obj\Debug\Get Movies.csproj.GenerateResource.cache

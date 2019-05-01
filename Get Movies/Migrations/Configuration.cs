@@ -16,6 +16,7 @@ namespace Get_Movies.Migrations
 
         protected override void Seed(Get_Movies.Data.GetMoviesDatabaseContext context)
         {
+            
             User u1 = new User
             {
                 Email = "user1@gmail.com",

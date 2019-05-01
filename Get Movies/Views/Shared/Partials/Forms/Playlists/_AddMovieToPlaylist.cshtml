@@ -13,8 +13,7 @@
             List<Playlist> Playlists = new Playlist() { Premium_Id = (Session["UserTypeData"] as Premium).Id }.Search(true, true).ToList();
             foreach (Playlist Playlist in Playlists)
             {
-                Debug.WriteLine("Playlist" +Playlist.Title + "Movie ID : "+ Model.movieId + "           " +Playlist.Movies.Where(m => m.Id == Model.movieId).Count());
-                if (Playlist.Movies.Where(m => m.Id == Model.movieId).Count() != 0) { continue; }
+                if (new PlaylistMovie() {Movie_Id=Model.movieId,Playlist_Id=Playlist.Id }.Search(true,true).Count() != 0) { continue; }
                 SelectListItem toAdd = new SelectListItem { Text = Playlist.Title, Value = Playlist.Id + "" };
                 if (!first) { toAdd.Selected = true; first = true; } listItems.Add(toAdd);
             }

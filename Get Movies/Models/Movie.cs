@@ -57,7 +57,6 @@ namespace Get_Movies.Models
 
         public virtual List<Rating> Ratings { get; set; }
 
-        public virtual List<Playlist> Playlists { get; set; }
         //#########################//
         public void Add()
         {

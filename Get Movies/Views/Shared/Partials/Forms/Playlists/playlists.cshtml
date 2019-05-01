@@ -6,7 +6,7 @@
 {
     using (Html.BeginForm("playlists", "Premium", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
     {
-        <a class="list-group-item" href="javascript:void(0);">Titel :@item.Title <br /></a>
+        <a class="list-group-item" href="javascript:void(0);">Title :@item.Title <br /></a>
         <input name="id" hidden value="@item.Id" style="display:none" />
         <div style="display:inline-block;margin:10px">
             <button data-target="@("#showPlaylistMovies"+item.Id)" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">Show Movies</button>
@@ -19,25 +19,28 @@
                         </div>
                         <div class="pmd-modal-list">
                             <ul class="list-group pmd-list">
-                               @foreach (Movie movie in item.Movies)
+                               @{ 
+                                   List<PlaylistMovie> PlaylistMovies = new PlaylistMovie() { Playlist_Id = item.Id }.Search(true, true).ToList();
+                                   List<Movie> MoviesInCurrentPlaylist = PlaylistMovies.Select(pm => pm.Movie).ToList();
+                               }
+                               @foreach (Movie movie in MoviesInCurrentPlaylist)
                                {
-                                <li class="list-group-item">
-                                    <div class="pmd-card pmd-card-default pmd-z-depth">
-                                        <div class="pmd-card-body">
-                                            <!-- Card media -->
-                                            <div class="media-body">
-                                                <a href="javascript:void(0);">
-                                                    <img width="330" height="228" src="http://propeller.in/assets/images/profile-pic.png">
-                                                </a>
-                                            </div>
-
-                                            <!-- Card media actions -->
-                                            <div class="media-right">
-                                                <button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i style="color:#000" class="material-icons pmd-sm">play</i></button>
+                                    <li class="list-group-item">
+                                        <div class="pmd-card pmd-card-default pmd-z-depth">
+                                            <div class="pmd-card-body">
+                                                <!-- Card media -->
+                                                <div class="media-body">
+                                                    <a href="@Url.Action("ViewMovie","Movies",new { imdbId = movie.Imdb_Id})" title="@movie.Title">
+                                                        <img width="330" height="228" src="@movie.Poster">
+                                                    </a>
+                                                </div>
+                                                <!-- Card media actions -->
+                                                <div class="media-right">
+                                                    <button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button" onclick="window.location.href='@Url.Action("ViewMovie","Movies",new { imdbId = movie.Imdb_Id})'"><i style="color:#000" class="material-icons pmd-sm">play_arrow</i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
+                                    </li>
                                }
                             </ul>
                         </div>
