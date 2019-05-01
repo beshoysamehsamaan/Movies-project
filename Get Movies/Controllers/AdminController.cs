@@ -84,9 +84,7 @@ namespace Get_Movies.Controllers
                 {
 
 
-                    //Movie v = new Movie() { Id = u.Id }.Search(true, true).FirstOrDefault();
-                    //v = u;
-                    //u = v;
+                    
                     Debug.WriteLine("XXXXXXXXXXXXX"+u.Id);
                     Debug.WriteLine("XXXXXXXXXXXXX" + u.Title);
                     Debug.WriteLine("XXXXXXXXXXXXX" + u.Description);
