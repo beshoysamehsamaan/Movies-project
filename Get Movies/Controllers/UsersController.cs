@@ -36,21 +36,7 @@ namespace ASP.NET.Controllers
 
                 Session["UserType"] = ((String)LoggingType).Split('_')[0];
                 Debug.WriteLine("Xxxxxxxxxxxxxxxxx" + ((String)Session["UserType"]));
-               // switch ((String)Session["UserType"])
-              //  {
-                   //case "Blacklist":
-                       // Session["UserTypeData"] = new Blacklist() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
-                      //  break;
-                    //case "Admin":
-                    //    Session["UserTypeData"] = new Admin() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
-                  //      break;
-                //    case "Premium":
-              //          Session["UserTypeData"] = new Premium() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
-            //            break;
-          //          case "Casual":
-        //                Session["UserTypeData"] = new Casual() { User_Id = user.Id }.Search(true, true).FirstOrDefault();
-      //                  break;
-    //            }
+            
 
                 var loggingType = UserFactory.Build((string)Session["UserType"], user.Id);
                 Session["UserTypeData"] = loggingType;
