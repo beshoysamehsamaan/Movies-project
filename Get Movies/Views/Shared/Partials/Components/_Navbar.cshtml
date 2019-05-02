@@ -30,13 +30,14 @@
             
             var loggingUser = Session["UserData"] as User;
             <div data-wheelnav-navitemimg='@loggingUser.Profile_Picture' onmouseup='document.getElementById("wheelnavProfileLink").click();'></div>
-            if (Session["UserType"].Equals("Premium") || Session["UserType"].Equals("Admin"))
+            if (Session["UserType"].Equals("Premium"))
             {
                 <div data-wheelnav-navitemicon='list' onmouseup='document.getElementById("wheelnavPlaylistsLink").click();'></div>
-                if (Session["UserType"].Equals("Admin"))
-                {
+            }
+            if (Session["UserType"].Equals("Admin"))
+            {
                     <div data-wheelnav-navitemicon='barchart' onmouseup='document.getElementById("wheelnavAdminDashboardLink").click();'></div>
-                }
+        
             }
             <div data-wheelnav-navitemicon='export' onmouseup='document.getElementById("wheelnavLogoutLink").click();'></div>
         }

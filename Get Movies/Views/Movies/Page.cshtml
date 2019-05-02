@@ -10,6 +10,64 @@
         Oh snap! Apparetly we dont have any movies matching your given credentials. maybe you should consider changing them and try submitting again.
     </div>
 }
+@if (Session["UserType"] != null && (Session["UserType"] as String).Equals("Casual"))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading list-group-item" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-expandable="false">
+                    Upgrade To Premium To Save Playlists And Request Movies
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                @using (Html.BeginForm("Upgrade", "Premium", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Card Number</label>
+                        <input name="cardId" />
+                    </div>
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Card Password</label>
+                        <input name="cardPassword" />
+                    </div>
+                    <input hidden value="@((Session["UserData"] as User).Id)" name="userId"/>
+                    <button class="btn pmd-btn-flat btn-primary btn-block pmd-ripple-effect" type="submit">Upgrade</button>
+                }
+            </div>
+        </div>
+    </div>
+}
+@if (Session["UserType"] != null && (Session["UserType"] as String).Equals("Premium"))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading list-group-item" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-expandable="false">
+                    Request A Movie
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                @using (Html.BeginForm("RequestMovie", "Premium", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Title</label>
+                        <input name="Title" />
+                    </div>
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Note</label>
+                        <input name="Note" />
+                    </div>
+                    <input hidden value="@((Session["UserTypeData"] as Premium).Id)" name="premiumId" />
+                    <button class="btn pmd-btn-flat btn-primary btn-block pmd-ripple-effect" type="submit">Request</button>
+                }
+            </div>
+        </div>
+    </div>
+}
 <div id="MoviesContainer" style="display: table;margin:0px auto;">
     @foreach (Movie movie in Model.MoviesList)
     {

@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using Get_Movies.ViewModels;
 
-namespace ASP.NET.Controllers
+namespace Get_Movies.Controllers
 {
     public class UsersController : Controller
     {
@@ -89,6 +89,7 @@ namespace ASP.NET.Controllers
             {
                 u.Verified = 0;
                 u.Add();
+                new Casual() { User_Id=u.Id}.Add();
                 ViewBag.SignupAttempt = true;
                 ModelState.Clear();
             }
