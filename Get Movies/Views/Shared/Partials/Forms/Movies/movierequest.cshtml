@@ -1,0 +1,24 @@
+﻿@using Get_Movies.Models
+@model Get_Movies.Models.Movie
+@using (Html.BeginForm("movierequest", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+ 
+        if (ViewBag.ii)
+        {
+            foreach (MovieRequest item in ViewBag.mr)
+            {
+    <a class="list-group-item" href="javascript:void(0);">ID :@item.Id <br />Premium_Id :@item.Premium_Id <br />Titel : @item.Title<br />Note : @item.Note</a>
+            }
+        }
+        else
+        {
+            foreach (MovieRequest item in ViewBag.i)
+            {
+<a class="list-group-item" href="javascript:void(0);">ID :@item.Id <br />Premium_Id :@item.Premium_Id<br />Titel : @item.Title<br />Note : @item.Note</a>
+            }
+        }
+
+   
+}
+
+

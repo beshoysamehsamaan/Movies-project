@@ -1,0 +1,13 @@
+﻿@model Get_Movies.Models.Playlist
+@using (Html.BeginForm("createplaylist", "Premium", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+    <!-- Regular Input -->
+    <div class="form-group">
+        <label for="regular1" class="control-label">Title</label>
+        @Html.TextBoxFor(u => u.Title , new { @class = "form-control", Name = "title" })
+
+    </div>
+    <div>
+        <button type="submit" class="btn btn-primary"> Add </button>
+    </div>
+}

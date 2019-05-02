@@ -1,0 +1,36 @@
+﻿
+@using System.Web.Optimization
+@model List<Get_Movies.Models.Playlist>
+
+@{
+    ViewBag.Title = "Premium Dashboard";
+}
+
+<!--Basic Bootstrap Tab start -->
+<div>
+    <!-- Nav tabs -->
+    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+        <li role="presentation" ><a href=@Url.Action("createplaylist")>Create Playlist</a></li>
+        <li role="presentation" class="active"><a href=@Url.Action("playlists")>Playlists</a></li>
+        <!--
+        <li role="presentation"><a href=@Url.Action("deletemovie")>Delete & Update</a></li>
+        <li role="presentation"><a href=@Url.Action("movierequest")>Submit Movie Requests</a></li> -->
+    </ul>
+</div>
+<div class="pmd-card">
+    <div class="pmd-card-body">
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="home">
+
+                <div>
+                    @Html.Partial("../Shared/Partials/Forms/Playlists/playlists")
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

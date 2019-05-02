@@ -1,0 +1,176 @@
+﻿@model Get_Movies.ViewModels.MoviesPagination
+@using Get_Movies.Models;
+@using Get_Movies.ViewModels;
+@{
+    ViewBag.Title = "Page";
+}
+@if (ViewBag.MovieSearch404 != null && ViewBag.MovieSearch404)
+{
+    <div class="alert alert-danger" role="alert" style="text-align:center">
+        Oh snap! Apparetly we dont have any movies matching your given credentials. maybe you should consider changing them and try submitting again.
+    </div>
+}
+@if (Session["UserType"] != null && (Session["UserType"] as String).Equals("Casual"))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading list-group-item" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-expandable="false">
+                    Upgrade To Premium To Save Playlists And Request Movies
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                @using (Html.BeginForm("Upgrade", "Premium", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Card Number</label>
+                        <input name="cardId" />
+                    </div>
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Card Password</label>
+                        <input name="cardPassword" />
+                    </div>
+                    <input hidden value="@((Session["UserData"] as User).Id)" name="userId"/>
+                    <button class="btn pmd-btn-flat btn-primary btn-block pmd-ripple-effect" type="submit">Upgrade</button>
+                }
+            </div>
+        </div>
+    </div>
+}
+@if (Session["UserType"] != null && (Session["UserType"] as String).Equals("Premium"))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading list-group-item" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" data-expandable="false">
+                    Request A Movie
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                @using (Html.BeginForm("RequestMovie", "Premium", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+                {
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Title</label>
+                        <input name="Title" />
+                    </div>
+                    <div class="form-group pmd-textfield form-group-lg">
+                        <label for="Large" class="control-label">Note</label>
+                        <input name="Note" />
+                    </div>
+                    <input hidden value="@((Session["UserTypeData"] as Premium).Id)" name="premiumId" />
+                    <button class="btn pmd-btn-flat btn-primary btn-block pmd-ripple-effect" type="submit">Request</button>
+                }
+            </div>
+        </div>
+    </div>
+}
+<div id="MoviesContainer" style="display: table;margin:0px auto;">
+    @foreach (Movie movie in Model.MoviesList)
+    {
+        <div class="pmd-card pmd-card-default pmd-z-depth" style="width:19%;margin:30px .5%;display:inline-block;">
+            <div id="metadata" style="display: table;width: 100%">
+                <button style="width:25%;display: inline-block;" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="top" title="@movie.Genre.Genre_"><i class="material-icons md-dark pmd-sm">local_movies</i></button>
+                <button style="width:25%;display: inline-block" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="top" title="@movie.Views_Count"><i class="material-icons md-dark pmd-sm">remove_red_eye</i></button>
+                <button style="width:25%;display: inline-block;" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="top" title="@movie.CalculateRating()/5"><i class="material-icons md-dark pmd-sm">star</i></button>
+                <button style="width:25%;display: inline-block;" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="top" title="@movie.Duration min"><i class="material-icons md-dark pmd-sm">timelapse</i></button>
+
+            </div>
+            <div class="pmd-card-title" style="padding:2px 10px">
+                <div class="media-body media-middle">
+
+
+                    <h2 class="pmd-card-title-text" style="font-size:1em;font-weight:bold;">@movie.Title</h2>
+                    <h3 class="pmd-card-title-text" style="">@movie.Director</h3>
+                    <span class="pmd-card-subtitle-text"><i>@movie.Release_Date.ToString("dd MMM yyyy")</i></span>
+                </div>
+            </div>
+            <!-- ;min-height:400px;max-height:400px; -->
+            <div class="pmd-card-media" style="overflow: hidden">
+                <img style="width:100%;min-height:400px;max-height:400px;"
+                     onMouseOver="this.style.cssText = 'transition: all 1s ease-in-out;transform:scale(1.1);width:100%;;min-height:400px;max-height:400px;';"
+                     onMouseOut="this.style.cssText = 'transition: all 1s ease-in-out;transform:scale(1);width:100%;;min-height:400px;max-height:400px;';"
+                     class="img-responsive"
+                     src="@movie.Poster">
+            </div>
+
+            <!-- Card body -->
+            <div class=" pmd-card-body pmd-scrollbar mCustomScrollbar" data-mcs-theme="minimal-dark" style="overflow-y: scroll;height:200px;overflow: hidden;border-bottom:1px solid #000;margin: 0">
+                <p style="padding:10px">@movie.Description</p>
+            </div>
+
+            <!-- Card actions -->
+            <div class="pmd-card-actions" style="padding: 10px">
+                <div style="float: left">
+                    <button type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="tooltip" data-placement="bottom" title="Watch" onmouseup="window.location.href ='@Url.Action("ViewMovie", "Movies", new { imdbId = movie.Imdb_Id }, null)';"><i class="material-icons md-dark pmd-lg">play_circle_outline</i></button>
+                </div>
+                @if (!String.IsNullOrEmpty(Session["UserType"] as String) && (Session["UserType"] as String).Equals("Premium"))
+                {
+                    <div style="float: right;">
+                        <button data-target="@("#playlistModal"+movie.Id)" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default" data-toggle="modal" data-placement="bottom" title="Add To Playlist"><i class="material-icons md-dark pmd-lg">playlist_add</i></button>
+                    </div>
+                    <div tabindex="-1" class="modal fade" id="@("playlistModal"+movie.Id)" style="display: none;" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header pmd-modal-bordered">
+                                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                    <h2 class="pmd-card-title-text">Add @movie.Title To A PLaylist</h2>
+                                </div>
+                                <div class="modal-body">
+                                    @Html.Partial("../Shared/Partials/Forms/Playlists/_AddMovieToPlaylist", new AddMovieToPlaylist() { movieId = movie.Id, Playlists = new Premium() { Id = (Session["UserTypeData"] as Premium).Id }.Search(true, true).FirstOrDefault().Playlists })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+
+
+@if (Model.PagesCount > 1 && !IsPost)
+{
+    <ul class="pagination justify-content-center pagination-lg" style="display:table;margin: 0 auto">
+        @{
+            int paginationLimit = 5;
+            Boolean isFirst = Model.PageNum == 1;
+            Boolean isLast = Model.PageNum == Model.PagesCount;
+            int previousPage = Model.PageNum > 1 ? Model.PageNum - 1 : 1;
+            int nextPage = Model.PageNum < Model.PagesCount ? Model.PageNum + 1 : Model.PageNum;
+            <li class="page-item @(isFirst?"disabled":"")"><a class="page-link" @(!isFirst ? "href =" + @previousPage : "")>«</a></li>
+
+            <li class="page-item  @(Model.PageNum==1?"active":"")"><a class="page-link" @(Model.PageNum != 1 ? "href=" + 1 : "")>1</a></li>
+            if (Model.PageNum - (paginationLimit + 1) / 2 - 1 > 1)
+            {
+                <li class="page-item"><a class="page-link">...</a></li> }
+            else
+            {
+                <li class="page-item @(Model.PageNum==2?"active":"")"><a class="page-link" @(Model.PageNum != 2 ? "href=2" : "")>2</a></li>}
+
+            int start = Model.PageNum - (paginationLimit + 1) / 2 - 1 > 1 ? Model.PageNum - (paginationLimit / 2) : 3;
+            int end = Model.PageNum + (paginationLimit + 1) / 2 + 1 < Model.PagesCount ? Model.PageNum + (paginationLimit / 2) : Model.PagesCount - 2;
+            if (Model.PageNum < paginationLimit) { start = 3; end = paginationLimit; }
+            if (Model.PageNum > Model.PagesCount - paginationLimit + 1) { start = Model.PagesCount - paginationLimit + 1; end = Model.PagesCount - 2; }
+
+            for (int i = start; i <= end; i++)
+            {
+                <li class="page-item  @(i==Model.PageNum?"active":"")"><a class="page-link" @(i != Model.PageNum ? "href=" + @i : "")>@i</a></li>
+            }
+
+            if (Model.PageNum + (paginationLimit + 1) / 2 + 1 < Model.PagesCount)
+            {
+                <li class="page-item"><a class="page-link">...</a></li> }
+            else
+            {
+                <li class="page-item @(Model.PageNum==(Model.PageNum-1)?"active":"")"><a class="page-link" @(Model.PageNum != (Model.PageNum - 1) ? "href=" + (Model.PagesCount - 1) : "")>@(Model.PagesCount - 1)</a></li> }
+            <li class="page-item @(Model.PageNum==Model.PagesCount?"active":"")"><a class="page-link" @(Model.PageNum != Model.PagesCount ? "href=" + @Model.PagesCount : "")>@Model.PagesCount</a></li>
+
+            <li class="page-item @(isLast?"disabled":"")"><a class="page-link" @(!isLast ? "href=" + @nextPage : "")>»</a></li>
+        }
+    </ul><br>
+}

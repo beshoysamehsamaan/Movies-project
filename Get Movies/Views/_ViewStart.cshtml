@@ -1,3 +1,136 @@
-﻿@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@using System.Web.Optimization
+@{
+    Layout = "Shared/Layouts/_Layout.cshtml";
 }
+
+@Styles.Render("~/Bundles/css/bootstrap/min")
+@Styles.Render("~/Bundles/css/propeller/style/typography")
+@Styles.Render("~/Bundles/css/propeller/style/shadow")
+@Styles.Render("~/Bundles/css/propeller/style/icons")
+@Styles.Render("~/Bundles/css/propeller/components/alert")
+@Styles.Render("~/Bundles/css/propeller/components/radio")
+@Styles.Render("~/Bundles/css/propeller/components/card")
+@Styles.Render("~/Bundles/css/propeller/components/custom-scrollbar")
+@Styles.Render("~/Bundles/css/propeller/components/textfield")
+@Styles.Render("~/Bundles/css/propeller/components/select2")
+@Styles.Render("~/Bundles/css/propeller/components/button")
+@Styles.Render("~/Bundles/css/wheelnav")
+@Styles.Render("~/Bundles/css/propeller/components/data-table")
+@Styles.Render("~/Bundles/css/propeller/components/dropdown")
+
+
+@Scripts.Render("~/Bundles/js/jquery/min")
+@Scripts.Render("~/Bundles/js/bootstrap/min")
+@Scripts.Render("~/Bundles/js/propeller/shared/global")
+@Scripts.Render("~/Bundles/js/propeller/shared/ripple-effect")
+@Scripts.Render("~/Bundles/js/propeller/components/alert")
+@Scripts.Render("~/Bundles/js/propeller/components/radio")
+@Scripts.Render("~/Bundles/js/propeller/components/card")
+@Scripts.Render("~/Bundles/js/propeller/components/custom-scrollbar")
+@Scripts.Render("~/Bundles/js/propeller/components/textfield")
+@Scripts.Render("~/Bundles/js/propeller/components/select2")
+@Scripts.Render("~/Bundles/js/propeller/components/button")
+@Scripts.Render("~/Bundles/js/propeller/components/data-table")
+@Scripts.Render("~/Bundles/js/wheelnav")
+@Scripts.Render("~/Bundles/js/propeller/components/dropdown")
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".select-with-search").select2({
+            theme: "bootstrap"
+        });
+
+    });
+</script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+
+<script>
+    (function ($) {
+        $(window).load(function () {
+            $(".content").mCustomScrollbar({
+                theme: "minimal"
+            });
+        });
+    })(jQuery);
+</script>
+<script type="text/javascript">
+    $('#ViewMovieTabPane a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>
+
+<script>
+    //Propeller Customised Javascript code
+    $(document).ready(function () {
+        $('#example-checkbox').DataTable({
+            responsive: {
+                details: {
+                    type: 'column',
+                    target: 'tr'
+                }
+            },
+            columnDefs: [{
+                orderable: false,
+                className: 'select-checkbox',
+                targets: 0,
+            }],
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            },
+            order: [1, 'asc'],
+            bFilter: true,
+            bLengthChange: true,
+            pagingType: "simple",
+            "paging": true,
+            "searching": true,
+            "language": {
+                "info": " _START_ - _END_ of _TOTAL_ ",
+                "sLengthMenu": "<span class='custom-select-title'>Rows per page:</span> <span class='custom-select'> _MENU_ </span>",
+                "sSearch": "",
+                "sSearchPlaceholder": "Search",
+                "paginate": {
+                    "sNext": " ",
+                    "sPrevious": " "
+                },
+            },
+            dom:
+                "<'pmd-card-title'<'data-table-title'><'search-paper pmd-textfield'f>>" +
+                "<'custom-select-info'<'custom-select-item'><'custom-select-action'>>" +
+                "<'row'<'col-sm-12'tr>>" +
+                "<'pmd-card-footer' <'pmd-datatable-pagination' l i p>>",
+        });
+
+        /// Select value
+        $('.custom-select-info').hide();
+
+        $('#example-checkbox tbody').on('click', 'tr', function () {
+            if ($(this).hasClass('selected')) {
+                var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
+                $(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
+                if ($(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text() != null) {
+                    $(this).closest('.dataTables_wrapper').find('.custom-select-info').show();
+                    //show delet button
+                } else {
+                    $(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
+                }
+            }
+            else {
+                var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
+                $(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
+            }
+            if ($('#example-checkbox').find('.selected').length == 0) {
+                $(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
+            }
+        });
+        $("div.data-table-title").html('<h2 class="pmd-card-title-text">Table Card</h2>');
+        $("div.data-table-title").html('<h2 class="pmd-card-title-text">Table Responsive</h2>');
+        $(".custom-select-action").html('<button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">delete</i></button><button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">more_vert</button>');
+
+    });
+</script>

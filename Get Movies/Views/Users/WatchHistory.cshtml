@@ -1,0 +1,40 @@
+﻿@using Get_Movies.Models
+@model List<Get_Movies.Models.ViewLog>
+@{
+    ViewBag.Title = "WatchHistory";
+}
+
+
+<div class="form-group">
+    @if (Model == null || (Model.Count() == 0))
+    {
+        <h2>You don't have a history</h2>
+    }
+    else
+    {
+
+        foreach (ViewLog item in Model)
+        {
+            <a class="list-group-item" href="javascript:void(0);">ID :@item.Id <br />Movie ID :@item.Movie_Id <br />Time : @item.Time_Stamp</a>
+        }
+
+    }
+
+
+</div>
+
+@using (Html.BeginForm("WatchHistory", "Users", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+
+    <div class="container-login100-form-btn" style="display:inline-block;width:48%;margin:0px 1%;padding:0px;text-align:center;min-width:20px">
+        <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button class="login100-form-btn" type="submit" name="submit" value="deleteWatchHistory" style="text-align:center;">
+                Delete Watch History
+            </button>
+        </div>
+    </div>
+
+}
+
+

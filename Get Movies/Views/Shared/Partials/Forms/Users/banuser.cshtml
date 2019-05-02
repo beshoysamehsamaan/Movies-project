@@ -1,0 +1,77 @@
+﻿@using Get_Movies.Models
+@model Get_Movies.Models.User
+    <!-- Table Card -->
+    <div class="pmd-card pmd-z-depth">
+        <div class="table-responsive">
+            <table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap" cellspacing="0" >
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{int z = 1;}
+                    @foreach (User item in ViewBag.t)
+                    {
+                        foreach (Blacklist i in ViewBag.tt)
+                        {
+                            if (item.Id == i.User_Id)
+                            {
+                                z = 0;
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Email</td>
+                                    <td>@item.Username</td>
+                                    <td>@item.Password</td>
+                                    <td>@item.First_Name</td>
+                                    <td>@item.Last_Name</td>
+                                    <td>
+                                        <div>
+                                            @using (Html.BeginForm("banuser", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+                                            {
+                                                @Html.TextBoxFor(u => u.Id, new { @style = "display:none", Value = item.Id })
+                                                @Html.TextBoxFor(u => u.First_Name, new { @style = "display:none", Value = "Activate" })
+                                                <button type="submit" class="btn btn-primary"> Activate </button>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                                break;
+                            }
+                        }
+                        if (z == 1)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Email</td>
+                                <td>@item.Username</td>
+                                <td>@item.Password</td>
+                                <td>@item.First_Name</td>
+                                <td>@item.Last_Name</td>
+                                <td>
+                                    <div>
+                                        @using (Html.BeginForm("banuser", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+                                        {
+                                            @Html.TextBoxFor(u => u.Id, new { @style = "display:none", Value = item.Id })
+                                            @Html.TextBoxFor(u => u.First_Name, new { @style = "display:none", Value = "Deactivate" })
+                                            <button type="submit" class="btn btn-primary"> Deactivate </button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                        z = 1;
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+

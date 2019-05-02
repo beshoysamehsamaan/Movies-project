@@ -1,0 +1,34 @@
+﻿@using System.Web.Optimization
+@model Get_Movies.Models.Movie
+
+@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+
+<!--Basic Bootstrap Tab start -->
+<div>
+    <!-- Nav tabs -->
+    <ul id="myTabs" class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href=@Url.Action("addmovie")>Add Movie</a></li>
+        <li role="presentation"><a href=@Url.Action("listmovie")>list Movie</a></li>
+        <li role="presentation"><a href=@Url.Action("deletemovie")>Delete & Update</a></li>
+        <li role="presentation"><a href=@Url.Action("movierequest")>Review Movie Requests</a></li>
+        <li role="presentation"><a href=@Url.Action("banuser")>Ban User</a></li>
+    </ul>
+    </div>
+    <div class="pmd-card">
+        <div class="pmd-card-body">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="home">
+
+                    <div>
+                        @Html.Partial("../Shared/Partials/Forms/Movies/addmovie")
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+

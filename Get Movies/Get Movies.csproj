@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -50,6 +54,9 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,6 +66,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -66,6 +76,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -94,52 +107,180 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="App_Data\_GetMoviesDBv9.mdf" />
+    <Content Include="App_Data\_GetMoviesDBv9_log.ldf">
+      <DependentUpon>_GetMoviesDBv9.mdf</DependentUpon>
+    </Content>
+    <Content Include="Assets\css\bootstrap\full\bootstrap.css" />
+    <Content Include="Assets\css\bootstrap\min\bootstrap.min.css" />
+    <Content Include="Assets\css\colorlib\main.css" />
+    <Content Include="Assets\css\colorlib\util.css" />
+    <Content Include="Assets\css\propeller\components\accordion\accordion.css" />
+    <Content Include="Assets\css\propeller\components\alert\alert.css" />
+    <Content Include="Assets\css\propeller\components\badge\badge.css" />
+    <Content Include="Assets\css\propeller\components\button\button.css" />
+    <Content Include="Assets\css\propeller\components\card\card.css" />
+    <Content Include="Assets\css\propeller\components\checkbox\checkbox.css" />
+    <Content Include="Assets\css\propeller\components\custom-scrollbar\jquery.mCustomScrollbar.css" />
+    <Content Include="Assets\css\propeller\components\custom-scrollbar\mCSB_buttons.png" />
+    <Content Include="Assets\css\propeller\components\custom-scrollbar\pmd-scrollbar.css" />
+    <Content Include="Assets\css\propeller\components\data-table\pmd-datatable.css" />
+    <Content Include="Assets\css\propeller\components\datetimepicker\bootstrap-datetimepicker.css" />
+    <Content Include="Assets\css\propeller\components\datetimepicker\pmd-datetimepicker.css" />
+    <Content Include="Assets\css\propeller\components\dropdown\dropdown.css" />
+    <Content Include="Assets\css\propeller\components\file-upload\image-upload.css" />
+    <Content Include="Assets\css\propeller\components\file-upload\upload-file.css" />
+    <Content Include="Assets\css\propeller\components\floating-action-button\floating-action-button.css" />
+    <Content Include="Assets\css\propeller\components\form\EmptyFolderGuard..css" />
+    <Content Include="Assets\css\propeller\components\list\list.css" />
+    <Content Include="Assets\css\propeller\components\modal\modal.css" />
+    <Content Include="Assets\css\propeller\components\navbar\navbar.css" />
+    <Content Include="Assets\css\propeller\components\pagination\pagination.css" />
+    <Content Include="Assets\css\propeller\components\popover\popover.css" />
+    <Content Include="Assets\css\propeller\components\progressbar\progressbar.css" />
+    <Content Include="Assets\css\propeller\components\radio\radio.css" />
+    <Content Include="Assets\css\propeller\components\range-slider\jquery.nouislider.css" />
+    <Content Include="Assets\css\propeller\components\range-slider\nouislider.min.css" />
+    <Content Include="Assets\css\propeller\components\range-slider\range-slider.css" />
+    <Content Include="Assets\css\propeller\components\select2\pmd-select2.css" />
+    <Content Include="Assets\css\propeller\components\select2\select2-bootstrap.css" />
+    <Content Include="Assets\css\propeller\components\select2\select2.min.css" />
+    <Content Include="Assets\css\propeller\components\sidebar\sidebar.css" />
+    <Content Include="Assets\css\propeller\components\table\table.css" />
+    <Content Include="Assets\css\propeller\components\tab\tab.css" />
+    <Content Include="Assets\css\propeller\components\textfield\textfield.css" />
+    <Content Include="Assets\css\propeller\components\toggle-switch\toggle-switch.css" />
+    <Content Include="Assets\css\propeller\components\tooltip\tooltip.css" />
+    <Content Include="Assets\css\propeller\shared\global\EmptyFolderGuard..css" />
+    <Content Include="Assets\css\propeller\shared\propeller\full\propeller.css" />
+    <Content Include="Assets\css\propeller\shared\propeller\min\propeller.min.css" />
+    <Content Include="Assets\css\propeller\shared\ripple-effect\EmptyFolderGuard..css" />
+    <Content Include="Assets\css\propeller\style\icons\google-icons.css" />
+    <Content Include="Assets\css\propeller\style\icons\icon.css" />
+    <Content Include="Assets\css\propeller\style\shadow\shadow.css" />
+    <Content Include="Assets\css\propeller\style\typography\typography.css" />
+    <Content Include="Assets\css\wheelnav\wheelnav.config.css" />
+    <Content Include="Assets\images\icons\favicon.ico" />
+    <Content Include="Assets\images\icons\map-marker.png" />
+    <Content Include="Assets\images\Movies.jpg" />
+    <Content Include="Assets\images\site-icon.png" />
+    <Content Include="Assets\js\bootstrap\full\bootstrap.js" />
+    <Content Include="Assets\js\bootstrap\min\bootstrap.min.js" />
+    <Content Include="Assets\js\colorlib\main.js" />
+    <Content Include="Assets\js\colorlib\map-custom.js" />
+    <Content Include="Assets\js\jquery\full\jquery.js" />
+    <Content Include="Assets\js\jquery\min\jquery.min.js" />
+    <Content Include="Assets\js\propeller\components\accordion\accordion.js" />
+    <Content Include="Assets\js\propeller\components\alert\alert.js" />
+    <Content Include="Assets\js\propeller\components\badge\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\button\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\card\jquery.masonry.min.js" />
+    <Content Include="Assets\js\propeller\components\checkbox\checkbox.js" />
+    <Content Include="Assets\js\propeller\components\custom-scrollbar\jquery.mCustomScrollbar.js" />
+    <Content Include="Assets\js\propeller\components\data-table\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\datetimepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Assets\js\propeller\components\datetimepicker\moment-with-locales.js" />
+    <Content Include="Assets\js\propeller\components\dropdown\dropdown.js" />
+    <Content Include="Assets\js\propeller\components\file-upload\upload-image.js" />
+    <Content Include="Assets\js\propeller\components\floating-action-button\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\form\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\list\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\modal\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\navbar\navbar.js" />
+    <Content Include="Assets\js\propeller\components\pagination\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\popover\popover.js" />
+    <Content Include="Assets\js\propeller\components\progressbar\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\radio\radio.js" />
+    <Content Include="Assets\js\propeller\components\range-slider\jquery.nouislider.min.js" />
+    <Content Include="Assets\js\propeller\components\range-slider\nouislider.js" />
+    <Content Include="Assets\js\propeller\components\range-slider\wNumb.js" />
+    <Content Include="Assets\js\propeller\components\select2\1select2.full.js" />
+    <Content Include="Assets\js\propeller\components\select2\2pmd-select2.js" />
+    <Content Include="Assets\js\propeller\components\sidebar\sidebar.js" />
+    <Content Include="Assets\js\propeller\components\table\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\tab\tab-scrollable.js" />
+    <Content Include="Assets\js\propeller\components\textfield\textfield.js" />
+    <Content Include="Assets\js\propeller\components\toggle-switch\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\components\tooltip\tooltip.js" />
+    <Content Include="Assets\js\propeller\shared\global\global.js" />
+    <Content Include="Assets\js\propeller\shared\propeller\full\propeller.js" />
+    <Content Include="Assets\js\propeller\shared\propeller\min\propeller.min.js" />
+    <Content Include="Assets\js\propeller\shared\ripple-effect\ripple-effect.js" />
+    <Content Include="Assets\js\propeller\style\icons\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\style\shadow\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\propeller\style\typography\EmptyFolderGuard..js" />
+    <Content Include="Assets\js\wheelnav\1raphael.icons.min.js" />
+    <Content Include="Assets\js\wheelnav\2raphael.min.js" />
+    <Content Include="Assets\js\wheelnav\3wheelnav.js" />
+    <Content Include="Assets\js\wheelnav\4wheelnav.config.js" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Scripts\jquery-3.3.1.js" />
-    <Content Include="Scripts\jquery-3.3.1.min.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.js" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Data\GetMoviesContext.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\MoviesController.cs" />
+    <Compile Include="Controllers\PremiumController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
+    <Compile Include="Data\GetMoviesDatabaseContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migration\201903302020310_Intial.cs" />
-    <Compile Include="Migration\201903302020310_Intial.Designer.cs">
-      <DependentUpon>201903302020310_Intial.cs</DependentUpon>
+    <Compile Include="Migrations\201905012004586_Migration.cs" />
+    <Compile Include="Migrations\201905012004586_Migration.Designer.cs">
+      <DependentUpon>201905012004586_Migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migration\Configuration.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\PlaylistMovie.cs" />
+    <Compile Include="ViewModels\UserFactory.cs" />
+    <Compile Include="ViewModels\GeneralUser.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Blacklist.cs" />
+    <Compile Include="Models\Casual.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieRequest.cs" />
+    <Compile Include="Models\Playlist.cs" />
+    <Compile Include="Models\Premium.cs" />
+    <Compile Include="Models\Rating.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\ViewLog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AddMovieToPlaylist.cs" />
+    <Compile Include="ViewModels\MoviesPagination.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Users\login.cshtml" />
+    <Content Include="Views\Users\signup.cshtml" />
+    <Content Include="Views\Shared\Layouts\_Layout.cshtml" />
+    <Content Include="Views\Shared\Partials\Components\_Navbar.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\_SearchMovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Users\_Login.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Users\_Signup.cshtml" />
+    <Content Include="Views\Movies\Page.cshtml" />
+    <Content Include="Views\Movies\ViewMovie.cshtml" />
+    <Content Include="Views\Admin\addmovie.cshtml" />
+    <Content Include="Views\Admin\deletemovie.cshtml" />
+    <Content Include="Views\Admin\listmovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\addmovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\deletemovie.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\listmovie.cshtml" />
+    <Content Include="Views\Admin\banuser.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Users\banuser.cshtml" />
+    <Content Include="Views\Admin\movierequest.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Movies\movierequest.cshtml" />
+    <Content Include="Views\Users\Editprofile.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Users\_Editprofile.cshtml" />
+    <Content Include="Views\Users\WatchHistory.cshtml" />
+    <Content Include="Views\Premium\createplaylist.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Playlists\createplaylist.cshtml" />
+    <Content Include="Views\Premium\playlists.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Playlists\playlists.cshtml" />
+    <Content Include="Views\Shared\Partials\Forms\Playlists\_AddMovieToPlaylist.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -148,12 +289,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
+    <Folder Include="Assets\fonts\" />
+    <Folder Include="fonts\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migration\201903302020310_Intial.resx">
-      <DependentUpon>201903302020310_Intial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201905012004586_Migration.resx">
+      <DependentUpon>201905012004586_Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

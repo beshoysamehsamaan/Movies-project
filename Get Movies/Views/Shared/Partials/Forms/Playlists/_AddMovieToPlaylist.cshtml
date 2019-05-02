@@ -1,0 +1,24 @@
+﻿@model Get_Movies.ViewModels.AddMovieToPlaylist
+@using Get_Movies.Models;
+@using System.Diagnostics
+
+@using (Html.BeginForm("AddMovieToPlaylist", "Premium", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+    @Html.HiddenFor(p => p.movieId, new { Value = Model.movieId, Name="movieId"})
+    <div class="form-group pmd-textfield pmd-textfield-floating-label">
+        <label>What Type Of Project You Will Choose ?</label>
+        @{
+            Boolean first = false;
+            List<SelectListItem> listItems = new List<SelectListItem>();
+            List<Playlist> Playlists = new Playlist() { Premium_Id = (Session["UserTypeData"] as Premium).Id }.Search(true, true).ToList();
+            foreach (Playlist Playlist in Playlists)
+            {
+                if (new PlaylistMovie() {Movie_Id=Model.movieId,Playlist_Id=Playlist.Id }.Search(true,true).Count() != 0) { continue; }
+                SelectListItem toAdd = new SelectListItem { Text = Playlist.Title, Value = Playlist.Id + "" };
+                if (!first) { toAdd.Selected = true; first = true; } listItems.Add(toAdd);
+            }
+        }
+        @Html.DropDownListFor(p => p.playlistId, listItems, new { @class = "select-with-search form-control pmd-select2", Name="playlistId",@style = "width:100%" })
+    </div>
+    <button class="btn pmd-btn-raised btn-primary btn-block pmd-ripple-effect" type="submit">Add</button>
+}

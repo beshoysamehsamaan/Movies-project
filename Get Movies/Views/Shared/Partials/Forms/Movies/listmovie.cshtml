@@ -1,0 +1,36 @@
+﻿@using Get_Movies.Models
+@model Get_Movies.Models.Movie
+@using (Html.BeginForm("listmovie", "Admin", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "login100-form validate-form" }))
+{
+    <!-- Regular Input -->
+
+
+
+    <div class="form-group">
+        <label for="regular1" class="control-label">Title</label>
+        @Html.TextBoxFor(i => i.Title, new { @class = "form-control", Name = "title" })
+
+
+
+
+        <div>
+            <button type="submit" class="btn btn-primary"> Search </button>
+        </div>
+        @if (ViewBag.ii)
+        {
+            foreach (Movie item in ViewBag.m)
+            {
+                <a class="list-group-item" href="javascript:void(0);">ID :@item.Id <br />Title :@item.Title <br />Director : @item.Director<br />Duration : @item.Duration</a>
+            }
+        }
+        else
+        {
+            foreach (Movie item in ViewBag.i)
+            {
+                <a class="list-group-item" href="javascript:void(0);">ID :@item.Id <br />Title :@item.Title <br />Director : @item.Director<br />Duration : @item.Duration</a>
+            }
+        }
+
+    </div>
+}
+
